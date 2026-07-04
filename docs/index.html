@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>True Web Clone - Source-first animated website cloning</title>
+    <meta name="description" content="True Web Clone is a Codex skill for source-first website cloning with real assets, GSAP, Lottie, Swiper, Lenis, and Playwright verification.">
+    <meta name="keywords" content="website cloner, web clone, AI website cloner, animated website clone, GSAP clone, Lottie clone, Swiper clone, Playwright verification, Codex skill">
+    <meta property="og:title" content="True Web Clone">
+    <meta property="og:description" content="Clone the real site, not a screenshot. Source-first animated website cloning for local replicas.">
+    <meta property="og:type" content="website">
+    <style>
+      :root {
+        color-scheme: light;
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        background: #f4eee8;
+        color: #111;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        min-height: 100vh;
+        background:
+          linear-gradient(90deg, rgba(0,0,0,.08) 1px, transparent 1px) 0 0 / 42px 42px,
+          linear-gradient(0deg, rgba(0,0,0,.08) 1px, transparent 1px) 0 0 / 42px 42px,
+          #f4eee8;
+      }
+      main {
+        width: min(1120px, calc(100% - 32px));
+        margin: 0 auto;
+        padding: 64px 0;
+      }
+      .hero {
+        border: 2px solid #111;
+        border-radius: 18px;
+        background: #ffdb08;
+        padding: clamp(28px, 6vw, 72px);
+        box-shadow: 10px 10px 0 #111;
+      }
+      h1 {
+        margin: 0;
+        max-width: 780px;
+        font-size: clamp(48px, 9vw, 112px);
+        line-height: .9;
+        letter-spacing: 0;
+      }
+      .tagline {
+        margin: 28px 0 0;
+        max-width: 760px;
+        font-size: clamp(20px, 3vw, 34px);
+        line-height: 1.1;
+        font-weight: 800;
+      }
+      .lede {
+        margin: 22px 0 0;
+        max-width: 760px;
+        font-size: 20px;
+        line-height: 1.45;
+      }
+      .actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 14px;
+        margin-top: 32px;
+      }
+      a.button {
+        display: inline-flex;
+        align-items: center;
+        min-height: 48px;
+        border: 2px solid #111;
+        border-radius: 999px;
+        padding: 12px 18px;
+        background: #111;
+        color: #fff;
+        text-decoration: none;
+        font-weight: 800;
+      }
+      a.button.secondary {
+        background: #fff;
+        color: #111;
+      }
+      section {
+        margin-top: 48px;
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 18px;
+      }
+      article {
+        border: 2px solid #111;
+        border-radius: 14px;
+        background: #fff;
+        padding: 22px;
+      }
+      article:nth-child(2) { background: #18a957; }
+      article:nth-child(3) { background: #ff5a1f; }
+      h2 {
+        margin: 0 0 12px;
+        font-size: 24px;
+      }
+      p {
+        margin: 0;
+        line-height: 1.45;
+      }
+      code {
+        background: rgba(0,0,0,.08);
+        border-radius: 6px;
+        padding: 2px 6px;
+      }
+      @media (max-width: 760px) {
+        main { padding: 32px 0; }
+        section { grid-template-columns: 1fr; }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="hero">
+        <h1>True Web Clone</h1>
+        <p class="tagline">Clone the real site, not a screenshot.</p>
+        <p class="lede">A Codex skill for source-first website cloning with real assets, runtime motion, and Playwright verification.</p>
+        <div class="actions">
+          <a class="button" href="https://github.com/SkyNotSilent/true-web-clone">GitHub Repository</a>
+          <a class="button secondary" href="https://units.gr/en/homepage/">Units.gr Case Source</a>
+        </div>
+      </div>
+      <section aria-label="Highlights">
+        <article>
+          <h2>Source First</h2>
+          <p>Reuse rendered DOM, CSS, JS, fonts, images, SVG, JSON, Lottie, and public frontend assets before rebuilding by hand.</p>
+        </article>
+        <article>
+          <h2>Motion Aware</h2>
+          <p>Detect and preserve GSAP, ScrollTrigger, Swiper, Lottie, Lenis, Three.js, videos, maps, feeds, and other runtime components.</p>
+        </article>
+        <article>
+          <h2>Verified</h2>
+          <p>Serve locally over HTTP, inspect console errors and failed requests, then validate runtime objects and screenshots with Playwright.</p>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>

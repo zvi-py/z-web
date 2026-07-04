@@ -1,0 +1,44 @@
+{
+  "url": "http://127.0.0.1:<local-port>/",
+  "metrics": {
+    "title": "HomePage - Units",
+    "bodyOpacity": "1",
+    "hasGsap": true,
+    "hasScrollTrigger": true,
+    "scrollTriggers": 2,
+    "hasSwiper": true,
+    "swiperInstances": 1,
+    "hasLottie": true,
+    "lottieRendered": 3,
+    "loadedImages": 24,
+    "imageCount": 33,
+    "heroText": true,
+    "navText": true,
+    "localScripts": 37,
+    "localStyles": 12
+  },
+  "errors": [],
+  "warnings": [
+    {
+      "type": "warning",
+      "text": "GSAP target [object NodeList] not found. https://gsap.com"
+    },
+    {
+      "type": "warning",
+      "text": "[.WebGL-0x11400477e00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels"
+    },
+    {
+      "type": "warning",
+      "text": "[.WebGL-0x11400477e00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels"
+    },
+    {
+      "type": "warning",
+      "text": "[.WebGL-0x11400477e00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels"
+    },
+    {
+      "type": "warning",
+      "text": "[.WebGL-0x11400477e00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)"
+    }
+  ],
+  "failed": []
+}
