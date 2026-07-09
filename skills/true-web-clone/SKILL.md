@@ -1,6 +1,6 @@
 ---
 name: true-web-clone
-description: "True Web Clone: clone public websites from a URL into local files with source-first, asset-first, runtime-aware fidelity. Use when the user says True Web Clone, web clone, clone this website, mirror/download/recreate a website locally, preserve animations/components/special assets/Lottie/GSAP/Swiper/smooth scrolling/dynamic effects, compare clone approaches, or says Chinese phrases such as 克隆网站, 复刻网站, 扒站, 下载到本地, 复制到本地, 完整复刻, 复刻动效, 直接复用资源."
+description: "True Web Clone: clone public websites from a URL into local files with source-first, asset-first, runtime-aware fidelity. Use when the user says True Web Clone, web clone, clone this website, mirror/download/recreate a website locally, preserve animations/components/special assets/Lottie/GSAP/Swiper/smooth scrolling/dynamic effects, clone WebGL/Three.js/Rive/canvas/3D resources, compare clone approaches, or says Chinese phrases such as 克隆网站, 复刻网站, 扒站, 下载到本地, 复制到本地, 完整复刻, 复刻动效, 直接复用资源, 复刻3D网站, 复杂动效网站."
 ---
 
 # True Web Clone
@@ -37,16 +37,19 @@ For each run, save:
    - Save desktop and mobile screenshots, preferably `1440px` and `390px`.
    - Collect rendered HTML after network idle and after initial animations.
    - Record `console` messages and failed requests.
+   - Record `performance.getEntriesByType("resource")` after load, after a short wait, and after scrolling through major sections. Many modern sites lazy-load models, textures, galleries, and videos only after scroll or after an initial scene is ready.
    - Detect runtime libraries with page evaluation:
      - `window.gsap`, `window.ScrollTrigger`
      - `window.Swiper`
      - `window.lottie` or `bodymovin`
      - `window.lenis`
-     - custom canvas, WebGL, video, map, feed, or player globals
+     - custom canvas, WebGL, Three.js, Rive, video, map, feed, or player globals
+   - If the source has canvas/WebGL/Rive/3D, read `references/complex-motion-3d.md` before building. These sites often need iterative resource discovery rather than a single static scrape.
 
 3. **Inventory resources**
    - Extract resource URLs from rendered DOM, inline styles, CSS files, JS strings, `srcset`, `data-*` fields, manifests, and JSON.
-   - Include images, SVG, fonts, CSS, JS, videos, Lottie JSON, WebGL assets, poster frames, feed thumbnails, and same-origin API payloads that are public and reproducible.
+   - Include images, SVG, fonts, CSS, JS, videos, Lottie JSON, Rive `.riv`, wasm, WebGL assets, shader/source maps when requested by the runtime, 3D buffers, compressed splats, poster frames, feed thumbnails, and same-origin API payloads that are public and reproducible.
+   - Treat `.buf`, `.bin`, `.glb`, `.gltf`, `.ktx2`, `.basis`, `.hdr`, `.exr`, `.sog`, `.riv`, `.wasm`, `.mp4`, `.webm`, `.json`, `.webp`, `.avif`, and MSDF font atlas files as first-class clone assets.
    - Download same-origin public resources first. Download third-party library files only when needed for offline operation and permitted by normal browser access.
    - Preserve original filenames when possible. Use deterministic hashed names only when collisions occur.
 
@@ -65,6 +68,7 @@ For each run, save:
 5. **Handle fragile dependencies**
    - Stub or block analytics, ads, cookie banners, tag managers, social trackers, and A/B testing scripts.
    - Treat Google Maps, form endpoints, WordPress nonces, admin AJAX, Instagram feeds, booking widgets, and private APIs as fragile.
+   - Treat Typekit/Adobe font binaries, Vimeo/YouTube players, payment widgets, and domain-keyed SDKs as fragile. Localize what normal browsing can fetch; leave the service external or build a fallback when it is domain-bound.
    - If a fragile dependency is domain-bound but visually important, keep its container and data, then create a local fallback component.
    - Read `references/pitfalls.md` when diagnosing missing animation, blank blocks, blocked external scripts, or resource-rewrite failures.
 
@@ -82,6 +86,7 @@ For each run, save:
 
 8. **Verify with Playwright**
    - Serve the clone over a local HTTP server. Do not rely only on `file://`.
+   - Use correct MIME types for module JS, wasm, fonts, images, `.buf`, `.riv`, `.sog`, video, and manifests. Complex clones can appear broken simply because the local server served a runtime asset as the wrong type.
    - Check:
      - no critical console errors
      - no failed local resources
@@ -91,7 +96,8 @@ For each run, save:
      - Swiper has an instance or equivalent behavior
      - smooth scroll exists when the source uses it
      - desktop and mobile screenshots look structurally aligned
-   - Scroll through key sections and check hover/click states for navigation, cards, CTA buttons, sliders, maps, feeds, and forms.
+   - Scroll through key sections and check hover/click states for navigation, cards, CTA buttons, sliders, maps, feeds, forms, canvas scenes, Rive canvases, video overlays, and 3D configurators.
+   - For lazy-loaded 3D/canvas sites, repeat the loop: reload local page, collect local 404s, download missing same-origin resources, refresh, and continue until local 404s are gone or only intentionally external/blocked services remain.
 
 9. **Choose and package**
    - Pick the highest-fidelity candidate, usually direct-reuse plus targeted fixes.

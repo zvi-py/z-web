@@ -2,6 +2,8 @@
 
 Load this reference when a local clone looks close but has blank sections, missing animations, failed scripts, wrong assets, or non-smooth interactions.
 
+If the site uses canvas, WebGL, Three.js, Rive, 3D models, compressed splats, wasm, or scroll-driven 3D scenes, also read `complex-motion-3d.md`. Those sites often need iterative runtime-resource discovery, not just static HTML/CSS/JS capture.
+
 ## Direct Reuse Limits
 
 - Public frontend files can usually be reused: HTML, CSS, JS bundles, images, SVG, fonts, video files, Lottie JSON, and public JSON payloads.
@@ -33,6 +35,8 @@ Load this reference when a local clone looks close but has blank sections, missi
 - Missing hero media: check video poster, `source`, lazy-load attributes, and WebP/AVIF variants.
 - Loader never exits: original JS crashed before removing loader; force body visible and disable loader only after capturing the failure.
 - Fonts wrong: check `@font-face` URL rewriting and MIME type from the local server.
+- Blank or incomplete canvas scene: check missing `.wasm`, `.riv`, `.buf`, `.bin`, `.glb`, `.sog`, texture folders, MSDF font atlases, and late-loaded resources exposed only after scroll/hover.
+- Screenshot timeout on a heavy canvas page: run a metrics-only verification first, then retry screenshots with longer timeouts.
 
 ## Verification Checklist
 
@@ -42,4 +46,5 @@ Load this reference when a local clone looks close but has blank sections, missi
 - Check loaded image count against total image count.
 - Check local script/style count.
 - Check runtime library globals and actual rendered animation nodes.
+- Check canvas count, canvas dimensions, wasm/model/texture request status, and whether scripted scroll triggers more local 404s.
 - Scroll, hover, and click through core sections before calling the clone complete.
