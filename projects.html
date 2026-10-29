@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en" data-theme="light">
 <head>
+  <script src="./assets/auth-gate.js"></script>
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
   <meta http-equiv="Pragma" content="no-cache" />
   <meta http-equiv="Expires" content="0" />
@@ -715,6 +716,92 @@
 }
 </style>
 
+
+<style id="zavi-minimal-footer-style">
+.zavi-minimal-footer {
+  background-color: #0c0c0c !important;
+  color: #777777 !important;
+  padding: 80px 48px 48px !important;
+  font-family: 'Fragment Mono', monospace !important;
+  font-size: 11px !important;
+  letter-spacing: 0.08em !important;
+  text-transform: uppercase !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
+  position: relative !important;
+  z-index: 100 !important;
+  box-sizing: border-box !important;
+  width: 100% !important;
+}
+.zavi-min-footer-grid {
+  max-width: 1120px !important;
+  margin: 0 auto !important;
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr) !important;
+  gap: 48px !important;
+}
+.zavi-min-label {
+  color: #555555 !important;
+  margin-bottom: 22px !important;
+  font-size: 11px !important;
+  font-family: 'Fragment Mono', monospace !important;
+}
+.zavi-min-links {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 14px !important;
+}
+.zavi-min-links a, .zavi-min-links span {
+  color: #EEDEE0 !important;
+  text-decoration: none !important;
+  font-family: 'Fragment Mono', monospace !important;
+  font-size: 11px !important;
+  letter-spacing: 0.08em !important;
+  transition: color 0.2s ease !important;
+}
+.zavi-min-links a:hover {
+  color: #FF552E !important;
+}
+.zavi-min-bottom {
+  max-width: 1120px !important;
+  margin: 64px auto 0 !important;
+  padding-top: 24px !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.06) !important;
+  display: flex !important;
+  justify-content: space-between !important;
+  color: #555555 !important;
+  font-size: 10px !important;
+  letter-spacing: 0.08em !important;
+}
+html[data-theme="light"] .zavi-minimal-footer {
+  background-color: #f7f7f5 !important;
+  color: #666666 !important;
+  border-top: 1px solid rgba(0, 0, 0, 0.08) !important;
+}
+html[data-theme="light"] .zavi-min-label {
+  color: #888888 !important;
+}
+html[data-theme="light"] .zavi-min-links a,
+html[data-theme="light"] .zavi-min-links span {
+  color: #111111 !important;
+}
+html[data-theme="light"] .zavi-min-links a:hover {
+  color: #FF552E !important;
+}
+html[data-theme="light"] .zavi-min-bottom {
+  border-top: 1px solid rgba(0, 0, 0, 0.06) !important;
+  color: #888888 !important;
+}
+@media (max-width: 768px) {
+  .zavi-minimal-footer {
+    padding: 60px 24px 36px !important;
+  }
+  .zavi-min-footer-grid {
+    grid-template-columns: 1fr !important;
+    gap: 32px !important;
+  }
+}
+</style>
+
 </head>
 <body>
 
@@ -749,7 +836,7 @@
       
     <a href="https://aurael.vercel.app/" target="_blank" rel="noopener" class="zavi-project-card">
       <div class="zavi-card-preview">
-        <img src="./assets/94vqLf16zzrRzHuSIFh24roas.jpg" alt="Aurael" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;">
+        <img src="./assets/project_covers/cover_aurael.svg" alt="Aurael" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;">
       </div>
       <div class="zavi-card-content">
         <h3 class="zavi-card-title">Aurael</h3>
@@ -758,7 +845,7 @@
     </a>
     <a href="https://zaveriya.vercel.app" target="_blank" rel="noopener" class="zavi-project-card">
       <div class="zavi-card-preview">
-        <video src="./assets/OJfAagBtWLUivBJLt5loMVShVQ.mp4" loop autoplay muted playsinline poster="./assets/ltIrXAljK9f8M2lzL8XhDeJSqE.webp" style="width:100%;height:100%;object-fit:cover;display:block;"></video>
+        <img src="./assets/project_covers/cover_ecocane.svg" alt="EcoCane" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;">
       </div>
       <div class="zavi-card-content">
         <h3 class="zavi-card-title">EcoCane</h3>
@@ -767,7 +854,7 @@
     </a>
     <a href="https://github.com/xozavii" target="_blank" rel="noopener" class="zavi-project-card">
       <div class="zavi-card-preview">
-        <img src="./assets/ZEzMdOICEPPACvEBac5nWV3vwvk.jpg" alt="ZCollab NMC (RISE CRM)" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;">
+        <img src="./assets/project_covers/cover_zcollab.svg" alt="ZCollab NMC (RISE CRM)" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;">
       </div>
       <div class="zavi-card-content">
         <h3 class="zavi-card-title">ZCollab NMC (RISE CRM)</h3>
@@ -776,7 +863,7 @@
     </a>
     <a href="https://ghostedbyzxll.vercel.app/" target="_blank" rel="noopener" class="zavi-project-card">
       <div class="zavi-card-preview">
-        <video src="./assets/YKFmX4qZ7zf0wcgXqvG8WIZBM.mp4" loop autoplay muted playsinline poster="./assets/2nBnLmhRLmgp93zBcdw2yChw2MQ.jpg" style="width:100%;height:100%;object-fit:cover;display:block;"></video>
+        <img src="./assets/project_covers/cover_ghosted.svg" alt="Ghosted" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;">
       </div>
       <div class="zavi-card-content">
         <h3 class="zavi-card-title">Ghosted</h3>
@@ -785,7 +872,7 @@
     </a>
     <a href="https://github.com/xozavii" target="_blank" rel="noopener" class="zavi-project-card">
       <div class="zavi-card-preview">
-        <video src="./assets/Hsjz1UaUJocT12ZIPiJ3Aiih3dI.mp4" loop autoplay muted playsinline poster="./assets/ClK00uxydTRnx2FcyYDqVb9ws.jpg" style="width:100%;height:100%;object-fit:cover;display:block;"></video>
+        <img src="./assets/project_covers/cover_drive.svg" alt="DRIVE" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;">
       </div>
       <div class="zavi-card-content">
         <h3 class="zavi-card-title">DRIVE</h3>
@@ -794,7 +881,7 @@
     </a>
     <a href="https://github.com/xozavii" target="_blank" rel="noopener" class="zavi-project-card">
       <div class="zavi-card-preview">
-        <img src="./assets/2NO1jbNg7kZpdLSnDnqjjvE6CAA.jpg" alt="ZARVIS Review" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;">
+        <img src="./assets/project_covers/cover_zarvis_review.svg" alt="ZARVIS Review" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;">
       </div>
       <div class="zavi-card-content">
         <h3 class="zavi-card-title">ZARVIS Review</h3>
@@ -803,7 +890,7 @@
     </a>
     <a href="https://github.com/xozavii" target="_blank" rel="noopener" class="zavi-project-card">
       <div class="zavi-card-preview">
-        <video src="./assets/gNIrs1aC6XnkA7sOOur1bLZkLg0.mp4" loop autoplay muted playsinline poster="./assets/V6brFN1sUTtWclER5CztgqGkl7k.jpg" style="width:100%;height:100%;object-fit:cover;display:block;"></video>
+        <img src="./assets/project_covers/cover_swas.svg" alt="SWAS" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;">
       </div>
       <div class="zavi-card-content">
         <h3 class="zavi-card-title">SWAS</h3>
@@ -812,7 +899,7 @@
     </a>
     <a href="https://github.com/xozavii" target="_blank" rel="noopener" class="zavi-project-card">
       <div class="zavi-card-preview">
-        <img src="./assets/KIh5lhw09ZvwZ0swXQoMWteco8c.jpg" alt="ZARVIS Insight" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;">
+        <img src="./assets/project_covers/cover_zarvis_insight.svg" alt="ZARVIS Insight" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;">
       </div>
       <div class="zavi-card-content">
         <h3 class="zavi-card-title">ZARVIS Insight</h3>
@@ -821,7 +908,7 @@
     </a>
     <a href="https://finovabyzxll.vercel.app/" target="_blank" rel="noopener" class="zavi-project-card">
       <div class="zavi-card-preview">
-        <img src="./assets/Xz8UOo5RwWPFpLz6H0sloNo35UE.jpg" alt="Finova" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;">
+        <img src="./assets/project_covers/cover_finova.svg" alt="Finova" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;">
       </div>
       <div class="zavi-card-content">
         <h3 class="zavi-card-title">Finova</h3>
@@ -830,7 +917,7 @@
     </a>
     <a href="https://zonexza.vercel.app/" target="_blank" rel="noopener" class="zavi-project-card">
       <div class="zavi-card-preview">
-        <img src="./assets/GUPiK9GXEZSmLChXhgPlz2wEh4E.webp" alt="ZoneXza" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;">
+        <img src="./assets/project_covers/cover_zonexza.svg" alt="ZoneXza" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;">
       </div>
       <div class="zavi-card-content">
         <h3 class="zavi-card-title">ZoneXza</h3>
@@ -839,7 +926,7 @@
     </a>
     <a href="https://github.com/xozavii" target="_blank" rel="noopener" class="zavi-project-card">
       <div class="zavi-card-preview">
-        <img src="./assets/gLZprcLKxglk4zWGledkl2gV1fQ.jpg" alt="TrainLLM" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;">
+        <img src="./assets/project_covers/cover_trainllm.svg" alt="TrainLLM" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;">
       </div>
       <div class="zavi-card-content">
         <h3 class="zavi-card-title">TrainLLM</h3>
@@ -848,7 +935,7 @@
     </a>
     <a href="https://github.com/xozavii" target="_blank" rel="noopener" class="zavi-project-card">
       <div class="zavi-card-preview">
-        <img src="./assets/oa6qxeil3SnDuhs7ikd3X3dKpE.jpg" alt="Face Recognitor" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;">
+        <img src="./assets/project_covers/cover_face_recognitor.svg" alt="Face Recognitor" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;">
       </div>
       <div class="zavi-card-content">
         <h3 class="zavi-card-title">Face Recognitor</h3>
@@ -857,7 +944,7 @@
     </a>
     <a href="https://github.com/xozavii" target="_blank" rel="noopener" class="zavi-project-card">
       <div class="zavi-card-preview">
-        <img src="./assets/r28TOPU5FurVvMAfI5vySdXj5Wo.jpg" alt="HeatRay" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;">
+        <img src="./assets/project_covers/cover_heatray.svg" alt="HeatRay" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;">
       </div>
       <div class="zavi-card-content">
         <h3 class="zavi-card-title">HeatRay</h3>
@@ -866,7 +953,7 @@
     </a>
     <a href="https://github.com/xozavii" target="_blank" rel="noopener" class="zavi-project-card">
       <div class="zavi-card-preview">
-        <img src="./assets/rYpGIb3MygYvhwgSUEJYk8t5oII.jpg" alt="Heart Calculator" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;">
+        <img src="./assets/project_covers/cover_heart_calc.svg" alt="Heart Calculator" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;">
       </div>
       <div class="zavi-card-content">
         <h3 class="zavi-card-title">Heart Calculator</h3>
@@ -1014,34 +1101,32 @@
 </section>
 
   <!-- Footer -->
-  <footer style="background:#000000 !important;color:#FFFFFF !important;padding:48px clamp(20px, 4vw, 60px) 36px !important;border-top:1px solid rgba(255,255,255,0.1) !important;width:100% !important;box-sizing:border-box !important;">
-  <div style="max-width:1400px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit, minmax(200px, 1fr));gap:32px;margin-bottom:40px;">
-    <!-- Column 1: Social -->
-    <div>
-      <span style="font-family:'Fragment Mono',monospace !important;font-size:11px !important;letter-spacing:0.14em !important;color:#666666 !important;text-transform:uppercase !important;display:block !important;margin-bottom:14px !important;">[social]</span>
-      <div style="display:flex;flex-direction:column;gap:8px;">
-        <a href="https://linkedin.com/in/zaveriya" target="_blank" rel="noopener noreferrer" style="font-family:'Fragment Mono',monospace !important;font-size:12.5px !important;color:#EEEDE4 !important;text-decoration:none !important;letter-spacing:0.04em !important;transition:color 0.2s;">LINKEDIN</a>
-        <a href="https://github.com/xozavii" target="_blank" rel="noopener noreferrer" style="font-family:'Fragment Mono',monospace !important;font-size:12.5px !important;color:#EEEDE4 !important;text-decoration:none !important;letter-spacing:0.04em !important;transition:color 0.2s;">GITHUB</a>
-        <a href="https://instagram.com/zvi.py" target="_blank" rel="noopener noreferrer" style="font-family:'Fragment Mono',monospace !important;font-size:12.5px !important;color:#EEEDE4 !important;text-decoration:none !important;letter-spacing:0.04em !important;transition:color 0.2s;">INSTAGRAM</a>
+  <footer class="zavi-minimal-footer">
+  <div class="zavi-min-footer-grid">
+    <div class="zavi-min-col">
+      <div class="zavi-min-label">[social]</div>
+      <div class="zavi-min-links">
+        <a href="https://linkedin.com/in/zaveriya" target="_blank" rel="noopener">LINKEDIN</a>
+        <a href="https://github.com/xozavii" target="_blank" rel="noopener">GITHUB</a>
+        <a href="https://instagram.com/zvi.py" target="_blank" rel="noopener">INSTAGRAM</a>
       </div>
     </div>
-    <!-- Column 2: Reach -->
-    <div>
-      <span style="font-family:'Fragment Mono',monospace !important;font-size:11px !important;letter-spacing:0.14em !important;color:#666666 !important;text-transform:uppercase !important;display:block !important;margin-bottom:14px !important;">[reach]</span>
-      <div style="display:flex;flex-direction:column;gap:8px;">
-        <a href="mailto:zaveriya.edu@gmail.com?subject=Book%20a%20Call%20with%20Zaveriya" style="font-family:'Fragment Mono',monospace !important;font-size:12.5px !important;color:#EEEDE4 !important;text-decoration:none !important;letter-spacing:0.04em !important;transition:color 0.2s;">BOOK A CALL</a>
-        <a href="mailto:zaveriya.edu@gmail.com" style="font-family:'Fragment Mono',monospace !important;font-size:12.5px !important;color:#EEEDE4 !important;text-decoration:none !important;letter-spacing:0.04em !important;transition:color 0.2s;">EMAIL</a>
+    <div class="zavi-min-col">
+      <div class="zavi-min-label">[reach]</div>
+      <div class="zavi-min-links">
+        <a href="mailto:zaveriya.edu@gmail.com">BOOK A CALL</a>
+        <a href="mailto:zaveriya.edu@gmail.com">EMAIL</a>
       </div>
     </div>
-    <!-- Column 3: Location -->
-    <div>
-      <span style="font-family:'Fragment Mono',monospace !important;font-size:11px !important;letter-spacing:0.14em !important;color:#666666 !important;text-transform:uppercase !important;display:block !important;margin-bottom:14px !important;">[location]</span>
-      <span style="font-family:'Fragment Mono',monospace !important;font-size:12.5px !important;color:#EEEDE4 !important;letter-spacing:0.04em !important;display:block !important;">INDIA</span>
+    <div class="zavi-min-col">
+      <div class="zavi-min-label">[location]</div>
+      <div class="zavi-min-links">
+        <span class="zavi-min-loc">INDIA</span>
+      </div>
     </div>
   </div>
-  <!-- Bottom Copyright -->
-  <div style="max-width:1400px;margin:0 auto;padding-top:24px;border-top:1px solid rgba(255,255,255,0.08);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;">
-    <span style="font-family:'Fragment Mono',monospace !important;font-size:11.5px !important;color:rgba(255,255,255,0.5) !important;letter-spacing:0.04em !important;">&copy; Zaveriya . All rights reserved.</span>
+  <div class="zavi-min-bottom">
+    <span>&copy; Zaveriya . All rights reserved.</span>
   </div>
 </footer>
 
