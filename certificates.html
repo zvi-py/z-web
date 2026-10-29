@@ -24,145 +24,553 @@
 }
 </style>
 
-<style id="zavi-experience-identical-typography">
+<style id="zavi-web-one-harmony">
 
-    .zavi-hero-main-title {
-      font-family: 'Inter Display', sans-serif !important;
-      font-size: clamp(48px, 8.5vw, 110px) !important;
-      font-weight: 700 !important;
-      letter-spacing: -0.04em !important;
-      line-height: 0.95 !important;
-      color: #000000 !important;
-      text-transform: uppercase !important;
-    }
-    
+  :root body, html body {
+    background: var(--token-af4aa957-55ee-4f69-b04a-fc26bc15a171, rgb(32, 32, 32)) !important;
+    background-color: rgb(32, 32, 32) !important;
+    color: #EEEDE4 !important;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif !important;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+  }
 
-    .zavi-web1-title {
-      font-family: 'Inter Display', sans-serif !important;
-      font-size: clamp(24px, 2.8vw, 36px) !important;
-      font-weight: 700 !important;
-      letter-spacing: -0.03em !important;
-      line-height: 1.12 !important;
-      color: #000000 !important;
-      margin: 0 0 20px 0 !important;
-      text-transform: uppercase !important;
-    }
-    
+  /* Two Column Editorial Section */
+  .zavi-web1-section {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+    border-bottom: 1px solid rgba(238, 237, 228, 0.12);
+    padding: 56px 0;
+    box-sizing: border-box;
+  }
 
-    .zavi-web1-role {
-      font-family: 'Inter Display', sans-serif !important;
-      font-size: clamp(18px, 2vw, 24px) !important;
-      font-weight: 600 !important;
-      color: #000000 !important;
-      letter-spacing: -0.02em !important;
-      margin: 0 !important;
-      line-height: 1.25 !important;
+  @media (min-width: 900px) {
+    .zavi-web1-section {
+      grid-template-columns: 360px 1fr;
+      gap: 64px;
     }
-    
+  }
 
-    .zavi-web1-tag {
-      font-family: 'Fragment Mono', monospace !important;
-      font-size: 11.5px !important;
-      letter-spacing: 0.14em !important;
-      color: #6D001A !important;
-      text-transform: uppercase !important;
-      display: block !important;
-      margin-bottom: 12px !important;
-      font-weight: 600 !important;
-    }
+  .zavi-web1-sidebar {
+    position: relative;
+  }
 
-    .zavi-web1-meta {
-      font-family: 'Fragment Mono', monospace !important;
-      font-size: 11.5px !important;
-      color: #6D001A !important;
-      letter-spacing: 0.08em !important;
-      text-transform: uppercase !important;
-      font-weight: 600 !important;
+  @media (min-width: 900px) {
+    .zavi-web1-sidebar.is-sticky {
+      position: sticky;
+      top: 110px;
+      height: fit-content;
     }
+  }
 
-    .zavi-web1-sub {
-      font-family: 'Fragment Mono', monospace !important;
-      font-size: 12.5px !important;
-      color: #6D001A !important;
-      letter-spacing: 0.04em !important;
-      margin: 6px 0 10px 0 !important;
-      font-weight: 600 !important;
-    }
+  .zavi-web1-tag {
+    font-family: 'Fragment Mono', monospace !important;
+    font-size: 11.5px !important;
+    letter-spacing: 0.14em !important;
+    color: var(--token-2b91d2ee-29b9-46c0-b84b-a645bbb7ee0c, rgb(92, 92, 89)) !important;
+    text-transform: uppercase !important;
+    display: block !important;
+    margin-bottom: 12px !important;
+  }
 
-    .zavi-web1-desc {
-      font-family: 'Inter', sans-serif !important;
-      font-size: 14.5px !important;
-      line-height: 1.65 !important;
-      color: #2b2b2b !important;
-      margin: 0 !important;
-      max-width: 820px !important;
-    }
-    
+  .zavi-web1-title {
+    font-family: 'Inter Display', sans-serif !important;
+    font-size: clamp(24px, 2.8vw, 36px) !important;
+    font-weight: 700 !important;
+    letter-spacing: -0.03em !important;
+    line-height: 1.12 !important;
+    color: #EEEDE4 !important;
+    margin: 0 0 20px 0 !important;
+    text-transform: uppercase !important;
+  }
+
+  .zavi-web1-media {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border-radius: 0px;
+    overflow: hidden;
+    background: #181818;
+    margin-top: 24px;
+    border: 1px solid rgba(238, 237, 228, 0.1);
+  }
+
+  .zavi-web1-media video,
+  .zavi-web1-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  /* Editorial Ledger Row */
+  .zavi-web1-row {
+    border-top: 1px solid rgba(238, 237, 228, 0.12);
+    padding: 28px 0;
+    display: grid;
+    grid-template-columns: 44px 1fr;
+    gap: 16px;
+    transition: background 0.2s ease, padding-left 0.2s ease;
+  }
+
+  .zavi-web1-row:hover {
+    background: rgba(255, 255, 255, 0.02);
+    padding-left: 8px;
+  }
+
+  .zavi-web1-num {
+    font-family: 'Fragment Mono', monospace !important;
+    font-size: 13.5px !important;
+    color: var(--token-2b91d2ee-29b9-46c0-b84b-a645bbb7ee0c, rgb(92, 92, 89)) !important;
+    letter-spacing: 0.08em !important;
+    padding-top: 3px !important;
+  }
+
+  .zavi-web1-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 4px;
+  }
+
+  .zavi-web1-role {
+    font-family: 'Inter Display', sans-serif !important;
+    font-size: clamp(18px, 2vw, 24px) !important;
+    font-weight: 600 !important;
+    color: #EEEDE4 !important;
+    letter-spacing: -0.02em !important;
+    margin: 0 !important;
+  }
+
+  .zavi-web1-meta {
+    font-family: 'Fragment Mono', monospace !important;
+    font-size: 11.5px !important;
+    color: rgba(238, 237, 228, 0.5) !important;
+    letter-spacing: 0.08em !important;
+    text-transform: uppercase !important;
+  }
+
+  .zavi-web1-sub {
+    font-family: 'Fragment Mono', monospace !important;
+    font-size: 12.5px !important;
+    color: rgba(238, 237, 228, 0.8) !important;
+    letter-spacing: 0.04em !important;
+    margin: 4px 0 8px 0 !important;
+  }
+
+  .zavi-web1-desc {
+    font-family: 'Inter', sans-serif !important;
+    font-size: 14.5px !important;
+    line-height: 1.65 !important;
+    color: rgba(238, 237, 228, 0.65) !important;
+    margin: 0 !important;
+    max-width: 820px !important;
+  }
+
+  /* Table style ledger for Certifications */
+  .zavi-web1-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  .zavi-web1-table th {
+    text-align: left;
+    font-family: 'Fragment Mono', monospace !important;
+    font-size: 11px !important;
+    letter-spacing: 0.14em !important;
+    color: var(--token-2b91d2ee-29b9-46c0-b84b-a645bbb7ee0c, rgb(92, 92, 89)) !important;
+    text-transform: uppercase !important;
+    padding: 16px 8px;
+    border-bottom: 1px solid rgba(238, 237, 228, 0.2);
+  }
+
+  .zavi-web1-table-row {
+    border-bottom: 1px solid rgba(238, 237, 228, 0.1);
+    transition: background 0.2s ease;
+  }
+
+  .zavi-web1-table-row:hover {
+    background: rgba(255, 255, 255, 0.03);
+  }
+
+  .zavi-web1-table-row td {
+    padding: 18px 8px;
+    vertical-align: middle;
+  }
+
+  .zavi-cert-title-web1 {
+    font-family: 'Inter Display', sans-serif !important;
+    font-size: 15.5px !important;
+    font-weight: 600 !important;
+    color: #EEEDE4 !important;
+    margin: 0 0 3px 0 !important;
+    letter-spacing: -0.01em !important;
+  }
+
+  .zavi-cert-verify-web1 {
+    font-family: 'Fragment Mono', monospace !important;
+    font-size: 11.5px !important;
+    color: rgba(238, 237, 228, 0.75) !important;
+    text-decoration: none !important;
+    border-bottom: 1px solid rgba(238, 237, 228, 0.3) !important;
+    padding-bottom: 2px !important;
+    transition: all 0.2s ease !important;
+    white-space: nowrap !important;
+  }
+
+  .zavi-cert-verify-web1:hover {
+    color: #EEEDE4 !important;
+    border-bottom-color: #EEEDE4 !important;
+  }
+
+</style>
+<style id="zavi-caesar-theme-system">
+
+  /* ==============================================================================
+     PROJECT: CAESAR THEME SYSTEM
+     BLACK:    #000000 (rgb 0, 0, 0)
+     BURGUNDY: #6D001A (rgb 109, 0, 26)
+     WHITE:    #FFFFFF (rgb 255, 255, 255)
+     ============================================================================== */
+
+  /* Global Color Transitions */
+  html, body, header, footer, div, a, span, p, h1, h2, h3, button, section, nav {
+    transition: background-color 0.3s cubic-bezier(0.16, 1, 0.3, 1), 
+                color 0.3s cubic-bezier(0.16, 1, 0.3, 1), 
+                border-color 0.3s cubic-bezier(0.16, 1, 0.3, 1), 
+                box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  }
+
+  /* ----------------------------------------------------------------------------
+     LIGHT THEME ENGINE (data-theme="light")
+     ---------------------------------------------------------------------------- */
+  html[data-theme="light"],
+  html[data-theme="light"] body {
+    --token-af4aa957-55ee-4f69-b04a-fc26bc15a171: #FFFFFF !important;
+    --token-c3043347-e55d-4e8f-a620-23399553e32c: #000000 !important;
+    --token-2b91d2ee-29b9-46c0-b84b-a645bbb7ee0c: #6D001A !important;
+    --token-944eeee7-f018-48d5-8e8a-c85a388a648e: #555555 !important;
+    background-color: #FFFFFF !important;
+    background: #FFFFFF !important;
+    color: #000000 !important;
+  }
+
+  /* 1. Header & Navigation (Light Theme) */
+  html[data-theme="light"] header,
+  html[data-theme="light"] .framer-2g118,
+  html[data-theme="light"] .zavi-pinned-header {
+    background: rgba(255, 255, 255, 0.95) !important;
+    backdrop-filter: blur(18px) !important;
+    -webkit-backdrop-filter: blur(18px) !important;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08) !important;
+    box-shadow: 0 1px 12px rgba(0, 0, 0, 0.03) !important;
+  }
+
+  html[data-theme="light"] .zavi-brand-logo-link,
+  html[data-theme="light"] .zavi-pinned-logo,
+  html[data-theme="light"] header a,
+  html[data-theme="light"] header p,
+  html[data-theme="light"] header span,
+  html[data-theme="light"] header nav a,
+  html[data-theme="light"] .zavi-pinned-nav a,
+  html[data-theme="light"] .zavi-nav-link,
+  html[data-theme="light"] .framer-text a {
+    color: #000000 !important;
+  }
+
+  html[data-theme="light"] header img[src*="star_logo.svg"],
+  html[data-theme="light"] header img[src*="header_star.svg"] {
+    filter: invert(1) brightness(0.15) !important;
+  }
+
+  /* Active Nav Link in Caesar Burgundy #6D001A */
+  html[data-theme="light"] header nav a:hover,
+  html[data-theme="light"] .zavi-pinned-nav a:hover,
+  html[data-theme="light"] .zavi-nav-link:hover,
+  html[data-theme="light"] header nav a.is-active,
+  html[data-theme="light"] .zavi-pinned-nav a.is-active,
+  html[data-theme="light"] .zavi-nav-link.is-active,
+  html[data-theme="light"] header a.framer-text.is-active,
+  html[data-theme="light"] header a[style*="FF5500"],
+  html[data-theme="light"] header a[style*="FF3B1D"] {
+    color: #6D001A !important;
+  }
+
+  html[data-theme="light"] a[href^="mailto"] {
+    color: #000000 !important;
+  }
+  html[data-theme="light"] a[href^="mailto"]:hover {
+    color: #6D001A !important;
+  }
+
+  /* 2. Headings & Typography */
+  html[data-theme="light"] h1,
+  html[data-theme="light"] h2,
+  html[data-theme="light"] h3,
+  html[data-theme="light"] .framer-text,
+  html[data-theme="light"] .framer-styles-preset-7qd6t6,
+  html[data-theme="light"] .zavi-web1-heading,
+  html[data-theme="light"] .zavi-folders-heading,
+  html[data-theme="light"] .zavi-tag-title,
+  html[data-theme="light"] .zavi-clean-proj-title,
+  html[data-theme="light"] .zavi-clean-proj-name {
+    color: #000000 !important;
+    --framer-text-color: #000000 !important;
+  }
+
+  html[data-theme="light"] p,
+  html[data-theme="light"] .zavi-web1-desc,
+  html[data-theme="light"] .zavi-tag-track span,
+  html[data-theme="light"] .framer-styles-preset-1246dxt,
+  html[data-theme="light"] .zavi-clean-proj-sub {
+    color: #222222 !important;
+  }
+
+  /* Caesar Burgundy Accents */
+  html[data-theme="light"] .zavi-web1-tag,
+  html[data-theme="light"] .zavi-folders-tag,
+  html[data-theme="light"] .zavi-tag-cat-tag,
+  html[data-theme="light"] .zavi-tag-dot,
+  html[data-theme="light"] .zavi-pinned-num,
+  html[data-theme="light"] .zavi-clean-proj-cat,
+  html[data-theme="light"] .zavi-clean-proj-tag {
+    color: #6D001A !important;
+  }
+
+  /* 3. Experience Page (Light Theme) */
+  html[data-theme="light"] .zavi-web1-section {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08) !important;
+  }
+  html[data-theme="light"] .zavi-web1-sub,
+  html[data-theme="light"] .zavi-web1-meta,
+  html[data-theme="light"] [class*="zavi-web1-meta"] {
+    color: #6D001A !important;
+    font-weight: 600 !important;
+  }
+  html[data-theme="light"] .zavi-web1-media-frame {
+    border: 1px solid rgba(0, 0, 0, 0.1) !important;
+    background: #F8F8F8 !important;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04) !important;
+  }
+
+  /* 4. Certificates Page (Light Theme) */
+  html[data-theme="light"] #zavi-cert-specimens-section {
+    background: #FFFFFF !important;
+    background-image: 
+      linear-gradient(rgba(109, 0, 26, 0.035) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(109, 0, 26, 0.035) 1px, transparent 1px) !important;
+    background-size: 32px 32px !important;
+  }
+
+  html[data-theme="light"] .zavi-anno-note,
+  html[data-theme="light"] .zavi-pinned-trail-badge {
+    background: rgba(109, 0, 26, 0.06) !important;
+    border: 1px solid #6D001A !important;
+    color: #6D001A !important;
+  }
+  html[data-theme="light"] .zavi-anno-note span {
+    color: #6D001A !important;
+  }
+
+  html[data-theme="light"] .zavi-tag-card {
+    background: #FFFFFF !important;
+    border: 1px solid rgba(0, 0, 0, 0.14) !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06), 0 2px 8px rgba(109, 0, 26, 0.04) !important;
+  }
+  html[data-theme="light"] .zavi-tag-card:hover {
+    border-color: #6D001A !important;
+    box-shadow: 0 16px 42px rgba(109, 0, 26, 0.16) !important;
+  }
+
+  html[data-theme="light"] .zavi-tag-inner {
+    background: #FAFAFA !important;
+    border: 1px solid rgba(0, 0, 0, 0.06) !important;
+  }
+
+  html[data-theme="light"] .zavi-tag-num {
+    color: #6D001A !important;
+  }
+
+  html[data-theme="light"] .zavi-tag-grommet {
+    border-color: #6D001A !important;
+    background: radial-gradient(circle, #EAEAEA 40%, #B8B8B8 100%) !important;
+  }
+
+  /* Company Badges in Caesar Burgundy */
+  html[data-theme="light"] .zavi-company-badge,
+  html[data-theme="light"] .zavi-company-badge.zavi-badge-amazon,
+  html[data-theme="light"] .zavi-company-badge.zavi-badge-microsoft,
+  html[data-theme="light"] .zavi-company-badge.zavi-badge-google,
+  html[data-theme="light"] .zavi-company-badge.zavi-badge-ibm,
+  html[data-theme="light"] .zavi-company-badge.zavi-badge-cisco {
+    background: #6D001A !important;
+    color: #FFFFFF !important;
+    border: 1px solid #6D001A !important;
+    box-shadow: 0 2px 8px rgba(109, 0, 26, 0.25) !important;
+  }
+
+  /* Category Filter Buttons in Light Theme */
+  html[data-theme="light"] .zavi-filter-btn {
+    background: #FFFFFF !important;
+    border: 1px solid rgba(0, 0, 0, 0.2) !important;
+    color: #111111 !important;
+    font-weight: 600 !important;
+  }
+  html[data-theme="light"] .zavi-filter-btn:hover {
+    border-color: #6D001A !important;
+    color: #6D001A !important;
+  }
+  html[data-theme="light"] .zavi-filter-btn.is-active {
+    background: #6D001A !important;
+    border-color: #6D001A !important;
+    color: #FFFFFF !important;
+    box-shadow: 0 4px 14px rgba(109, 0, 26, 0.35) !important;
+  }
+
+  html[data-theme="light"] .zavi-tag-btn {
+    border: 1px solid #6D001A !important;
+    color: #6D001A !important;
+    background: rgba(109, 0, 26, 0.04) !important;
+  }
+  html[data-theme="light"] .zavi-tag-btn:hover {
+    background: #6D001A !important;
+    color: #FFFFFF !important;
+  }
+
+  /* 5. Projects Page (Light Theme) */
+  html[data-theme="light"] .framer-1a938j-container,
+  html[data-theme="light"] .zavi-clean-proj-card {
+    background: #FFFFFF !important;
+    border-color: rgba(0, 0, 0, 0.12) !important;
+  }
+  html[data-theme="light"] .zavi-clean-proj-card:hover {
+    border-color: #6D001A !important;
+  }
+  html[data-theme="light"] .zavi-clean-proj-subtitle {
+    color: #6D001A !important;
+  }
+
+  /* 6. Homepage & 4 Folders (Light Theme) */
+  html[data-theme="light"] #zavi-folders-section {
+    background: #FFFFFF !important;
+    border-top: 1px solid rgba(0, 0, 0, 0.08) !important;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08) !important;
+  }
+  
+  
+
+  html[data-theme="light"] #zaviTypewriterBox {
+    color: #000000 !important;
+    text-shadow: 0 1px 6px rgba(255, 255, 255, 0.9) !important;
+  }
+  html[data-theme="light"] #zaviTypewriterCursor {
+    color: #6D001A !important;
+  }
+  html[data-theme="light"] #zaviScrollBtn {
+    background: rgba(255, 255, 255, 0.95) !important;
+    border-color: #6D001A !important;
+    color: #6D001A !important;
+    box-shadow: 0 4px 18px rgba(109, 0, 26, 0.22) !important;
+  }
+  html[data-theme="light"] .zavi-scroll-dot {
+    background: #6D001A !important;
+    box-shadow: 0 0 6px #6D001A !important;
+  }
+  html[data-theme="light"] .zavi-scroll-arrow {
+    color: #6D001A !important;
+  }
+
+  /* 7. Footer (Project Caesar Anchor - Black & White) */
+  html[data-theme="light"] footer,
+  html[data-theme="light"] footer.framer-MLDwj {
+    background: #000000 !important;
+    color: #FFFFFF !important;
+  }
+  html[data-theme="light"] footer p,
+  html[data-theme="light"] footer a {
+    color: #CCCCCC !important;
+  }
+  html[data-theme="light"] footer a:hover {
+    color: #6D001A !important;
+  }
+
+  /* 8. Bottom Folders Dock (Light Theme) */
+  html[data-theme="light"] .zavi-bottom-dock {
+    background: #FFFFFF !important;
+    border-top: 1px solid rgba(0, 0, 0, 0.08) !important;
+  }
+  html[data-theme="light"] .zavi-bottom-dock span.zavi-heat-folder-label {
+    color: #111111 !important;
+  }
+  html[data-theme="light"] .zavi-bottom-dock div[style*="color:#6D001A"],
+  html[data-theme="light"] .zavi-bottom-dock div[style*="color: rgb(109, 0, 26)"] {
+    color: #6D001A !important;
+  }
+
+
+  /* Certificates Page Verify Credly Links */
+  html[data-theme="light"] .zavi-cert-verify-link {
+    color: #6D001A !important;
+    text-decoration: none !important;
+    border-bottom: 1px solid rgba(109, 0, 26, 0.35) !important;
+    padding-bottom: 1px !important;
+    transition: all 0.2s ease !important;
+    font-weight: 600 !important;
+  }
+  html[data-theme="light"] .zavi-cert-verify-link:hover {
+    color: #000000 !important;
+    border-bottom-color: #000000 !important;
+  }
+
+  html[data-theme="dark"] .zavi-cert-verify-link {
+    color: rgba(238, 237, 228, 0.75) !important;
+    text-decoration: none !important;
+    border-bottom: 1px solid rgba(238, 237, 228, 0.3) !important;
+    padding-bottom: 1px !important;
+    transition: all 0.2s ease !important;
+  }
+  html[data-theme="dark"] .zavi-cert-verify-link:hover {
+    color: #EEEDE4 !important;
+    border-bottom-color: #EEEDE4 !important;
+  }
+
+  /* Authentic Dark Burnt Orange Folder Hover Shade (#881C00 / #A03C0A) */
+  .zavi-heat-folder:hover .zavi-heat-folder-icon,
+  .zavi-heat-folder.is-hovered .zavi-heat-folder-icon,
+  #zavi-fingerprint-folders-dock .zavi-heat-folder:hover .zavi-heat-folder-icon,
+  #zavi-fingerprint-folders-dock .zavi-heat-folder.is-hovered .zavi-heat-folder-icon,
+  #zavi-folders-section .zavi-heat-folder:hover .zavi-heat-folder-icon,
+  #zavi-folders-section .zavi-heat-folder.is-hovered .zavi-heat-folder-icon,
+  .zavi-bottom-dock .zavi-heat-folder:hover .zavi-heat-folder-icon,
+  .zavi-bottom-dock .zavi-heat-folder.is-hovered .zavi-heat-folder-icon {
+    filter: hue-rotate(188deg) saturate(7.5) brightness(0.60) contrast(1.3) drop-shadow(0 14px 28px rgba(136, 28, 0, 0.5)) !important;
+    -webkit-filter: hue-rotate(188deg) saturate(7.5) brightness(0.60) contrast(1.3) drop-shadow(0 14px 28px rgba(136, 28, 0, 0.5)) !important;
+    transform: scale(1.08) !important;
+  }
+
+  .zavi-heat-folder:hover .zavi-heat-folder-label,
+  .zavi-heat-folder.is-hovered .zavi-heat-folder-label,
+  #zavi-fingerprint-folders-dock .zavi-heat-folder:hover .zavi-heat-folder-label,
+  #zavi-fingerprint-folders-dock .zavi-heat-folder.is-hovered .zavi-heat-folder-label,
+  #zavi-folders-section .zavi-heat-folder:hover .zavi-heat-folder-label,
+  #zavi-folders-section .zavi-heat-folder.is-hovered .zavi-heat-folder-label,
+  .zavi-bottom-dock .zavi-heat-folder:hover .zavi-heat-folder-label,
+  .zavi-bottom-dock .zavi-heat-folder.is-hovered .zavi-heat-folder-label {
+    color: #FF552E !important;
+    text-shadow: 0 0 12px rgba(255, 85, 46, 0.6) !important;
+  }
+
 </style>
 
 
 
-<style id="zavi-authentic-heat-orange-hover">
-/* AUTHENTIC HEAT BUREAU DARK ORANGE FOLDER HOVER ENGINE */
-.zavi-heat-folder {
-  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
-}
-.zavi-heat-folder:hover,
-.zavi-heat-folder.is-hovered {
-  transform: translateY(-14px) scale(1.10) !important;
-  z-index: 100 !important;
-}
-.zavi-heat-folder:hover .zavi-heat-folder-icon,
-.zavi-heat-folder.is-hovered .zavi-heat-folder-icon {
-  filter: hue-rotate(200deg) saturate(5.5) brightness(0.92) contrast(1.1) drop-shadow(0 18px 36px rgba(235, 75, 0, 0.75)) !important;
-  -webkit-filter: hue-rotate(200deg) saturate(5.5) brightness(0.92) contrast(1.1) drop-shadow(0 18px 36px rgba(235, 75, 0, 0.75)) !important;
-}
-.zavi-heat-folder:hover .zavi-heat-folder-label,
-.zavi-heat-folder.is-hovered .zavi-heat-folder-label {
-  color: #FF552E !important;
-  text-shadow: 0 0 12px rgba(255, 85, 46, 0.6) !important;
-}
-</style>
 
-<style id='zavi-universal-orange-hover'>
-/* UNIVERSAL AUTHENTIC HEAT BUREAU DARK ORANGE FOLDER HOVER */
-.zavi-heat-folder:hover,
-.zavi-heat-folder.is-hovered,
-#zavi-fingerprint-folders-dock .zavi-heat-folder:hover,
-#zavi-fingerprint-folders-dock .zavi-heat-folder.is-hovered,
-#zavi-folders-section .zavi-heat-folder:hover,
-#zavi-folders-section .zavi-heat-folder.is-hovered,
-.zavi-bottom-dock .zavi-heat-folder:hover,
-.zavi-bottom-dock .zavi-heat-folder.is-hovered {
-  transform: translateY(-14px) scale(1.10) !important;
-  z-index: 100 !important;
-}
 
-.zavi-heat-folder:hover .zavi-heat-folder-icon,
-.zavi-heat-folder.is-hovered .zavi-heat-folder-icon,
-#zavi-fingerprint-folders-dock .zavi-heat-folder:hover .zavi-heat-folder-icon,
-#zavi-fingerprint-folders-dock .zavi-heat-folder.is-hovered .zavi-heat-folder-icon,
-#zavi-folders-section .zavi-heat-folder:hover .zavi-heat-folder-icon,
-#zavi-folders-section .zavi-heat-folder.is-hovered .zavi-heat-folder-icon,
-.zavi-bottom-dock .zavi-heat-folder:hover .zavi-heat-folder-icon,
-.zavi-bottom-dock .zavi-heat-folder.is-hovered .zavi-heat-folder-icon {
-  filter: hue-rotate(200deg) saturate(5.5) brightness(0.92) contrast(1.1) drop-shadow(0 18px 36px rgba(235, 75, 0, 0.75)) !important;
-  -webkit-filter: hue-rotate(200deg) saturate(5.5) brightness(0.92) contrast(1.1) drop-shadow(0 18px 36px rgba(235, 75, 0, 0.75)) !important;
-  transform: scale(1.08) !important;
-}
 
-.zavi-heat-folder:hover .zavi-heat-folder-label,
-.zavi-heat-folder.is-hovered .zavi-heat-folder-label,
-#zavi-fingerprint-folders-dock .zavi-heat-folder:hover .zavi-heat-folder-label,
-#zavi-fingerprint-folders-dock .zavi-heat-folder.is-hovered .zavi-heat-folder-label,
-#zavi-folders-section .zavi-heat-folder:hover .zavi-heat-folder-label,
-#zavi-folders-section .zavi-heat-folder.is-hovered .zavi-heat-folder-label,
-.zavi-bottom-dock .zavi-heat-folder:hover .zavi-heat-folder-label,
-.zavi-bottom-dock .zavi-heat-folder.is-hovered .zavi-heat-folder-label {
-  color: #FF552E !important;
-  text-shadow: 0 0 12px rgba(255, 85, 46, 0.6) !important;
-}
-</style>
 <style id='zavi-framer-authentic-fonts'>
 /* cyrillic-ext */
 
@@ -741,6 +1149,142 @@ body {
 }
 </style>
 
+
+<style id="zavi-authentic-heat-orange-hover">
+/* AUTHENTIC HEAT BUREAU DARK ORANGE FOLDER HOVER ENGINE (#881C00 / #A03C0A) */
+.zavi-heat-folder {
+  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
+}
+.zavi-heat-folder:hover,
+.zavi-heat-folder.is-hovered,
+#zavi-fingerprint-folders-dock .zavi-heat-folder:hover,
+#zavi-fingerprint-folders-dock .zavi-heat-folder.is-hovered,
+#zavi-folders-section .zavi-heat-folder:hover,
+#zavi-folders-section .zavi-heat-folder.is-hovered,
+.zavi-bottom-dock .zavi-heat-folder:hover,
+.zavi-bottom-dock .zavi-heat-folder.is-hovered {
+  transform: translateY(-14px) scale(1.10) !important;
+  z-index: 100 !important;
+}
+.zavi-heat-folder:hover .zavi-heat-folder-icon,
+.zavi-heat-folder.is-hovered .zavi-heat-folder-icon,
+#zavi-fingerprint-folders-dock .zavi-heat-folder:hover .zavi-heat-folder-icon,
+#zavi-fingerprint-folders-dock .zavi-heat-folder.is-hovered .zavi-heat-folder-icon,
+#zavi-folders-section .zavi-heat-folder:hover .zavi-heat-folder-icon,
+#zavi-folders-section .zavi-heat-folder.is-hovered .zavi-heat-folder-icon,
+.zavi-bottom-dock .zavi-heat-folder:hover .zavi-heat-folder-icon,
+.zavi-bottom-dock .zavi-heat-folder.is-hovered .zavi-heat-folder-icon {
+  filter: hue-rotate(188deg) saturate(7.5) brightness(0.60) contrast(1.3) drop-shadow(0 14px 28px rgba(136, 28, 0, 0.5)) !important;
+  -webkit-filter: hue-rotate(188deg) saturate(7.5) brightness(0.60) contrast(1.3) drop-shadow(0 14px 28px rgba(136, 28, 0, 0.5)) !important;
+  transform: scale(1.08) !important;
+}
+.zavi-heat-folder:hover .zavi-heat-folder-label,
+.zavi-heat-folder.is-hovered .zavi-heat-folder-label,
+#zavi-fingerprint-folders-dock .zavi-heat-folder:hover .zavi-heat-folder-label,
+#zavi-fingerprint-folders-dock .zavi-heat-folder.is-hovered .zavi-heat-folder-label,
+#zavi-folders-section .zavi-heat-folder:hover .zavi-heat-folder-label,
+#zavi-folders-section .zavi-heat-folder.is-hovered .zavi-heat-folder-label,
+.zavi-bottom-dock .zavi-heat-folder:hover .zavi-heat-folder-label,
+.zavi-bottom-dock .zavi-heat-folder.is-hovered .zavi-heat-folder-label {
+  color: #FF552E !important;
+  text-shadow: 0 0 12px rgba(255, 85, 46, 0.6) !important;
+}
+</style>
+
+
+<style id="zavi-cert-dock-and-footer-css">
+  /* =========================================================
+     AUTHENTIC DIRECTORY SELECTION & ARCHIVES WORKSPACES DOCK
+     ========================================================= */
+  #zavi-folders-section,
+  .zavi-bottom-dock {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    width: 100% !important;
+    min-height: 46vh !important;
+    padding: 60px 24px 75px 24px !important;
+    background: #FFFFFF !important;
+    background-color: #FFFFFF !important;
+    position: relative !important;
+    z-index: 1000 !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    box-sizing: border-box !important;
+    border-top: 1px solid rgba(0, 0, 0, 0.08) !important;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08) !important;
+    text-align: center !important;
+  }
+
+  .zavi-folders-header-block {
+    text-align: center !important;
+    margin-bottom: 50px !important;
+  }
+
+  .zavi-folders-tag {
+    font-family: 'Fragment Mono', monospace !important;
+    font-size: 11px !important;
+    letter-spacing: 0.14em !important;
+    color: #6D001A !important;
+    text-transform: uppercase !important;
+    display: block !important;
+    margin-bottom: 8px !important;
+    font-weight: 600 !important;
+  }
+
+  .zavi-folders-heading {
+    font-family: 'Inter Display', sans-serif !important;
+    font-size: clamp(20px, 2.5vw, 28px) !important;
+    font-weight: 700 !important;
+    color: #000000 !important;
+    letter-spacing: -0.01em !important;
+    text-transform: uppercase !important;
+  }
+
+  .zavi-original-folders-group {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: center !important;
+    align-items: flex-end !important;
+    gap: clamp(24px, 5vw, 64px) !important;
+    flex-wrap: wrap !important;
+    width: 100% !important;
+    max-width: 1100px !important;
+    margin: 0 auto !important;
+  }
+
+  .zavi-heat-folder {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-decoration: none !important;
+    cursor: pointer !important;
+    width: clamp(100px, 11.6vw, 140px) !important;
+    transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
+  }
+
+  .zavi-heat-folder-icon {
+    width: 100% !important;
+    aspect-ratio: 1024 / 1234 !important;
+    background: url('./assets/gdUx6rALI3FrP7JAvefnJYqbcpo.png') no-repeat center / contain !important;
+    filter: drop-shadow(0 8px 18px rgba(0, 0, 0, 0.2)) !important;
+    -webkit-filter: drop-shadow(0 8px 18px rgba(0, 0, 0, 0.2)) !important;
+    transition: filter 0.35s ease, -webkit-filter 0.35s ease, transform 0.35s ease !important;
+  }
+
+  .zavi-heat-folder-label {
+    margin-top: 14px !important;
+    font-family: 'Inter Display', sans-serif !important;
+    font-size: 11.5px !important;
+    letter-spacing: 0.12em !important;
+    color: #000000 !important;
+    font-weight: 600 !important;
+    text-transform: uppercase !important;
+    transition: color 0.2s ease !important;
+  }
+</style>
+
 </head>
 <body>
 
@@ -1157,9 +1701,9 @@ body {
           <div>
             <div class="zavi-web1-header">
               <h3 class="zavi-web1-role">Intercollegiate CTF — 3rd Place / 300+ Teams</h3>
-              <span class="zavi-web1-meta">INTERCOLLEGIATE BELAGAVI &bull; <a href="https://credly.com/users/zaveriya" target="_blank" rel="noopener noreferrer" class="zavi-cert-verify-link">VERIFY CREDLY ↗</a></span>
+              <span class="zavi-web1-meta">INTERCOLLEGIATE INDIA &bull; <a href="https://credly.com/users/zaveriya" target="_blank" rel="noopener noreferrer" class="zavi-cert-verify-link">VERIFY CREDLY ↗</a></span>
             </div>
-            <div class="zavi-web1-sub">Intercollegiate Belagavi // Summit Qualifier &amp; Flag Captures</div>
+            <div class="zavi-web1-sub">Intercollegiate India // Summit Qualifier &amp; Flag Captures</div>
             <p class="zavi-web1-desc">
               High-stakes collegiate cybersecurity tournament ranking 3rd overall among 300+ competitive teams across Karnataka. Captured critical flags in cryptographic challenge suites and privilege escalation vectors.
             </p>
@@ -1322,20 +1866,36 @@ body {
   <!-- ========================================================= -->
   <!-- FOOTER                                                    -->
   <!-- ========================================================= -->
-  <footer>
-    <div class="zavi-footer-inner">
-      <div class="zavi-footer-left"><span style="text-transform:none !important;">&copy; &nbsp;Zaveriya . All rights reserved.</span></div>
-      <div class="zavi-footer-right">
-        <a href="./about.html">About</a>
-        <a href="./projects.html">Projects</a>
-        <a href="./experience.html">Experience</a>
-        <a href="https://github.com/xozavii" target="_blank" rel="noopener">GitHub</a>
-        <a href="https://linkedin.com/in/zaveriya" target="_blank" rel="noopener">LinkedIn</a>
-        <a href="https://instagram.com/zvi.py" target="_blank" rel="noopener">Instagram</a>
-        <a href="mailto:zaveriya.edu@gmail.com">Contact</a>
+  <footer style="background:#000000 !important;color:#FFFFFF !important;padding:48px clamp(20px, 4vw, 60px) 36px !important;border-top:1px solid rgba(255,255,255,0.1) !important;width:100% !important;box-sizing:border-box !important;">
+  <div style="max-width:1400px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit, minmax(200px, 1fr));gap:32px;margin-bottom:40px;">
+    <!-- Column 1: Social -->
+    <div>
+      <span style="font-family:'Fragment Mono',monospace !important;font-size:11px !important;letter-spacing:0.14em !important;color:#666666 !important;text-transform:uppercase !important;display:block !important;margin-bottom:14px !important;">[social]</span>
+      <div style="display:flex;flex-direction:column;gap:8px;">
+        <a href="https://linkedin.com/in/zaveriya" target="_blank" rel="noopener noreferrer" style="font-family:'Fragment Mono',monospace !important;font-size:12.5px !important;color:#EEEDE4 !important;text-decoration:none !important;letter-spacing:0.04em !important;transition:color 0.2s;">LINKEDIN</a>
+        <a href="https://github.com/xozavii" target="_blank" rel="noopener noreferrer" style="font-family:'Fragment Mono',monospace !important;font-size:12.5px !important;color:#EEEDE4 !important;text-decoration:none !important;letter-spacing:0.04em !important;transition:color 0.2s;">GITHUB</a>
+        <a href="https://instagram.com/zvi.py" target="_blank" rel="noopener noreferrer" style="font-family:'Fragment Mono',monospace !important;font-size:12.5px !important;color:#EEEDE4 !important;text-decoration:none !important;letter-spacing:0.04em !important;transition:color 0.2s;">INSTAGRAM</a>
       </div>
     </div>
-  </footer>
+    <!-- Column 2: Reach -->
+    <div>
+      <span style="font-family:'Fragment Mono',monospace !important;font-size:11px !important;letter-spacing:0.14em !important;color:#666666 !important;text-transform:uppercase !important;display:block !important;margin-bottom:14px !important;">[reach]</span>
+      <div style="display:flex;flex-direction:column;gap:8px;">
+        <a href="mailto:zaveriya.edu@gmail.com?subject=Book%20a%20Call%20with%20Zaveriya" style="font-family:'Fragment Mono',monospace !important;font-size:12.5px !important;color:#EEEDE4 !important;text-decoration:none !important;letter-spacing:0.04em !important;transition:color 0.2s;">BOOK A CALL</a>
+        <a href="mailto:zaveriya.edu@gmail.com" style="font-family:'Fragment Mono',monospace !important;font-size:12.5px !important;color:#EEEDE4 !important;text-decoration:none !important;letter-spacing:0.04em !important;transition:color 0.2s;">EMAIL</a>
+      </div>
+    </div>
+    <!-- Column 3: Location -->
+    <div>
+      <span style="font-family:'Fragment Mono',monospace !important;font-size:11px !important;letter-spacing:0.14em !important;color:#666666 !important;text-transform:uppercase !important;display:block !important;margin-bottom:14px !important;">[location]</span>
+      <span style="font-family:'Fragment Mono',monospace !important;font-size:12.5px !important;color:#EEEDE4 !important;letter-spacing:0.04em !important;display:block !important;">INDIA</span>
+    </div>
+  </div>
+  <!-- Bottom Copyright -->
+  <div style="max-width:1400px;margin:0 auto;padding-top:24px;border-top:1px solid rgba(255,255,255,0.08);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;">
+    <span style="font-family:'Fragment Mono',monospace !important;font-size:11.5px !important;color:rgba(255,255,255,0.5) !important;letter-spacing:0.04em !important;">&copy; Zaveriya . All rights reserved.</span>
+  </div>
+</footer>
 
   <script>
     function zaviNavigateFolder(event, targetUrl) {
