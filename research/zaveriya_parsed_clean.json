@@ -1,0 +1,236 @@
+{
+  "projects": [
+    {
+      "id": "aurael",
+      "title": "Aurael",
+      "description": "Built an AI-powered journaling and reflection app with a calming, user-centric interface to support emotional well-being.",
+      "technologies": [
+        "React",
+        "JavaScript",
+        "Firebase",
+        "Tailwind CSS"
+      ],
+      "imageUrl": "https://images.unsplash.com/photo-1528319725582-ddc0b610117c?auto=format&fit=crop&q=80&w=1200",
+      "liveUrl": "https://aurael.vercel.app/",
+      "githubUrl": "https://github.com/zvi-py/Aurael",
+      "category": "AI Mental Wellness Platform"
+    },
+    {
+      "id": "finova",
+      "title": "Finova",
+      "description": "Built an AI-powered finance assistant that helps users manage expenses, analyze spending, and get personalized budgeting recommendations.",
+      "technologies": [
+        "React",
+        "FastAPI",
+        "PostgreSQL",
+        "TensorFlow"
+      ],
+      "imageUrl": "https://images.unsplash.com/photo-1559526324-4b87b5e36e44?auto=format&fit=crop&q=80&w=1200",
+      "liveUrl": "https://finovabyzxll.vercel.app/",
+      "githubUrl": "https://github.com/zvi-py",
+      "category": "AI Personal Finance Assistant"
+    },
+    {
+      "id": "ghosted",
+      "title": "Ghosted",
+      "description": "Deployed a real-time, Gen-Z-focused quiz game with leaderboards and streak systems.",
+      "technologies": [
+        "React",
+        "Firebase",
+        "Tailwind CSS"
+      ],
+      "imageUrl": "https://images.unsplash.com/photo-1614850523296-d8c1af93d400?auto=format&fit=crop&q=80&w=1200",
+      "liveUrl": "https://ghostedbyzxll.vercel.app/",
+      "githubUrl": "https://github.com/zvi-py",
+      "category": "Multiplayer Quiz Platform"
+    },
+    {
+      "id": "zonexza",
+      "title": "ZoneXza",
+      "description": "Deployed a mood-based Spotify recommendation platform using NLP and embeddings to personalize suggestions.",
+      "technologies": [
+        "Next.js",
+        "FastAPI",
+        "Spotify API",
+        "TensorFlow"
+      ],
+      "imageUrl": "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&q=80&w=1200",
+      "liveUrl": "https://zonexzabyzxll.vercel.app/",
+      "githubUrl": "https://github.com/zvi-py",
+      "category": "AI Music Recommendation App"
+    },
+    {
+      "id": "face-recognitor",
+      "title": "Face Recognitor",
+      "description": "Computer-vision app for real-time face detection and recognition.",
+      "technologies": [
+        "Python",
+        "OpenCV"
+      ],
+      "imageUrl": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&q=80&w=1200",
+      "liveUrl": "https://zvi-py.github.io/Face-Recognizer/",
+      "githubUrl": "https://github.com/zvi-py/Face-Recognizer",
+      "category": "Computer Vision Application"
+    },
+    {
+      "id": "heart-calculator",
+      "title": "Heart Calculator",
+      "description": "Interactive, heart-themed calculator built to practice JavaScript logic and responsive UI design.",
+      "technologies": [
+        "JavaScript",
+        "HTML5",
+        "CSS3"
+      ],
+      "imageUrl": "https://images.unsplash.com/photo-1518199266791-5375a83190b7?auto=format&fit=crop&q=80&w=1200",
+      "liveUrl": "https://zvi-py.github.io/Heart-Calculator/",
+      "githubUrl": "https://github.com/zvi-py/Heart-Calculator",
+      "category": "Interactive Web Tool"
+    },
+    {
+      "id": "heatray",
+      "title": "HeatRay",
+      "description": "Building a webcam-based thermal-vision effect with real hand-gesture detection, using Next.js 15, React 18, TypeScript, Three.js/React Three Fiber, and MediaPipe Tasks Vision.",
+      "technologies": [
+        "Next.js 15",
+        "React 18",
+        "TypeScript",
+        "Three.js",
+        "MediaPipe Tasks Vision"
+      ],
+      "imageUrl": "https://images.unsplash.com/photo-1507668077129-56e32842fceb?auto=format&fit=crop&q=80&w=1200",
+      "liveUrl": "",
+      "githubUrl": "https://github.com/zvi-py",
+      "category": "Cinematic Thermal-Vision Web App"
+    },
+    {
+      "id": "trainllm",
+      "title": "TrainLLM",
+      "description": "Designing visual simulations of tokenization, embeddings, and transformers to teach how large language models work.",
+      "technologies": [
+        "React",
+        "Python",
+        "JavaScript"
+      ],
+      "imageUrl": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&q=80&w=1200",
+      "liveUrl": "",
+      "githubUrl": "https://github.com/zvi-py",
+      "category": "Interactive LLM Learning Platform"
+    }
+  ],
+  "experiences": [
+    {
+      "id": "maincrafts-technology",
+      "role": "Full Stack Development Intern",
+      "company": "Maincrafts Technology (Remote)",
+      "period": "03/2026 \u2013 04/2026",
+      "location": "Remote",
+      "description": "Built responsive web interfaces and engineered seamless frontend\u2013backend integration. Developed reusable React UI components, implemented RESTful API endpoints, and optimized client-side state management to ensure high performance, intuitive user experience, and robust cross-platform accessibility.",
+      "type": "Professional Internship",
+      "link": "https://www.linkedin.com/posts/zaveriya_fullstackdevelopment-webdevelopment-maincraftstechnology-activity-7448318423979200512-pvN7?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFM4VvEBjuw6zGRc3S_RM9t9zegNedgJNV8",
+      "createdAt": 999999999000
+    },
+    {
+      "id": "bluestack-intern",
+      "role": "Data Analysis Intern",
+      "company": "BlueStack (Remote)",
+      "period": "03/2026 \u2013 04/2026",
+      "location": "Remote",
+      "description": "Cleaned, preprocessed, and analyzed structured datasets using Excel, Pandas, and Python to extract actionable insights. Built data visualization pipelines, identified trend patterns across operational metrics, and generated comprehensive summary reports to support data-driven decision-making.",
+      "type": "Professional Internship",
+      "link": "https://drive.google.com/file/d/10kHaO23UlEDCYMx6DCsIbZmJ6_bCOhhi/view?usp=sharing",
+      "createdAt": 999999998000
+    },
+    {
+      "id": "google-gsa",
+      "role": "Google Gemini Student Ambassador",
+      "company": "Google (GID 9142)",
+      "period": "01/2026 \u2013 Present",
+      "location": "Campus & Ambassador Network",
+      "description": "Spearheaded AI community engagement by developing and executing content strategies, educational campaigns, and campus initiatives to increase awareness and adoption of Google Gemini and Google's AI ecosystem. Designed and delivered workshops, technical demonstrations, and knowledge-sharing sessions, empowering students to leverage Google AI tools, enhance productivity, and explore emerging technologies. Collaborated with Google's ambassador network and campus stakeholders to drive strategic outreach, foster student engagement, and connect peers with Google certifications, events, learning resources, and career opportunities.",
+      "type": "Ambassadorship & Outreach",
+      "link": "https://www.skills.google/",
+      "createdAt": 999999997000
+    },
+    {
+      "id": "aws-sbcl",
+      "role": "AWS Student Builder Community Lead (AWS SBCL)",
+      "company": "Amazon Web Services (AWS)",
+      "period": "2025 \u2013 Present",
+      "location": "Campus & AWS Cloud Community",
+      "description": "Serving as AWS Student Builder Community Lead (SBCL) [AWS ID: zaveriya], driving cloud awareness, organizing hands-on builder workshops, hackathons, and technical deep-dives on AWS cloud infrastructure, AI/ML services, and modern cloud architectures for student developers and builders.",
+      "type": "Cloud Leadership & Community",
+      "createdAt": 999999996500
+    },
+    {
+      "id": "ecocane-founder",
+      "role": "Founder & Team Lead",
+      "company": "EcoCane",
+      "period": "01/2025 \u2013 Present",
+      "location": "VTU Incubation, Belagavi",
+      "description": "Founded and lead EcoCane, a VTU-incubated startup developing biodegradable, sugarcane-bagasse-based alternatives to conventional plastic products. Ranked Top 10 in the NAIN Startup Program (VTU) and secured \u20b94.5 Lakh in startup funding. Lead a multidisciplinary team across product development, research, and go-to-market planning; manage timelines, mentor relationships, and stakeholder presentations.",
+      "type": "Startup / Venture",
+      "link": "https://www.linkedin.com/in/zaveriya",
+      "createdAt": 999999996000
+    },
+    {
+      "id": "let-him-cook",
+      "role": "Customer Service Associate",
+      "company": "Let Him Cook Caf\u00e9",
+      "period": "Professional Experience",
+      "location": "Belagavi, India",
+      "description": "Delivered customer service in a fast-paced caf\u00e9 environment, building customer relationships through clear, friendly communication. Practiced upselling and personalized recommendations to grow order value; handled queries and resolved issues on the spot.",
+      "type": "Professional Experience",
+      "createdAt": 999999995000
+    },
+    {
+      "id": "magenta-cafe",
+      "role": "Inventory Manager",
+      "company": "Magenta Caf\u00e9",
+      "period": "Professional Experience",
+      "location": "Belagavi, India",
+      "description": "Managed inventory operations, including stock organization, tracking, and replenishment. Ensured inventory accuracy and supported smooth daily operational workflows.",
+      "type": "Professional Experience",
+      "createdAt": 999999994000
+    },
+    {
+      "id": "class-rep",
+      "role": "Class Representative",
+      "company": "SGBIT Belagavi (Engineering)",
+      "period": "01/2024 \u2013 Present",
+      "location": "Belagavi, India",
+      "description": "Represent classmates to faculty and coordinate communication between students and the department.",
+      "type": "Campus Leadership",
+      "createdAt": 999999993000
+    },
+    {
+      "id": "st-pauls-event",
+      "role": "Event Organizer",
+      "company": "St. Paul's Pre-University College",
+      "period": "01/2022 \u2013 2024",
+      "location": "Belagavi, India",
+      "description": "Planned and ran college events end-to-end \u2014 logistics, promotion, and volunteer coordination.",
+      "type": "Leadership & Events",
+      "createdAt": 999999992000
+    },
+    {
+      "id": "st-pauls-media",
+      "role": "Media Incharge",
+      "company": "St. Paul's Pre-University College",
+      "period": "01/2022 \u2013 01/2024",
+      "location": "Belagavi, India",
+      "description": "Ran the college's Instagram presence \u2014 planned content, designed posters, banners, invitations, and event creatives, and edited promotional videos and reels. Built a practical understanding of social-media algorithms and audience engagement by studying high-performing content and applying it to campus campaigns.",
+      "type": "Media & Design",
+      "createdAt": 999999991000
+    },
+    {
+      "id": "cultural-head",
+      "role": "Cultural Head",
+      "company": "School",
+      "period": "01/2017 \u2013 12/2021",
+      "location": "Belagavi, India",
+      "description": "Led and coordinated cultural events and competitions, managing student participation and event planning.",
+      "type": "Leadership",
+      "createdAt": 999999990000
+    }
+  ]
+}

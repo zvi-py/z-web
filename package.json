@@ -1,0 +1,9 @@
+{
+  "name": "zaveriya-mulla-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "python outputs/heatbureau-clone/serve_clone.py",
+    "start": "python outputs/heatbureau-clone/serve_clone.py"
+  }
+}

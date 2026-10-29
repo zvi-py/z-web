@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" style="background:#0D0D0D;font-family:'Inter',system-ui,-apple-system,sans-serif;">
+  <defs>
+    <!-- Grid Pattern -->
+    <pattern id="brutalist-grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#EEEDE4" stroke-width="0.75" stroke-opacity="0.05"/>
+    </pattern>
+    <linearGradient id="grad-cover_zarvis_review" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#EF4444"/>
+      <stop offset="100%" stop-color="#F59E0B"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Deep Obsidian Canvas -->
+  <rect width="1600" height="900" fill="#0E0E0E"/>
+  <rect width="1600" height="900" fill="url(#brutalist-grid)"/>
+
+  <!-- Center Graphic Artwork -->
+  
+          <defs>
+            <radialGradient id="zarvisglow" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stop-color="#EF4444" stop-opacity="0.35"/>
+              <stop offset="60%" stop-color="#F59E0B" stop-opacity="0.12"/>
+              <stop offset="100%" stop-color="#0A0A0A" stop-opacity="0"/>
+            </radialGradient>
+          </defs>
+          <circle cx="800" cy="450" r="350" fill="url(#zarvisglow)"/>
+          <!-- Code Scanner Radar Reticle -->
+          <circle cx="800" cy="450" r="160" fill="none" stroke="#EF4444" stroke-width="1.5" stroke-dasharray="10 6"/>
+          <circle cx="800" cy="450" r="90" fill="none" stroke="#F59E0B" stroke-width="2"/>
+          <line x1="600" y1="450" x2="1000" y2="450" stroke="#EF4444" stroke-width="1.5" opacity="0.6"/>
+          <line x1="800" y1="250" x2="800" y2="650" stroke="#EF4444" stroke-width="1.5" opacity="0.6"/>
+          <!-- AST Brackets -->
+          <path d="M 720 390 L 680 450 L 720 510" fill="none" stroke="#F59E0B" stroke-width="3.5" stroke-linecap="round"/>
+          <path d="M 880 390 L 920 450 L 880 510" fill="none" stroke="#F59E0B" stroke-width="3.5" stroke-linecap="round"/>
+          <line x1="815" y1="400" x2="785" y2="500" stroke="#EEEDE4" stroke-width="3" stroke-linecap="round"/>
+        
+
+  <!-- Technical Brutalist Frame Overlay -->
+  <rect x="30" y="30" width="1540" height="840" fill="none" stroke="#EEEDE4" stroke-width="1" stroke-opacity="0.12"/>
+  <rect x="36" y="36" width="1528" height="828" fill="none" stroke="#EF4444" stroke-width="1" stroke-opacity="0.25"/>
+
+  <!-- Corner Reticle Ticks -->
+  <path d="M 30 70 L 30 30 L 70 30" fill="none" stroke="#EF4444" stroke-width="3"/>
+  <path d="M 1570 70 L 1570 30 L 1530 30" fill="none" stroke="#EF4444" stroke-width="3"/>
+  <path d="M 30 830 L 30 870 L 70 870" fill="none" stroke="#EF4444" stroke-width="3"/>
+  <path d="M 1570 830 L 1570 870 L 1530 870" fill="none" stroke="#EF4444" stroke-width="3"/>
+
+  <!-- Top System Badge -->
+  <g transform="translate(60, 75)">
+    <rect width="190" height="32" rx="4" fill="#181818" stroke="#EEEDE4" stroke-opacity="0.2"/>
+    <circle cx="20" cy="16" r="4.5" fill="#EF4444"/>
+    <text x="36" y="21" fill="#EEEDE4" font-family="'Fragment Mono',monospace" font-size="12" font-weight="600" letter-spacing="2">06 // CODE AGENT</text>
+  </g>
+
+  <!-- Top Right Serial Stamp -->
+  <g transform="translate(1360, 75)">
+    <text x="180" y="21" fill="#EEEDE4" fill-opacity="0.45" font-family="'Fragment Mono',monospace" font-size="12" letter-spacing="2" text-anchor="end">SYS-ID // 2026.REL</text>
+  </g>
+
+  <!-- Bottom Title Block -->
+  <g transform="translate(60, 730)">
+    <text x="0" y="0" fill="#EEEDE4" font-family="'Inter Display','Inter',sans-serif" font-size="52" font-weight="800" letter-spacing="-1.5">ZARVIS REVIEW</text>
+    <text x="0" y="34" fill="#EF4444" font-family="'Fragment Mono',monospace" font-size="14" font-weight="600" letter-spacing="3">AI CODE COMPLIANCE &amp; AST AUDIT</text>
+  </g>
+
+  <!-- Bottom Right Specs Readout -->
+  <g transform="translate(1540, 725)">
+    <text x="0" y="-36" fill="#EEEDE4" fill-opacity="0.75" font-family="'Fragment Mono',monospace" font-size="13" letter-spacing="1" text-anchor="end">AST PARSING: Real-Time</text>
+    <text x="0" y="-12" fill="#EEEDE4" fill-opacity="0.75" font-family="'Fragment Mono',monospace" font-size="13" letter-spacing="1" text-anchor="end">RULES: 100+ Standards</text>
+    <text x="0" y="12" fill="#EF4444" font-family="'Fragment Mono',monospace" font-size="13" font-weight="600" letter-spacing="1" text-anchor="end">AGENT: Gemini 2.5 Flash</text>
+  </g>
+</svg>

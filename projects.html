@@ -1,0 +1,997 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Projects • Zaveriya Mulla | AI &amp; Software Engineering Studio</title>
+  <meta name="description" content="Selected AI systems, autonomous workflows, and innovative product deployments by Zaveriya Mulla.">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fragment+Mono:ital@0;1&family=Inter:wght@400;500;600;700&family=Syne:wght@500;600;700;800&display=swap" rel="stylesheet">
+  
+  <link href="./assets/hNrTNDq6GuUHQg3dYQ8BrIv5IDU.png" rel="icon" media="(prefers-color-scheme: light)">
+  <link href="./assets/r5SbcZnn1O5cyoZr8bwZKPKLwAc.png" rel="icon" media="(prefers-color-scheme: dark)">
+
+  <style>
+    /* ==============================================================================
+       PROJECT CAESAR LIGHT THEME ENGINE (Pure Vanilla CSS)
+       Background: #FFFFFF | Text: #000000 | Accent: #6D001A (Burgundy)
+       ============================================================================== */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    html, body {
+      background-color: #FFFFFF !important;
+      color: #000000 !important;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      overflow-x: hidden;
+      min-height: 100vh;
+    }
+
+    /* Header & Navigation */
+    header.zavi-header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 64px;
+      padding: 0 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: rgba(255, 255, 255, 0.94);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+      z-index: 9999;
+    }
+    .zavi-header-left a {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-family: 'Syne', sans-serif;
+      font-size: 15px;
+      font-weight: 700;
+      color: #000000;
+      text-decoration: none;
+      letter-spacing: -0.01em;
+    }
+    .zavi-header-star {
+      color: #6D001A;
+      font-size: 14px;
+    }
+    .zavi-header-nav {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+    }
+    .zavi-header-nav a {
+      font-family: 'Fragment Mono', monospace;
+      font-size: 13px;
+      text-transform: lowercase;
+      color: #000000;
+      text-decoration: none;
+      opacity: 0.65;
+      transition: opacity 0.2s, color 0.2s;
+    }
+    .zavi-header-nav a:hover {
+      opacity: 1;
+    }
+    .zavi-header-nav a.active {
+      opacity: 1;
+      font-weight: 600;
+      border-bottom: 1px solid #6D001A;
+      color: #6D001A;
+    }
+    .zavi-header-right a {
+      font-family: 'Fragment Mono', monospace;
+      font-size: 12px;
+      color: #000000;
+      text-decoration: none;
+      opacity: 0.85;
+      padding: 6px 16px;
+      border: 1px solid rgba(0, 0, 0, 0.18);
+      border-radius: 20px;
+      transition: all 0.2s ease;
+    }
+    .zavi-header-right a:hover {
+      background: #000000;
+      color: #FFFFFF;
+      border-color: #000000;
+      opacity: 1;
+    }
+
+    /* Main Container */
+    main.zavi-main {
+      width: 100%;
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 140px 40px 80px 40px;
+    }
+
+    /* Headline Section */
+    .zavi-projects-headline {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 32px;
+      margin-bottom: 64px;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+      padding-bottom: 32px;
+    }
+    .zavi-projects-headline h1 {
+      font-family: 'Syne', sans-serif;
+      font-size: 80px;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      line-height: 0.95;
+      color: #000000;
+    }
+    .zavi-projects-headline p {
+      font-family: 'Fragment Mono', monospace;
+      font-size: 14px;
+      line-height: 1.5;
+      color: #555555;
+      max-width: 440px;
+      text-align: right;
+    }
+
+    /* 2-Column Editorial Card Grid */
+    .zavi-projects-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 56px 40px;
+      width: 100%;
+      margin-bottom: 120px;
+    }
+    .zavi-project-card {
+      display: flex;
+      flex-direction: column;
+      text-decoration: none;
+      width: 100%;
+      cursor: pointer;
+    }
+    .zavi-card-preview {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      background-color: #F0EFEA;
+      border-radius: 6px;
+      overflow: hidden;
+      border: 1px solid rgba(0, 0, 0, 0.08);
+      position: relative;
+    }
+    .zavi-card-preview img,
+    .zavi-card-preview video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .zavi-project-card:hover .zavi-card-preview img,
+    .zavi-project-card:hover .zavi-card-preview video {
+      transform: scale(1.035);
+    }
+    .zavi-card-content {
+      margin-top: 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 16px;
+      width: 100%;
+    }
+    .zavi-card-title {
+      font-family: 'Syne', sans-serif;
+      font-size: 21px;
+      font-weight: 700;
+      color: #000000;
+      letter-spacing: -0.01em;
+      margin: 0;
+      transition: color 0.2s;
+    }
+    .zavi-project-card:hover .zavi-card-title {
+      color: #6D001A;
+    }
+    .zavi-card-subtitle {
+      font-family: 'Fragment Mono', monospace;
+      font-size: 13px;
+      color: #6D001A;
+      font-weight: 500;
+      text-align: right;
+      margin: 0;
+    }
+
+    /* Archive Roster Section */
+    .zavi-archive-section {
+      width: 100%;
+      margin-bottom: 140px;
+      padding-top: 40px;
+      border-top: 2px solid #000000;
+    }
+    .zavi-archive-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 24px;
+    }
+    .zavi-archive-tag {
+      font-family: 'Fragment Mono', monospace;
+      font-size: 13px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #000000;
+      font-weight: 600;
+    }
+    .zavi-archive-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 0;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+      transition: background-color 0.2s;
+    }
+    .zavi-archive-row:hover {
+      background-color: rgba(109, 0, 26, 0.02);
+    }
+    .zavi-archive-left {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
+    .zavi-archive-year {
+      font-family: 'Fragment Mono', monospace;
+      font-size: 12px;
+      color: #777777;
+    }
+    .zavi-archive-title {
+      font-family: 'Syne', sans-serif;
+      font-size: 17px;
+      font-weight: 600;
+      color: #000000;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .zavi-archive-title:hover {
+      color: #6D001A;
+    }
+    .zavi-archive-cat {
+      font-family: 'Fragment Mono', monospace;
+      font-size: 12px;
+      color: #6D001A;
+      font-weight: 500;
+    }
+
+    /* =========================================================
+     AUTHENTIC HEAT BUREAU FOLDER HOVER & SPRING TRANSITION
+     ========================================================= */
+  .zavi-heat-folder {
+    transition: transform 0.38s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.38s ease !important;
+    transform: none !important;
+  }
+
+  .zavi-heat-folder-icon {
+    transition: filter 0.38s cubic-bezier(0.16, 1, 0.3, 1), -webkit-filter 0.38s cubic-bezier(0.16, 1, 0.3, 1), transform 0.38s cubic-bezier(0.16, 1, 0.3, 1) !important;
+    transform: none !important;
+  }
+
+  .zavi-heat-folder-label {
+    font-family: "Neue Montreal Regular", "Neue Montreal", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+    font-size: clamp(14px, 1.15vw, 16px) !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.08em !important;
+    text-transform: uppercase !important;
+    transition: color 0.3s ease, text-shadow 0.3s ease !important;
+    transform: none !important;
+  }
+
+  /* Dark mode / dark theme text */
+  .zavi-heat-folder-label {
+    color: #FFFFFF !important;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.9), 0 2px 8px rgba(0, 0, 0, 0.7) !important;
+  }
+
+  .zavi-heat-folder:hover {
+    opacity: 1 !important;
+    transform: scale(1.025) !important;
+    z-index: 100 !important;
+  }
+
+  .zavi-heat-folder:hover .zavi-heat-folder-icon {
+    filter: brightness(1.18) drop-shadow(0 14px 28px rgba(0, 0, 0, 0.75)) !important;
+    -webkit-filter: brightness(1.18) drop-shadow(0 14px 28px rgba(0, 0, 0, 0.75)) !important;
+    transform: scale(1.02) !important;
+  }
+
+  .zavi-heat-folder:hover .zavi-heat-folder-label {
+    color: #FFFFFF !important;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.55), 0 2px 8px rgba(0, 0, 0, 0.95) !important;
+    transform: none !important;
+  }
+
+  /* Light Theme Specific: Black text that stays crisp on white/light gray background */
+  html[data-theme="light"] .zavi-heat-folder-label,
+  .zavi-bottom-dock[style*="background: #F8F8F8"] .zavi-heat-folder-label,
+  .zavi-bottom-dock[style*="background:#F8F8F8"] .zavi-heat-folder-label {
+    color: #111111 !important;
+    text-shadow: none !important;
+  }
+
+  html[data-theme="light"] .zavi-heat-folder:hover .zavi-heat-folder-label,
+  .zavi-bottom-dock[style*="background: #F8F8F8"] .zavi-heat-folder:hover .zavi-heat-folder-label,
+  .zavi-bottom-dock[style*="background:#F8F8F8"] .zavi-heat-folder:hover .zavi-heat-folder-label {
+    color: #000000 !important;
+    text-shadow: 0 1px 6px rgba(0, 0, 0, 0.2) !important;
+    transform: none !important;
+  }
+
+  .zavi-heat-folder:active {
+    transform: scale(0.98) !important;
+  }
+
+
+  /* =========================================================
+     AUTHENTIC POP-UP / EXPAND & CAESAR COLOR SHIFT ON HOVER
+     ========================================================= */
+  .zavi-heat-folder {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: flex-end !important;
+    gap: 12px !important;
+    text-decoration: none !important;
+    width: clamp(100px, 11.6vw, 140px) !important;
+    cursor: pointer !important;
+    background: transparent !important;
+    border: none !important;
+    padding: 0 !important;
+    outline: none !important;
+    transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.35s ease !important;
+    transform: translateY(0) scale(1) !important;
+  }
+
+  .zavi-heat-folder-icon {
+    width: 100% !important;
+    aspect-ratio: 1024 / 1234 !important;
+    background: url('./assets/gdUx6rALI3FrP7JAvefnJYqbcpo.png') no-repeat center / contain !important;
+    filter: drop-shadow(0 8px 18px rgba(0, 0, 0, 0.2)) !important;
+    -webkit-filter: drop-shadow(0 8px 18px rgba(0, 0, 0, 0.2)) !important;
+    transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), filter 0.35s ease, -webkit-filter 0.35s ease !important;
+  }
+
+  .zavi-heat-folder:hover {
+    opacity: 1 !important;
+    transform: translateY(-16px) scale(1.12) !important;
+    z-index: 100 !important;
+  }
+
+  .zavi-heat-folder:hover .zavi-heat-folder-icon {
+    filter: hue-rotate(150deg) saturate(1.45) brightness(1.08) drop-shadow(0 20px 32px rgba(109, 0, 26, 0.42)) !important;
+    -webkit-filter: hue-rotate(150deg) saturate(1.45) brightness(1.08) drop-shadow(0 20px 32px rgba(109, 0, 26, 0.42)) !important;
+    transform: scale(1.04) !important;
+  }
+
+  .zavi-heat-folder-label,
+  span.zavi-heat-folder-label,
+  html[data-theme="light"] .zavi-heat-folder-label,
+  html[data-theme="dark"] .zavi-heat-folder-label {
+    margin-top: 8px !important;
+    font-family: "Neue Montreal Regular", "Neue Montreal", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+    font-size: clamp(12px, 0.9vw, 14px) !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.08em !important;
+    line-height: 1.2em !important;
+    text-transform: uppercase !important;
+    color: #111111 !important;
+    text-align: center !important;
+    background: transparent !important;
+    border: none !important;
+    padding: 0 !important;
+    text-shadow: none !important;
+    white-space: nowrap !important;
+    pointer-events: none !important;
+    transition: color 0.3s ease, transform 0.3s ease !important;
+  }
+
+  .zavi-heat-folder:hover .zavi-heat-folder-label,
+  html[data-theme="light"] .zavi-heat-folder:hover .zavi-heat-folder-label,
+  html[data-theme="dark"] .zavi-heat-folder:hover .zavi-heat-folder-label {
+    color: #6D001A !important;
+    font-weight: 700 !important;
+    transform: translateY(2px) scale(1.05) !important;
+  }
+
+  .zavi-heat-folder:active {
+    transform: translateY(-8px) scale(1.06) !important;
+  }
+
+  /* Footer copyright standardization */
+  .zavi-footer-left span,
+  [data-framer-name="Copyright"] p {
+    text-transform: none !important;
+  }
+
+</style>
+
+<style id="zavi-universal-folders-css">
+  /* Universal Font Imports */
+  @font-face {
+    font-family: "Neue Montreal Regular";
+    src: url("./assets/EN0wrjjcgDdG3SMgxfEI19PNHRs.woff2") format("woff2"),
+         url("https://framerusercontent.com/assets/EN0wrjjcgDdG3SMgxfEI19PNHRs.woff2") format("woff2");
+    font-display: swap;
+    font-style: normal;
+    font-weight: 400 600;
+  }
+  @font-face {
+    font-family: "Neue Montreal";
+    src: url("./assets/EN0wrjjcgDdG3SMgxfEI19PNHRs.woff2") format("woff2"),
+         url("https://framerusercontent.com/assets/EN0wrjjcgDdG3SMgxfEI19PNHRs.woff2") format("woff2");
+    font-display: swap;
+    font-style: normal;
+    font-weight: 400 600;
+  }
+
+  /* =========================================================
+     AUTHENTIC DIRECTORY SELECTION & ARCHIVES WORKSPACES DOCK
+     Unified across all pages: Clean Pure White Background & Scaled Folders
+     ========================================================= */
+  #zavi-folders-section,
+  .zavi-bottom-dock,
+  html #zavi-folders-section,
+  html .zavi-bottom-dock,
+  html[data-theme="light"] #zavi-folders-section,
+  html[data-theme="dark"] #zavi-folders-section,
+  html[data-theme="light"] .zavi-bottom-dock,
+  html[data-theme="dark"] .zavi-bottom-dock {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    width: 100% !important;
+    min-height: 46vh !important;
+    padding: 60px 24px 75px 24px !important;
+    background: #FFFFFF !important;
+    background-color: #FFFFFF !important;
+    position: relative !important;
+    z-index: 1000 !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    box-sizing: border-box !important;
+    border-top: 1px solid rgba(0, 0, 0, 0.08) !important;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08) !important;
+    text-align: center !important;
+  }
+
+  .zavi-folders-header-block {
+    text-align: center !important;
+    margin-bottom: 32px !important;
+  }
+
+  .zavi-folders-tag,
+  span.zavi-folders-tag,
+  #zavi-folders-section span.zavi-folders-tag,
+  .zavi-bottom-dock span.zavi-folders-tag,
+  html[data-theme="light"] #zavi-folders-section span.zavi-folders-tag,
+  html[data-theme="light"] .zavi-bottom-dock span.zavi-folders-tag,
+  html[data-theme="dark"] #zavi-folders-section span.zavi-folders-tag,
+  html[data-theme="dark"] .zavi-bottom-dock span.zavi-folders-tag {
+    font-family: 'Fragment Mono', 'Suisse Int'l Mono Regular', monospace !important;
+    font-size: clamp(11.5px, 0.9vw, 13px) !important;
+    letter-spacing: 0.22em !important;
+    color: #6D001A !important;
+    text-transform: uppercase !important;
+    font-weight: 600 !important;
+    display: inline-block !important;
+    margin-bottom: 10px !important;
+  }
+
+  .zavi-folders-heading,
+  html[data-theme="light"] .zavi-folders-heading,
+  html[data-theme="dark"] .zavi-folders-heading {
+    font-family: 'Inter Display', -apple-system, BlinkMacSystemFont, sans-serif !important;
+    font-size: clamp(26px, 3.2vw, 40px) !important;
+    font-weight: 800 !important;
+    color: #111111 !important;
+    letter-spacing: -0.03em !important;
+    text-transform: uppercase !important;
+    margin: 0 !important;
+    line-height: 1.15 !important;
+  }
+
+  .zavi-original-folders-group {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+    gap: clamp(24px, 3.8vw, 54px) !important;
+    justify-content: center !important;
+    align-items: flex-end !important;
+    width: 100% !important;
+    max-width: 1100px !important;
+    margin: 0 auto !important;
+  }
+
+  /* Folder: Reduced by ~20% (from 175px max to 140px max) */
+  .zavi-heat-folder {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: flex-end !important;
+    gap: 10px !important;
+    text-decoration: none !important;
+    width: clamp(100px, 11.6vw, 140px) !important;
+    cursor: pointer !important;
+    background: transparent !important;
+    border: none !important;
+    padding: 0 !important;
+    outline: none !important;
+    transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.35s ease !important;
+  }
+
+  .zavi-heat-folder-icon {
+    width: 100% !important;
+    aspect-ratio: 1024 / 1234 !important;
+    background: url('./assets/gdUx6rALI3FrP7JAvefnJYqbcpo.png') no-repeat center / contain !important;
+    filter: drop-shadow(0 8px 18px rgba(0, 0, 0, 0.2)) !important;
+    -webkit-filter: drop-shadow(0 8px 18px rgba(0, 0, 0, 0.2)) !important;
+    transition: filter 0.35s cubic-bezier(0.16, 1, 0.3, 1), -webkit-filter 0.35s cubic-bezier(0.16, 1, 0.3, 1), transform 0.35s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  }
+
+  /* Hover effect: Subtle elevation lift */
+  .zavi-heat-folder:hover {
+    opacity: 1 !important;
+    transform: translateY(-4px) scale(1.03) !important;
+    z-index: 100 !important;
+  }
+
+  .zavi-heat-folder:hover .zavi-heat-folder-icon {
+    filter: brightness(1.08) drop-shadow(0 12px 24px rgba(0, 0, 0, 0.28)) !important;
+    -webkit-filter: brightness(1.08) drop-shadow(0 12px 24px rgba(0, 0, 0, 0.28)) !important;
+    transform: scale(1.02) !important;
+  }
+
+  /* Folder Label: Clean, crisp black text on white background */
+  .zavi-heat-folder-label,
+  span.zavi-heat-folder-label,
+  html[data-theme="light"] .zavi-heat-folder-label,
+  html[data-theme="dark"] .zavi-heat-folder-label,
+  #zavi-folders-section span.zavi-heat-folder-label,
+  .zavi-bottom-dock span.zavi-heat-folder-label {
+    margin-top: 8px !important;
+    font-family: "Neue Montreal Regular", "Neue Montreal", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+    font-size: clamp(12px, 0.9vw, 14px) !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.08em !important;
+    line-height: 1.2em !important;
+    text-transform: uppercase !important;
+    color: #111111 !important;
+    text-align: center !important;
+    background: transparent !important;
+    border: none !important;
+    padding: 0 !important;
+    text-shadow: none !important;
+    white-space: nowrap !important;
+    pointer-events: none !important;
+    transition: color 0.25s ease, transform 0.25s ease !important;
+  }
+
+  .zavi-heat-folder:hover .zavi-heat-folder-label,
+  html[data-theme="light"] .zavi-heat-folder:hover .zavi-heat-folder-label,
+  html[data-theme="dark"] .zavi-heat-folder:hover .zavi-heat-folder-label {
+    color: #6D001A !important;
+  }
+
+  .zavi-heat-folder:active {
+    transform: scale(0.97) !important;
+  }
+</style>
+
+<style id="zavi-standard-nav-css">
+  /* =========================================================
+     STANDARDIZED HEADER NAVIGATION
+     Matches About Page Standard: Inter Display, 12.8px, uppercase, #000000 & #6D001A
+     ========================================================= */
+  header nav,
+  header .framer-MaGa7,
+  header .zavi-header-nav,
+  header .zavi-nav-center {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: clamp(16px, 2.5vw, 34px) !important;
+  }
+
+  header nav a,
+  header .framer-MaGa7 a,
+  header .zavi-header-nav a,
+  header .zavi-nav-center a,
+  header .zavi-nav-link,
+  header a.framer-styles-preset-th5v8x,
+  header a.framer-text {
+    font-family: "Inter Display", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+    font-size: 12.8px !important;
+    font-weight: 500 !important;
+    line-height: 1.2 !important;
+    letter-spacing: normal !important;
+    text-transform: uppercase !important;
+    color: #000000 !important;
+    text-decoration: none !important;
+    background: transparent !important;
+    border: none !important;
+    outline: none !important;
+    padding: 0 !important;
+    opacity: 1 !important;
+    transition: color 0.25s ease !important;
+  }
+
+  header nav a:hover,
+  header .framer-MaGa7 a:hover,
+  header .zavi-header-nav a:hover,
+  header .zavi-nav-center a:hover,
+  header .zavi-nav-link:hover,
+  header a.framer-styles-preset-th5v8x:hover,
+  header a.framer-text:hover {
+    color: #6D001A !important;
+  }
+
+  /* Active Nav Item - Caesar Burgundy #6D001A & Semibold (Exact Match to Screenshot) */
+  header nav a.is-active,
+  header nav a.active,
+  header .framer-MaGa7 a.is-active,
+  header .zavi-header-nav a.active,
+  header .zavi-header-nav a.is-active,
+  header .zavi-nav-center a.is-active,
+  header .zavi-nav-link.is-active,
+  header a.framer-styles-preset-th5v8x.is-active,
+  header a.framer-text.is-active {
+    color: #6D001A !important;
+    font-weight: 600 !important;
+  }
+</style>
+<style>
+/* UNIFIED FOLDER HOVER & PHYSICS (Standardized across all pages) */
+.zavi-heat-folder {
+  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), filter 0.35s ease !important;
+}
+.zavi-heat-folder:hover {
+  transform: translateY(-14px) scale(1.10) !important;
+  filter: hue-rotate(150deg) saturate(1.45) brightness(1.08) drop-shadow(0 20px 32px rgba(109, 0, 26, 0.40)) !important;
+  z-index: 100 !important;
+}
+</style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="zavi-header">
+    <div class="zavi-header-left">
+      <a href="./index.html">
+        <span class="zavi-header-star">✦</span>
+        <span>zaveriya&#8482;</span>
+      </a>
+    </div>
+    <nav class="zavi-header-nav">
+      <a href="./about.html">ABOUT</a>
+      <a href="./projects.html" class="is-active">PROJECTS</a>
+      <a href="./experience.html">EXPERIENCE</a>
+      <a href="./certificates.html">CERTIFICATES</a>
+    </nav>
+    <div class="zavi-header-right">
+      <a href="mailto:zaveriya.edu@gmail.com?cc=zaveriyawork@gmail.com&subject=Project%20Inquiry%20%E2%80%94%20Zaveriya%20Mulla&body=Hi%20Zaveriya%2C%0A%0AI%20would%20like%20to%20discuss%20a%20project%20or%20collaboration%20with%20you...">[contact]</a>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="zavi-main">
+    <section class="zavi-projects-headline">
+      <h1>projects</h1>
+      <p>Selected AI systems, autonomous workflows, and innovative product deployments</p>
+    </section>
+
+    <!-- 2-Column Card Grid -->
+    <section class="zavi-projects-grid">
+      
+    <a href="https://aurael.vercel.app/" target="_blank" rel="noopener" class="zavi-project-card">
+      <div class="zavi-card-preview">
+        <img src="./assets/94vqLf16zzrRzHuSIFh24roas.jpg" alt="Aurael" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;">
+      </div>
+      <div class="zavi-card-content">
+        <h3 class="zavi-card-title">Aurael</h3>
+        <p class="zavi-card-subtitle">AI Mental Wellness Platform • React, Firebase, NLP</p>
+      </div>
+    </a>
+    <a href="https://zaveriya.vercel.app" target="_blank" rel="noopener" class="zavi-project-card">
+      <div class="zavi-card-preview">
+        <video src="./assets/OJfAagBtWLUivBJLt5loMVShVQ.mp4" loop autoplay muted playsinline poster="./assets/ltIrXAljK9f8M2lzL8XhDeJSqE.webp" style="width:100%;height:100%;object-fit:cover;display:block;"></video>
+      </div>
+      <div class="zavi-card-content">
+        <h3 class="zavi-card-title">EcoCane</h3>
+        <p class="zavi-card-subtitle">Sustainable Biomaterials Startup • ₹4.5L Seed Funding, NAIN Top 10</p>
+      </div>
+    </a>
+    <a href="https://github.com/xozavii" target="_blank" rel="noopener" class="zavi-project-card">
+      <div class="zavi-card-preview">
+        <img src="./assets/ZEzMdOICEPPACvEBac5nWV3vwvk.jpg" alt="ZCollab NMC (RISE CRM)" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;">
+      </div>
+      <div class="zavi-card-content">
+        <h3 class="zavi-card-title">ZCollab NMC (RISE CRM)</h3>
+        <p class="zavi-card-subtitle">Enterprise Platform • Modular HRMS, CRM & Security Architecture</p>
+      </div>
+    </a>
+    <a href="https://ghostedbyzxll.vercel.app/" target="_blank" rel="noopener" class="zavi-project-card">
+      <div class="zavi-card-preview">
+        <video src="./assets/YKFmX4qZ7zf0wcgXqvG8WIZBM.mp4" loop autoplay muted playsinline poster="./assets/2nBnLmhRLmgp93zBcdw2yChw2MQ.jpg" style="width:100%;height:100%;object-fit:cover;display:block;"></video>
+      </div>
+      <div class="zavi-card-content">
+        <h3 class="zavi-card-title">Ghosted</h3>
+        <p class="zavi-card-subtitle">Multiplayer Quiz Platform • React, Firebase, Real-Time WebSockets</p>
+      </div>
+    </a>
+    <a href="https://github.com/xozavii" target="_blank" rel="noopener" class="zavi-project-card">
+      <div class="zavi-card-preview">
+        <video src="./assets/Hsjz1UaUJocT12ZIPiJ3Aiih3dI.mp4" loop autoplay muted playsinline poster="./assets/ClK00uxydTRnx2FcyYDqVb9ws.jpg" style="width:100%;height:100%;object-fit:cover;display:block;"></video>
+      </div>
+      <div class="zavi-card-content">
+        <h3 class="zavi-card-title">DRIVE</h3>
+        <p class="zavi-card-subtitle">Deep Research Intelligence & Verification Engine • Next.js, FastAPI, Gemini Agents</p>
+      </div>
+    </a>
+    <a href="https://github.com/xozavii" target="_blank" rel="noopener" class="zavi-project-card">
+      <div class="zavi-card-preview">
+        <img src="./assets/2NO1jbNg7kZpdLSnDnqjjvE6CAA.jpg" alt="ZARVIS Review" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;">
+      </div>
+      <div class="zavi-card-content">
+        <h3 class="zavi-card-title">ZARVIS Review</h3>
+        <p class="zavi-card-subtitle">AI Creative Compliance Platform • Gemini 2.5 Flash, Vision & Multi-Format Ingestion</p>
+      </div>
+    </a>
+    <a href="https://github.com/xozavii" target="_blank" rel="noopener" class="zavi-project-card">
+      <div class="zavi-card-preview">
+        <video src="./assets/gNIrs1aC6XnkA7sOOur1bLZkLg0.mp4" loop autoplay muted playsinline poster="./assets/V6brFN1sUTtWclER5CztgqGkl7k.jpg" style="width:100%;height:100%;object-fit:cover;display:block;"></video>
+      </div>
+      <div class="zavi-card-content">
+        <h3 class="zavi-card-title">SWAS</h3>
+        <p class="zavi-card-subtitle">Smart Workflow Automation System • Next.js, NestJS, Temporal, PostgreSQL</p>
+      </div>
+    </a>
+    <a href="https://github.com/xozavii" target="_blank" rel="noopener" class="zavi-project-card">
+      <div class="zavi-card-preview">
+        <img src="./assets/KIh5lhw09ZvwZ0swXQoMWteco8c.jpg" alt="ZARVIS Insight" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;">
+      </div>
+      <div class="zavi-card-content">
+        <h3 class="zavi-card-title">ZARVIS Insight</h3>
+        <p class="zavi-card-subtitle">Enterprise Operational Intelligence • Analytics, Real-Time Workflows & Audit Trails</p>
+      </div>
+    </a>
+    <a href="https://finovabyzxll.vercel.app/" target="_blank" rel="noopener" class="zavi-project-card">
+      <div class="zavi-card-preview">
+        <img src="./assets/Xz8UOo5RwWPFpLz6H0sloNo35UE.jpg" alt="Finova" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;">
+      </div>
+      <div class="zavi-card-content">
+        <h3 class="zavi-card-title">Finova</h3>
+        <p class="zavi-card-subtitle">AI Personal Finance Assistant • React, FastAPI, PostgreSQL, Predictive Insights</p>
+      </div>
+    </a>
+    <a href="https://zonexza.vercel.app/" target="_blank" rel="noopener" class="zavi-project-card">
+      <div class="zavi-card-preview">
+        <img src="./assets/GUPiK9GXEZSmLChXhgPlz2wEh4E.webp" alt="ZoneXza" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;">
+      </div>
+      <div class="zavi-card-content">
+        <h3 class="zavi-card-title">ZoneXza</h3>
+        <p class="zavi-card-subtitle">AI Music Recommendation Engine • Next.js, FastAPI, Spotify API, TensorFlow</p>
+      </div>
+    </a>
+    <a href="https://github.com/xozavii" target="_blank" rel="noopener" class="zavi-project-card">
+      <div class="zavi-card-preview">
+        <img src="./assets/gLZprcLKxglk4zWGledkl2gV1fQ.jpg" alt="TrainLLM" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;">
+      </div>
+      <div class="zavi-card-content">
+        <h3 class="zavi-card-title">TrainLLM</h3>
+        <p class="zavi-card-subtitle">Interactive LLM Platform • Tokenization, Attention Maps & Transformer Mechanics</p>
+      </div>
+    </a>
+    <a href="https://github.com/xozavii" target="_blank" rel="noopener" class="zavi-project-card">
+      <div class="zavi-card-preview">
+        <img src="./assets/oa6qxeil3SnDuhs7ikd3X3dKpE.jpg" alt="Face Recognitor" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;">
+      </div>
+      <div class="zavi-card-content">
+        <h3 class="zavi-card-title">Face Recognitor</h3>
+        <p class="zavi-card-subtitle">Real-Time Biometric Face Detection & Recognition • Python, OpenCV, Haar Cascades</p>
+      </div>
+    </a>
+    <a href="https://github.com/xozavii" target="_blank" rel="noopener" class="zavi-project-card">
+      <div class="zavi-card-preview">
+        <img src="./assets/r28TOPU5FurVvMAfI5vySdXj5Wo.jpg" alt="HeatRay" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;">
+      </div>
+      <div class="zavi-card-content">
+        <h3 class="zavi-card-title">HeatRay</h3>
+        <p class="zavi-card-subtitle">Cinematic Thermal-Vision WebGL Application • Three.js / R3F, MediaPipe Tasks Vision</p>
+      </div>
+    </a>
+    <a href="https://github.com/xozavii" target="_blank" rel="noopener" class="zavi-project-card">
+      <div class="zavi-card-preview">
+        <img src="./assets/rYpGIb3MygYvhwgSUEJYk8t5oII.jpg" alt="Heart Calculator" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;">
+      </div>
+      <div class="zavi-card-content">
+        <h3 class="zavi-card-title">Heart Calculator</h3>
+        <p class="zavi-card-subtitle">Interactive Health Logic & Metric Computation • Modern JavaScript & Responsive UI</p>
+      </div>
+    </a>
+    </section>
+
+    <!-- Archive Roster -->
+    <section class="zavi-archive-section">
+      <div class="zavi-archive-header">
+        <span class="zavi-archive-tag">// SELECTED ARCHIVES &amp; PLATFORM ROSTER</span>
+      </div>
+      
+    <div class="zavi-archive-row">
+      <div class="zavi-archive-left">
+        <span class="zavi-archive-year">2024-2026</span>
+        <a href="https://aurael.vercel.app/" target="_blank" class="zavi-archive-title">Aurael</a>
+      </div>
+      <span class="zavi-archive-cat">React, Firebase, NLP</span>
+    </div>
+    <div class="zavi-archive-row">
+      <div class="zavi-archive-left">
+        <span class="zavi-archive-year">2024-2026</span>
+        <a href="https://zaveriya.vercel.app" target="_blank" class="zavi-archive-title">EcoCane</a>
+      </div>
+      <span class="zavi-archive-cat">₹4.5L Seed Funding, NAIN Top 10</span>
+    </div>
+    <div class="zavi-archive-row">
+      <div class="zavi-archive-left">
+        <span class="zavi-archive-year">2024-2026</span>
+        <a href="https://github.com/xozavii" target="_blank" class="zavi-archive-title">ZCollab NMC (RISE CRM)</a>
+      </div>
+      <span class="zavi-archive-cat">Modular HRMS, CRM & Security Architecture</span>
+    </div>
+    <div class="zavi-archive-row">
+      <div class="zavi-archive-left">
+        <span class="zavi-archive-year">2024-2026</span>
+        <a href="https://ghostedbyzxll.vercel.app/" target="_blank" class="zavi-archive-title">Ghosted</a>
+      </div>
+      <span class="zavi-archive-cat">React, Firebase, Real-Time WebSockets</span>
+    </div>
+    <div class="zavi-archive-row">
+      <div class="zavi-archive-left">
+        <span class="zavi-archive-year">2024-2026</span>
+        <a href="https://github.com/xozavii" target="_blank" class="zavi-archive-title">DRIVE</a>
+      </div>
+      <span class="zavi-archive-cat">Next.js, FastAPI, Gemini Agents</span>
+    </div>
+    <div class="zavi-archive-row">
+      <div class="zavi-archive-left">
+        <span class="zavi-archive-year">2024-2026</span>
+        <a href="https://github.com/xozavii" target="_blank" class="zavi-archive-title">ZARVIS Review</a>
+      </div>
+      <span class="zavi-archive-cat">Gemini 2.5 Flash, Vision & Multi-Format Ingestion</span>
+    </div>
+    <div class="zavi-archive-row">
+      <div class="zavi-archive-left">
+        <span class="zavi-archive-year">2024-2026</span>
+        <a href="https://github.com/xozavii" target="_blank" class="zavi-archive-title">SWAS</a>
+      </div>
+      <span class="zavi-archive-cat">Next.js, NestJS, Temporal, PostgreSQL</span>
+    </div>
+    <div class="zavi-archive-row">
+      <div class="zavi-archive-left">
+        <span class="zavi-archive-year">2024-2026</span>
+        <a href="https://github.com/xozavii" target="_blank" class="zavi-archive-title">ZARVIS Insight</a>
+      </div>
+      <span class="zavi-archive-cat">Analytics, Real-Time Workflows & Audit Trails</span>
+    </div>
+    <div class="zavi-archive-row">
+      <div class="zavi-archive-left">
+        <span class="zavi-archive-year">2024-2026</span>
+        <a href="https://finovabyzxll.vercel.app/" target="_blank" class="zavi-archive-title">Finova</a>
+      </div>
+      <span class="zavi-archive-cat">React, FastAPI, PostgreSQL, Predictive Insights</span>
+    </div>
+    <div class="zavi-archive-row">
+      <div class="zavi-archive-left">
+        <span class="zavi-archive-year">2024-2026</span>
+        <a href="https://zonexza.vercel.app/" target="_blank" class="zavi-archive-title">ZoneXza</a>
+      </div>
+      <span class="zavi-archive-cat">Next.js, FastAPI, Spotify API, TensorFlow</span>
+    </div>
+    <div class="zavi-archive-row">
+      <div class="zavi-archive-left">
+        <span class="zavi-archive-year">2024-2026</span>
+        <a href="https://github.com/xozavii" target="_blank" class="zavi-archive-title">TrainLLM</a>
+      </div>
+      <span class="zavi-archive-cat">Tokenization, Attention Maps & Transformer Mechanics</span>
+    </div>
+    <div class="zavi-archive-row">
+      <div class="zavi-archive-left">
+        <span class="zavi-archive-year">2024-2026</span>
+        <a href="https://github.com/xozavii" target="_blank" class="zavi-archive-title">Face Recognitor</a>
+      </div>
+      <span class="zavi-archive-cat">Python, OpenCV, Haar Cascades</span>
+    </div>
+    <div class="zavi-archive-row">
+      <div class="zavi-archive-left">
+        <span class="zavi-archive-year">2024-2026</span>
+        <a href="https://github.com/xozavii" target="_blank" class="zavi-archive-title">HeatRay</a>
+      </div>
+      <span class="zavi-archive-cat">Three.js / R3F, MediaPipe Tasks Vision</span>
+    </div>
+    <div class="zavi-archive-row">
+      <div class="zavi-archive-left">
+        <span class="zavi-archive-year">2024-2026</span>
+        <a href="https://github.com/xozavii" target="_blank" class="zavi-archive-title">Heart Calculator</a>
+      </div>
+      <span class="zavi-archive-cat">Modern JavaScript & Responsive UI</span>
+    </div>
+    </section>
+  </main>
+
+  <!-- 4 Directory Folders Dock -->
+  <!-- ========================================================
+     DIRECTORY DOCK (4 Folders)
+     ======================================================== -->
+<section id="zavi-folders-section" class="zavi-bottom-dock zavi-folders-section">
+  <div class="zavi-folders-header-block">
+    <span class="zavi-folders-tag">// DIRECTORY SELECTION</span>
+    <h2 class="zavi-folders-heading">ARCHIVES &amp; WORKSPACES</h2>
+  </div>
+
+  <div class="zavi-original-folders-group">
+    <!-- 01. ABOUT FOLDER -->
+    <a href="./about.html" class="zavi-heat-folder" onclick="zaviNavigateFolder(event, './about.html');" title="About Directory">
+      <div class="zavi-heat-folder-icon"></div>
+      <span class="zavi-heat-folder-label">ABOUT</span>
+    </a>
+
+    <!-- 02. EXPERIENCE FOLDER -->
+    <a href="./experience.html" class="zavi-heat-folder" onclick="zaviNavigateFolder(event, './experience.html');" title="Experience Directory">
+      <div class="zavi-heat-folder-icon"></div>
+      <span class="zavi-heat-folder-label">EXPERIENCE</span>
+    </a>
+
+    <!-- 03. CERTIFICATES FOLDER -->
+    <a href="./certificates.html" class="zavi-heat-folder" onclick="zaviNavigateFolder(event, './certificates.html');" title="Certificates Directory">
+      <div class="zavi-heat-folder-icon"></div>
+      <span class="zavi-heat-folder-label">CERTIFICATES</span>
+    </a>
+  </div>
+</section>
+
+  <!-- Footer -->
+  <footer class="zavi-footer">
+    <div class="zavi-footer-left"><span style="text-transform:none !important;font-family:'Fragment Mono',monospace;font-size:12px;color:#888888;letter-spacing:0.02em;">&copy; &nbsp;Zaveriya . All rights reserved.</span></div>
+    <div class="zavi-footer-links">
+      <a href="https://github.com/xozavii" target="_blank" rel="noopener">GITHUB</a>
+      <a href="https://linkedin.com/in/zaveriya" target="_blank" rel="noopener">LINKEDIN</a>
+      <a href="https://instagram.com/zvi.py" target="_blank" rel="noopener">INSTAGRAM</a>
+    </div>
+  </footer>
+
+<script id="zavi-folder-navigation-script">
+function zaviNavigateFolder(event, targetUrl) {
+  if (event) {
+    event.preventDefault();
+    event.stopPropagation();
+  }
+  var currentFile = (window.location.pathname.split('/').pop() || 'index.html').toLowerCase().replace('.html', '');
+  var targetFile = (targetUrl.split('/').pop() || 'index.html').toLowerCase().replace('.html', '');
+  
+  if (currentFile === targetFile) {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  } else {
+    window.location.href = targetUrl;
+  }
+}
+</script>
+<script src="./assets/lenis.js"></script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="953" height="447" viewBox="0 0 953 447" fill="none">
+  <defs>
+    <filter id="cream-glow" x="-15%" y="-15%" width="130%" height="130%">
+      <feGaussianBlur stdDeviation="1.2" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <g filter="url(#cream-glow)" transform="translate(45, -35)">
+    <!-- ============================================================== -->
+    <!-- BOLD, BUBBLY, JUICY "star." SCRIPT (SIGNATURE STYLE) -->
+    <!-- ============================================================== -->
+    <g stroke="#EEEDE4" stroke-width="36" stroke-linecap="round" stroke-linejoin="round" fill="none">
+      <!-- === 's' (SMOOTH, NATURAL, REGULAR S-SHAPE) === -->
+      <path d="M 295 215 
+               C 295 180, 260 160, 220 162 
+               C 175 164, 150 200, 165 240 
+               C 180 275, 265 275, 285 310 
+               C 305 345, 275 385, 225 385 
+               C 175 385, 145 360, 150 330" />
+
+      <!-- === 't' === -->
+      <path d="M 435 95 
+               C 440 95, 445 120, 443 155 
+               L 433 315 
+               C 430 355, 458 375, 495 362 
+               C 512 355, 522 370, 510 382" />
+      <path d="M 390 195 L 495 185" />
+
+      <!-- === 'a' === -->
+      <path d="M 615 260 
+               C 600 205, 555 185, 515 212 
+               C 475 240, 472 315, 512 350 
+               C 552 376, 602 360, 622 310" />
+      <path d="M 620 200 
+               L 620 342 
+               C 620 360, 642 360, 656 344" />
+
+      <!-- === 'r' === -->
+      <path d="M 700 205 L 690 350" />
+      <path d="M 694 265 
+               C 718 214, 765 194, 810 218 
+               C 824 226, 822 248, 804 252 
+               C 764 256, 718 285, 708 330" />
+    </g>
+
+    <!-- PERIOD DOT "." (creamy solid circle) -->
+    <circle cx="855" cy="345" r="22" fill="#EEEDE4" />
+
+    <!-- CIRCLED "™" TRADEMARK BADGE -->
+    <g transform="translate(865, 205)">
+      <circle cx="18" cy="18" r="18" stroke="#EEEDE4" stroke-width="3" fill="none" opacity="0.88" />
+      <text x="8" y="24" font-family="'Inter Display', -apple-system, sans-serif" font-size="15" font-weight="700" fill="#EEEDE4" opacity="0.95">™</text>
+    </g>
+  </g>
+</svg>

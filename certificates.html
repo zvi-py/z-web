@@ -1,0 +1,1255 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Certificates — Zaveriya Mulla | Verified Industry Accreditations</title>
+  <meta name="description" content="Verified industry credentials, engineering accreditations, and specialized certifications across Amazon Web Services (AWS), Google Cloud Platform (GCP), Microsoft, Anthropic, Cisco, IBM, and competitive cybersecurity." />
+
+  <!-- Preconnect & Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Fragment+Mono:ital@0;1&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <style>
+    /* Font Declarations */
+    @font-face {
+      font-family: 'Inter Display';
+      font-style: normal;
+      font-weight: 600 800;
+      font-display: swap;
+      src: url('./assets/GrgcKwrN6d3Uz8EwcLHZxwEfC4.woff2') format('woff2');
+    }
+    @font-face {
+      font-family: 'Neue Montreal Regular';
+      font-style: normal;
+      font-weight: 400 600;
+      font-display: swap;
+      src: url('./assets/EN0wrjjcgDdG3SMgxfEI19PNHRs.woff2') format('woff2');
+    }
+    @font-face {
+      font-family: 'Suisse Int'l Mono Regular';
+      font-style: normal;
+      font-weight: 400;
+      font-display: swap;
+      src: url('./assets/4LkYyDftQWBsGmW5l8UyJRTPr0.woff2') format('woff2');
+    }
+
+    /* Core Variables & Reset */
+    :root {
+      --color-bg: #FFFFFF;
+      --color-text-primary: #000000;
+      --color-text-secondary: #222222;
+      --color-text-muted: rgba(0, 0, 0, 0.65);
+      --color-burgundy: #6D001A;
+      --color-border: rgba(0, 0, 0, 0.08);
+      --font-display: 'Inter Display', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-mono: 'Fragment Mono', 'Suisse Int'l Mono Regular', monospace;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html, body {
+      background-color: #FFFFFF !important;
+      background: #FFFFFF !important;
+      color: #000000 !important;
+      font-family: var(--font-body);
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    /* =========================================================
+       TOP NAVIGATION BAR (Standardized across all pages)
+       ========================================================= */
+    .zavi-pinned-header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 99999;
+      background: rgba(255, 255, 255, 0.94);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--color-border);
+      height: 64px;
+      display: flex;
+      align-items: center;
+      padding: 0 clamp(20px, 4vw, 60px);
+      box-sizing: border-box;
+      box-shadow: 0 1px 10px rgba(0, 0, 0, 0.02);
+    }
+
+    .zavi-header-content {
+      width: 100%;
+      max-width: 1400px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .zavi-pinned-logo {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      text-decoration: none;
+      color: #000000;
+      font-family: var(--font-mono);
+      font-size: 13px;
+      letter-spacing: 0.04em;
+    }
+
+    .zavi-pinned-logo img {
+      width: 16px;
+      height: 16px;
+      vertical-align: middle;
+      filter: invert(1) brightness(0.15);
+    }
+
+    .zavi-pinned-nav {
+      display: flex;
+      align-items: center;
+      gap: clamp(16px, 2.5vw, 36px);
+    }
+
+    .zavi-pinned-nav a {
+      font-family: var(--font-display);
+      font-size: 12.8px;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      text-decoration: none;
+      color: #000000;
+      font-weight: 500;
+      transition: color 0.2s ease;
+    }
+
+    .zavi-pinned-nav a:hover {
+      color: var(--color-burgundy);
+    }
+
+    .zavi-pinned-nav a.is-active {
+      color: var(--color-burgundy) !important;
+      font-weight: 600 !important;
+    }
+
+    .zavi-header-contact {
+      font-family: var(--font-mono);
+      font-size: 12px;
+      letter-spacing: 0.12em;
+      color: #000000;
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .zavi-header-contact:hover {
+      color: var(--color-burgundy);
+    }
+
+    /* =========================================================
+       EDITORIAL TWO-COLUMN LAYOUT (Exact match to experience.html)
+       ========================================================= */
+    .zavi-web1-section {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 40px;
+      border-bottom: 1px solid var(--color-border);
+      padding: 56px 0;
+      box-sizing: border-box;
+    }
+
+    @media (min-width: 900px) {
+      .zavi-web1-section {
+        grid-template-columns: 360px 1fr;
+        gap: 64px;
+      }
+    }
+
+    .zavi-web1-sidebar {
+      position: relative;
+    }
+
+    @media (min-width: 900px) {
+      .zavi-web1-sidebar.is-sticky {
+        position: sticky;
+        top: 110px;
+        height: fit-content;
+      }
+    }
+
+    .zavi-web1-tag {
+      font-family: var(--font-mono) !important;
+      font-size: 11.5px !important;
+      letter-spacing: 0.14em !important;
+      color: var(--color-burgundy) !important;
+      text-transform: uppercase !important;
+      display: block !important;
+      margin-bottom: 12px !important;
+      font-weight: 600 !important;
+    }
+
+    
+    .zavi-web1-title {
+      font-family: 'Inter Display', sans-serif !important;
+      font-size: clamp(24px, 2.8vw, 36px) !important;
+      font-weight: 700 !important;
+      letter-spacing: -0.03em !important;
+      line-height: 1.12 !important;
+      color: #000000 !important;
+      margin: 0 0 20px 0 !important;
+      text-transform: uppercase !important;
+    }
+    
+
+    .zavi-web1-media {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      border-radius: 0px;
+      overflow: hidden;
+      background: #F8F8F8;
+      margin-top: 24px;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+    }
+
+    .zavi-web1-media video,
+    .zavi-web1-media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* Editorial Ledger Row */
+    .zavi-web1-row {
+      border-top: 1px solid var(--color-border);
+      padding: 28px 0;
+      display: grid;
+      grid-template-columns: 44px 1fr;
+      gap: 16px;
+      transition: background 0.2s ease, padding-left 0.2s ease;
+    }
+
+    .zavi-web1-row:first-child {
+      border-top: none;
+      padding-top: 0;
+    }
+
+    .zavi-web1-row:hover {
+      background: rgba(109, 0, 26, 0.02);
+      padding-left: 8px;
+    }
+
+    .zavi-web1-num {
+      font-family: var(--font-mono) !important;
+      font-size: 13.5px !important;
+      color: var(--color-burgundy) !important;
+      letter-spacing: 0.08em !important;
+      padding-top: 3px !important;
+      font-weight: 600 !important;
+    }
+
+    .zavi-web1-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 4px;
+    }
+
+    
+    .zavi-web1-role {
+      font-family: 'Inter Display', sans-serif !important;
+      font-size: clamp(18px, 2vw, 24px) !important;
+      font-weight: 600 !important;
+      color: #000000 !important;
+      letter-spacing: -0.02em !important;
+      margin: 0 !important;
+      line-height: 1.25 !important;
+    }
+    
+
+    
+
+    
+
+    
+
+    .zavi-cert-verify-link {
+      color: var(--color-burgundy) !important;
+      text-decoration: none !important;
+      border-bottom: 1px solid rgba(109, 0, 26, 0.35) !important;
+      padding-bottom: 1px !important;
+      transition: all 0.2s ease !important;
+      display: inline-flex !important;
+      align-items: center !important;
+      gap: 3px !important;
+    }
+
+    .zavi-cert-verify-link:hover {
+      color: #000000 !important;
+      border-bottom-color: #000000 !important;
+    }
+
+    /* =========================================================
+       AUTHENTIC DIRECTORY SELECTION & ARCHIVES WORKSPACES DOCK
+       ========================================================= */
+    #zavi-folders-section,
+    .zavi-bottom-dock {
+      display: flex !important;
+      flex-direction: column !important;
+      justify-content: center !important;
+      align-items: center !important;
+      width: 100% !important;
+      min-height: 46vh !important;
+      padding: 60px 24px 75px 24px !important;
+      background: #FFFFFF !important;
+      background-color: #FFFFFF !important;
+      position: relative !important;
+      z-index: 1000 !important;
+      opacity: 1 !important;
+      visibility: visible !important;
+      box-sizing: border-box !important;
+      border-top: 1px solid rgba(0, 0, 0, 0.08) !important;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.08) !important;
+      text-align: center !important;
+    }
+
+    .zavi-folders-header-block {
+      text-align: center !important;
+      margin-bottom: 36px !important;
+    }
+
+    .zavi-folders-tag {
+      font-family: var(--font-mono) !important;
+      font-size: clamp(12px, 1vw, 13.5px) !important;
+      letter-spacing: 0.22em !important;
+      color: var(--color-burgundy) !important;
+      text-transform: uppercase !important;
+      font-weight: 600 !important;
+      display: inline-block !important;
+      margin-bottom: 10px !important;
+    }
+
+    .zavi-folders-heading {
+      font-family: var(--font-display) !important;
+      font-size: clamp(28px, 3.5vw, 44px) !important;
+      font-weight: 700 !important;
+      color: #111111 !important;
+      letter-spacing: -0.03em !important;
+      text-transform: uppercase !important;
+      margin: 0 !important;
+      line-height: 1.15 !important;
+    }
+
+    .zavi-original-folders-group {
+      display: flex !important;
+      flex-direction: row !important;
+      flex-wrap: wrap !important;
+      gap: clamp(24px, 3.8vw, 54px) !important;
+      justify-content: center !important;
+      align-items: flex-end !important;
+      width: 100% !important;
+      max-width: 1180px !important;
+      margin: 0 auto !important;
+    }
+
+    .zavi-heat-folder {
+      display: flex !important;
+      flex-direction: column !important;
+      align-items: center !important;
+      justify-content: flex-end !important;
+      gap: 12px !important;
+      text-decoration: none !important;
+      width: clamp(100px, 11.6vw, 140px) !important;
+      cursor: pointer !important;
+      background: transparent !important;
+      border: none !important;
+      padding: 0 !important;
+      outline: none !important;
+      transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.35s ease !important;
+    }
+
+    .zavi-heat-folder-icon {
+      width: 100% !important;
+      aspect-ratio: 1024 / 1234 !important;
+      background: url('./assets/gdUx6rALI3FrP7JAvefnJYqbcpo.png') no-repeat center / contain !important;
+      filter: drop-shadow(0 10px 22px rgba(0, 0, 0, 0.22)) !important;
+      -webkit-filter: drop-shadow(0 10px 22px rgba(0, 0, 0, 0.22)) !important;
+      transition: filter 0.35s cubic-bezier(0.16, 1, 0.3, 1), -webkit-filter 0.35s cubic-bezier(0.16, 1, 0.3, 1), transform 0.35s cubic-bezier(0.16, 1, 0.3, 1) !important;
+    }
+
+    .zavi-heat-folder:hover {
+      opacity: 1 !important;
+      transform: translateY(-4px) scale(1.03) !important;
+      z-index: 100 !important;
+    }
+
+    .zavi-heat-folder:hover .zavi-heat-folder-icon {
+      filter: brightness(1.08) drop-shadow(0 14px 28px rgba(0, 0, 0, 0.32)) !important;
+      -webkit-filter: brightness(1.08) drop-shadow(0 14px 28px rgba(0, 0, 0, 0.32)) !important;
+      transform: scale(1.02) !important;
+    }
+
+    .zavi-heat-folder-label {
+      margin-top: 10px !important;
+      font-family: "Neue Montreal Regular", var(--font-display) !important;
+      font-size: clamp(13px, 1vw, 15px) !important;
+      font-weight: 600 !important;
+      letter-spacing: 0.08em !important;
+      line-height: 1.2em !important;
+      text-transform: uppercase !important;
+      color: #111111 !important;
+      text-align: center !important;
+      white-space: nowrap !important;
+      pointer-events: none !important;
+      transition: color 0.25s ease, transform 0.25s ease !important;
+    }
+
+    .zavi-heat-folder:hover .zavi-heat-folder-label {
+      color: var(--color-burgundy) !important;
+    }
+
+    /* =========================================================
+       FOOTER
+       ========================================================= */
+    footer {
+      background: #000000 !important;
+      color: #FFFFFF !important;
+      padding: 64px clamp(20px, 4vw, 60px) 48px clamp(20px, 4vw, 60px);
+      box-sizing: border-box;
+      font-family: var(--font-mono);
+      font-size: 12px;
+      letter-spacing: 0.06em;
+    }
+
+    .zavi-footer-inner {
+      max-width: 1400px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 24px;
+    }
+
+    .zavi-footer-left {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: #888888;
+    }
+
+    .zavi-footer-right {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
+
+    .zavi-footer-right a {
+      color: #CCCCCC;
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .zavi-footer-right a:hover {
+      color: #FFFFFF;
+    }
+  
+  /* =========================================================
+     STANDARDIZED BOLD HEADLINE & EDITORIAL TYPOGRAPHY
+     ========================================================= */
+  @import url('https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Inter:wght@400;500;600;700;800&display=swap');
+
+  h1, .zavi-cert-h1, main h1 {
+    font-family: 'Inter Display', sans-serif !important;
+    font-size: clamp(48px, 8vw, 110px) !important;
+    font-weight: 700 !important;
+    letter-spacing: -0.04em !important;
+    line-height: 0.95 !important;
+    color: #000000 !important;
+    margin: 0 !important;
+    text-transform: lowercase !important;
+  }
+
+  
+    .zavi-web1-title {
+      font-family: 'Inter Display', sans-serif !important;
+      font-size: clamp(24px, 2.8vw, 36px) !important;
+      font-weight: 700 !important;
+      letter-spacing: -0.03em !important;
+      line-height: 1.12 !important;
+      color: #000000 !important;
+      margin: 0 0 20px 0 !important;
+      text-transform: uppercase !important;
+    }
+    
+
+  
+    .zavi-web1-role {
+      font-family: 'Inter Display', sans-serif !important;
+      font-size: clamp(18px, 2vw, 24px) !important;
+      font-weight: 600 !important;
+      color: #000000 !important;
+      letter-spacing: -0.02em !important;
+      margin: 0 !important;
+      line-height: 1.25 !important;
+    }
+    
+
+  .zavi-footer-left span {
+    font-family: 'Fragment Mono', monospace !important;
+    font-size: 12px !important;
+    color: #888888 !important;
+    letter-spacing: 0.02em !important;
+    text-transform: none !important;
+  }
+
+
+  /* =========================================================
+     AUTHENTIC POP-UP / EXPAND & CAESAR COLOR SHIFT ON HOVER
+     ========================================================= */
+  .zavi-heat-folder {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: flex-end !important;
+    gap: 12px !important;
+    text-decoration: none !important;
+    width: clamp(100px, 11.6vw, 140px) !important;
+    cursor: pointer !important;
+    background: transparent !important;
+    border: none !important;
+    padding: 0 !important;
+    outline: none !important;
+    transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.35s ease !important;
+    transform: translateY(0) scale(1) !important;
+  }
+
+  .zavi-heat-folder-icon {
+    width: 100% !important;
+    aspect-ratio: 1024 / 1234 !important;
+    background: url('./assets/gdUx6rALI3FrP7JAvefnJYqbcpo.png') no-repeat center / contain !important;
+    filter: drop-shadow(0 8px 18px rgba(0, 0, 0, 0.2)) !important;
+    -webkit-filter: drop-shadow(0 8px 18px rgba(0, 0, 0, 0.2)) !important;
+    transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), filter 0.35s ease, -webkit-filter 0.35s ease !important;
+  }
+
+  .zavi-heat-folder:hover {
+    opacity: 1 !important;
+    transform: translateY(-16px) scale(1.12) !important;
+    z-index: 100 !important;
+  }
+
+  .zavi-heat-folder:hover .zavi-heat-folder-icon {
+    filter: hue-rotate(150deg) saturate(1.45) brightness(1.08) drop-shadow(0 20px 32px rgba(109, 0, 26, 0.42)) !important;
+    -webkit-filter: hue-rotate(150deg) saturate(1.45) brightness(1.08) drop-shadow(0 20px 32px rgba(109, 0, 26, 0.42)) !important;
+    transform: scale(1.04) !important;
+  }
+
+  .zavi-heat-folder-label,
+  span.zavi-heat-folder-label,
+  html[data-theme="light"] .zavi-heat-folder-label,
+  html[data-theme="dark"] .zavi-heat-folder-label {
+    margin-top: 8px !important;
+    font-family: "Neue Montreal Regular", "Neue Montreal", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+    font-size: clamp(12px, 0.9vw, 14px) !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.08em !important;
+    line-height: 1.2em !important;
+    text-transform: uppercase !important;
+    color: #111111 !important;
+    text-align: center !important;
+    background: transparent !important;
+    border: none !important;
+    padding: 0 !important;
+    text-shadow: none !important;
+    white-space: nowrap !important;
+    pointer-events: none !important;
+    transition: color 0.3s ease, transform 0.3s ease !important;
+  }
+
+  .zavi-heat-folder:hover .zavi-heat-folder-label,
+  html[data-theme="light"] .zavi-heat-folder:hover .zavi-heat-folder-label,
+  html[data-theme="dark"] .zavi-heat-folder:hover .zavi-heat-folder-label {
+    color: #6D001A !important;
+    font-weight: 700 !important;
+    transform: translateY(2px) scale(1.05) !important;
+  }
+
+  .zavi-heat-folder:active {
+    transform: translateY(-8px) scale(1.06) !important;
+  }
+
+</style>
+<style>
+/* UNIFIED FOLDER HOVER & PHYSICS (Standardized across all pages) */
+.zavi-heat-folder {
+  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), filter 0.35s ease !important;
+}
+.zavi-heat-folder:hover {
+  transform: translateY(-14px) scale(1.10) !important;
+  filter: hue-rotate(150deg) saturate(1.45) brightness(1.08) drop-shadow(0 20px 32px rgba(109, 0, 26, 0.40)) !important;
+  z-index: 100 !important;
+}
+</style>
+
+<style id="zavi-experience-identical-typography">
+
+    .zavi-hero-main-title {
+      font-family: 'Inter Display', sans-serif !important;
+      font-size: clamp(48px, 8.5vw, 110px) !important;
+      font-weight: 700 !important;
+      letter-spacing: -0.04em !important;
+      line-height: 0.95 !important;
+      color: #000000 !important;
+      text-transform: uppercase !important;
+    }
+    
+
+    .zavi-web1-title {
+      font-family: 'Inter Display', sans-serif !important;
+      font-size: clamp(24px, 2.8vw, 36px) !important;
+      font-weight: 700 !important;
+      letter-spacing: -0.03em !important;
+      line-height: 1.12 !important;
+      color: #000000 !important;
+      margin: 0 0 20px 0 !important;
+      text-transform: uppercase !important;
+    }
+    
+
+    .zavi-web1-role {
+      font-family: 'Inter Display', sans-serif !important;
+      font-size: clamp(18px, 2vw, 24px) !important;
+      font-weight: 600 !important;
+      color: #000000 !important;
+      letter-spacing: -0.02em !important;
+      margin: 0 !important;
+      line-height: 1.25 !important;
+    }
+    
+
+    .zavi-web1-tag {
+      font-family: 'Fragment Mono', monospace !important;
+      font-size: 11.5px !important;
+      letter-spacing: 0.14em !important;
+      color: #6D001A !important;
+      text-transform: uppercase !important;
+      display: block !important;
+      margin-bottom: 12px !important;
+      font-weight: 600 !important;
+    }
+
+    .zavi-web1-meta {
+      font-family: 'Fragment Mono', monospace !important;
+      font-size: 11.5px !important;
+      color: #6D001A !important;
+      letter-spacing: 0.08em !important;
+      text-transform: uppercase !important;
+      font-weight: 600 !important;
+    }
+
+    .zavi-web1-sub {
+      font-family: 'Fragment Mono', monospace !important;
+      font-size: 12.5px !important;
+      color: #6D001A !important;
+      letter-spacing: 0.04em !important;
+      margin: 6px 0 10px 0 !important;
+      font-weight: 600 !important;
+    }
+
+    .zavi-web1-desc {
+      font-family: 'Inter', sans-serif !important;
+      font-size: 14.5px !important;
+      line-height: 1.65 !important;
+      color: #2b2b2b !important;
+      margin: 0 !important;
+      max-width: 820px !important;
+    }
+    
+</style>
+
+</head>
+<body>
+
+  <!-- ========================================================= -->
+  <!-- PINNED NAVIGATION HEADER                                  -->
+  <!-- ========================================================= -->
+  <header class="zavi-pinned-header">
+    <div class="zavi-header-content">
+      <a class="zavi-pinned-logo" href="./index.html" title="Return to Homepage">
+        <span>zaveriya&#8482;</span>
+      </a>
+
+      <nav class="zavi-pinned-nav">
+        <a href="./about.html">ABOUT</a>
+        <a href="./projects.html">PROJECTS</a>
+        <a href="./experience.html">EXPERIENCE</a>
+        <a href="./certificates.html" class="is-active">CERTIFICATES</a>
+      </nav>
+
+      <a class="zavi-header-contact" href="mailto:zaveriya.edu@gmail.com">[contact]</a>
+    </div>
+  </header>
+
+  <!-- ========================================================= -->
+  <!-- MAIN EDITORIAL CONTENT                                    -->
+  <!-- ========================================================= -->
+  <main style="width:100%;max-width:1400px;margin:0 auto;padding:120px clamp(20px, 4vw, 60px) 60px clamp(20px, 4vw, 60px);box-sizing:border-box;">
+    
+    <!-- HERO HEADLINE -->
+    <div style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:24px;border-bottom:1px solid rgba(0,0,0,0.08);padding-bottom:48px;margin-bottom:20px;">
+      <h1 style="font-family:'Inter Display',sans-serif;font-size:clamp(48px, 8vw, 110px);font-weight:700;letter-spacing:-0.04em;line-height:0.95;color:#000000;margin:0;text-transform:lowercase;">
+        certificates
+      </h1>
+      <p style="font-family:'Inter',sans-serif;font-size:clamp(15px, 1.6vw, 19px);color:rgba(0,0,0,0.65);max-width:560px;line-height:1.55;margin:0;">
+        Verified industry credentials, engineering accreditations, and competitive honors categorized across Amazon Web Services (AWS), Google Cloud Platform (GCP), Microsoft, Anthropic Frontier AI, Cisco Networking Academy, IBM SkillsBuild, Cybersecurity, and Applied Data Science.
+      </p>
+    </div>
+
+    <!-- ========================================================= -->
+    <!-- SECTION 01: AMAZON WEB SERVICES (AWS)                     -->
+    <!-- ========================================================= -->
+    <section class="zavi-web1-section">
+      <div class="zavi-web1-sidebar is-sticky">
+        <span class="zavi-web1-tag">[CLOUD &amp; MACHINE LEARNING] — 01</span>
+        <h2 class="zavi-web1-title">AMAZON WEB SERVICES (AWS)</h2>
+        <div class="zavi-web1-media">
+          <video src="./assets/OJfAagBtWLUivBJLt5loMVShVQ.mp4" loop autoplay muted playsinline poster="./assets/ltIrXAljK9f8M2lzL8XhDeJSqE.webp"></video>
+        </div>
+      </div>
+      <div>
+        <!-- 01. AWS ML & AI -->
+        <div class="zavi-web1-row">
+          <div class="zavi-web1-num">01.</div>
+          <div>
+            <div class="zavi-web1-header">
+              <h3 class="zavi-web1-role">Fundamentals of Machine Learning and Artificial Intelligence</h3>
+              <span class="zavi-web1-meta">AMAZON (AWS) &bull; <a href="https://credly.com/users/zaveriya" target="_blank" rel="noopener noreferrer" class="zavi-cert-verify-link">VERIFY CREDLY ↗</a></span>
+            </div>
+            <div class="zavi-web1-sub">AWS Training &amp; Certification // Machine Learning, Neural Networks &amp; Model Optimization</div>
+            <p class="zavi-web1-desc">
+              Comprehensive AWS credential verifying core principles of machine learning, model training, supervised and unsupervised learning pipelines, deep learning foundations, and deploying intelligent cloud workloads on AWS infrastructure.
+            </p>
+          </div>
+        </div>
+
+        <!-- 02. AWS Cloud Practitioner -->
+        <div class="zavi-web1-row">
+          <div class="zavi-web1-num">02.</div>
+          <div>
+            <div class="zavi-web1-header">
+              <h3 class="zavi-web1-role">Cloud Practitioner Essentials</h3>
+              <span class="zavi-web1-meta">AMAZON (AWS) &bull; <a href="https://credly.com/users/zaveriya" target="_blank" rel="noopener noreferrer" class="zavi-cert-verify-link">VERIFY CREDLY ↗</a></span>
+            </div>
+            <div class="zavi-web1-sub">AWS Training &amp; Certification // Cloud Architecture, IAM, VPC, S3 &amp; High Availability</div>
+            <p class="zavi-web1-desc">
+              Fundamental knowledge of AWS Cloud concepts, global infrastructure, security, IAM policies, networking, computing models (EC2, Lambda), and cost management architectures for scalable cloud operations.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================= -->
+    <!-- SECTION 02: GOOGLE CLOUD PLATFORM (GCP)                   -->
+    <!-- ========================================================= -->
+    <section class="zavi-web1-section">
+      <div class="zavi-web1-sidebar is-sticky">
+        <span class="zavi-web1-tag">[CLOUD ARCHITECTURE &amp; AI AGENTS] — 02</span>
+        <h2 class="zavi-web1-title">GOOGLE CLOUD PLATFORM</h2>
+        <div class="zavi-web1-media">
+          <video src="./assets/gNIrs1aC6XnkA7sOOur1bLZkLg0.mp4" loop autoplay muted playsinline poster="./assets/2nBnLmhRLmgp93zBcdw2yChw2MQ.jpg"></video>
+        </div>
+      </div>
+      <div>
+        <!-- 01. Google Multi-Agent -->
+        <div class="zavi-web1-row">
+          <div class="zavi-web1-num">01.</div>
+          <div>
+            <div class="zavi-web1-header">
+              <h3 class="zavi-web1-role">Deploy Multi-Agent Architectures</h3>
+              <span class="zavi-web1-meta">GOOGLE CLOUD &bull; <a href="https://credly.com/users/zaveriya" target="_blank" rel="noopener noreferrer" class="zavi-cert-verify-link">VERIFY CREDLY ↗</a></span>
+            </div>
+            <div class="zavi-web1-sub">Google Cloud Skills // Autonomous Multi-Agent Systems &amp; Orchestration</div>
+            <p class="zavi-web1-desc">
+              Advanced credential in multi-agent orchestration on Google Cloud, leveraging Vertex AI, reasoning protocols, autonomous tool invocation, agentic delegation, and scalable distributed model architectures.
+            </p>
+          </div>
+        </div>
+
+        <!-- 02. Google GenAI Studio -->
+        <div class="zavi-web1-row">
+          <div class="zavi-web1-num">02.</div>
+          <div>
+            <div class="zavi-web1-header">
+              <h3 class="zavi-web1-role">Generative AI Studio</h3>
+              <span class="zavi-web1-meta">GOOGLE CLOUD &bull; <a href="https://credly.com/users/zaveriya" target="_blank" rel="noopener noreferrer" class="zavi-cert-verify-link">VERIFY CREDLY ↗</a></span>
+            </div>
+            <div class="zavi-web1-sub">Google Cloud Skills // Gemini Models, Prompt Design &amp; Vertex AI Tuning</div>
+            <p class="zavi-web1-desc">
+              Practical mastery of Google's Generative AI Studio on Vertex AI, including Gemini 1.5 Pro/Flash prompt optimization, multimodal grounding, zero-shot/few-shot evaluations, and enterprise model governance.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================= -->
+    <!-- SECTION 03: MICROSOFT & AZURE                             -->
+    <!-- ========================================================= -->
+    <section class="zavi-web1-section">
+      <div class="zavi-web1-sidebar is-sticky">
+        <span class="zavi-web1-tag">[ENTERPRISE AI &amp; ANALYTICS] — 03</span>
+        <h2 class="zavi-web1-title">MICROSOFT &amp; AZURE</h2>
+        <div class="zavi-web1-media">
+          <video src="./assets/Hsjz1UaUJocT12ZIPiJ3Aiih3dI.mp4" loop autoplay muted playsinline poster="./assets/2nBnLmhRLmgp93zBcdw2yChw2MQ.jpg"></video>
+        </div>
+      </div>
+      <div>
+        <!-- 01. Microsoft AI Skills Fest -->
+        <div class="zavi-web1-row">
+          <div class="zavi-web1-num">01.</div>
+          <div>
+            <div class="zavi-web1-header">
+              <h3 class="zavi-web1-role">Microsoft AI Skills Fest — Azure AI Foundry, AI Agents, GitHub Copilot</h3>
+              <span class="zavi-web1-meta">MICROSOFT &bull; <a href="https://credly.com/users/zaveriya" target="_blank" rel="noopener noreferrer" class="zavi-cert-verify-link">VERIFY CREDLY ↗</a></span>
+            </div>
+            <div class="zavi-web1-sub">Microsoft Learn // Azure AI Foundry, Custom Agents &amp; Developer Workflows</div>
+            <p class="zavi-web1-desc">
+              Specialized Microsoft certification covering the end-to-end AI application lifecycle: Azure AI Foundry studio, agentic Copilot extensions, GitHub Copilot developer optimization, and responsible AI system guardrails.
+            </p>
+          </div>
+        </div>
+
+        <!-- 02. Business Analytics with Excel -->
+        <div class="zavi-web1-row">
+          <div class="zavi-web1-num">02.</div>
+          <div>
+            <div class="zavi-web1-header">
+              <h3 class="zavi-web1-role">Business Analytics with Excel</h3>
+              <span class="zavi-web1-meta">SIMPLILEARN &bull; MICROSOFT &bull; <a href="https://credly.com/users/zaveriya" target="_blank" rel="noopener noreferrer" class="zavi-cert-verify-link">VERIFY CREDLY ↗</a></span>
+            </div>
+            <div class="zavi-web1-sub">Simplilearn &bull; Microsoft // Advanced Financial Modeling &amp; Business Intelligence</div>
+            <p class="zavi-web1-desc">
+              Professional analytics credential mastering data cleaning, dynamic pivot tables, statistical regression, Power Query ETL, macro automation, and executive dashboard modeling using Microsoft Excel.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================= -->
+    <!-- SECTION 04: ANTHROPIC & FRONTIER AI LABS                  -->
+    <!-- ========================================================= -->
+    <section class="zavi-web1-section">
+      <div class="zavi-web1-sidebar is-sticky">
+        <span class="zavi-web1-tag">[FRONTIER LLMS &amp; AGENTS] — 04</span>
+        <h2 class="zavi-web1-title">ANTHROPIC &amp; FRONTIER AI</h2>
+        <div class="zavi-web1-media">
+          <img src="./assets/zMyXrh3ViCe0H4Ex3njrhxQLnyQ.jpg" alt="Anthropic &amp; Frontier AI Labs" />
+        </div>
+      </div>
+      <div>
+        <!-- 01. Claude Code 101 -->
+        <div class="zavi-web1-row">
+          <div class="zavi-web1-num">01.</div>
+          <div>
+            <div class="zavi-web1-header">
+              <h3 class="zavi-web1-role">Claude Code 101</h3>
+              <span class="zavi-web1-meta">ANTHROPIC &bull; <a href="https://credly.com/users/zaveriya" target="_blank" rel="noopener noreferrer" class="zavi-cert-verify-link">VERIFY CREDLY ↗</a></span>
+            </div>
+            <div class="zavi-web1-sub">Anthropic // Autonomous Agentic Software Engineering &amp; Tool Use</div>
+            <p class="zavi-web1-desc">
+              Certified in Claude Code CLI, tool-calling pipelines, autonomous code refactoring, context compaction techniques, and developer workflow automation powered by Claude 3.5 Sonnet / 3.7.
+            </p>
+          </div>
+        </div>
+
+        <!-- 02. Anthropic AI Fluency -->
+        <div class="zavi-web1-row">
+          <div class="zavi-web1-num">02.</div>
+          <div>
+            <div class="zavi-web1-header">
+              <h3 class="zavi-web1-role">AI Fluency: Framework &amp; Foundations</h3>
+              <span class="zavi-web1-meta">ANTHROPIC &bull; <a href="https://credly.com/users/zaveriya" target="_blank" rel="noopener noreferrer" class="zavi-cert-verify-link">VERIFY CREDLY ↗</a></span>
+            </div>
+            <div class="zavi-web1-sub">Anthropic // Constitutional AI, Alignment &amp; Frontier LLM Safety</div>
+            <p class="zavi-web1-desc">
+              Foundational certification covering Anthropic's constitutional alignment frameworks, safety mitigations, reasoning benchmarks, context length management, and strategic enterprise AI deployment.
+            </p>
+          </div>
+        </div>
+
+        <!-- 03. OpenAI AI Foundations -->
+        <div class="zavi-web1-row">
+          <div class="zavi-web1-num">03.</div>
+          <div>
+            <div class="zavi-web1-header">
+              <h3 class="zavi-web1-role">AI Foundations</h3>
+              <span class="zavi-web1-meta">OPENAI &bull; <a href="https://credly.com/users/zaveriya" target="_blank" rel="noopener noreferrer" class="zavi-cert-verify-link">VERIFY CREDLY ↗</a></span>
+            </div>
+            <div class="zavi-web1-sub">OpenAI // Transformer Architectures, Attention Mechanisms &amp; Embeddings</div>
+            <p class="zavi-web1-desc">
+              Rigorous grounding in modern transformer architecture, neural attention heads, high-dimensional vector embeddings, semantic search vectors, and LLM fine-tuning methodologies.
+            </p>
+          </div>
+        </div>
+
+        <!-- 04. upGrad Prompt Engineering -->
+        <div class="zavi-web1-row">
+          <div class="zavi-web1-num">04.</div>
+          <div>
+            <div class="zavi-web1-header">
+              <h3 class="zavi-web1-role">Advanced Prompt Engineering with ChatGPT</h3>
+              <span class="zavi-web1-meta">UPGRAD &bull; <a href="https://credly.com/users/zaveriya" target="_blank" rel="noopener noreferrer" class="zavi-cert-verify-link">VERIFY CREDLY ↗</a></span>
+            </div>
+            <div class="zavi-web1-sub">upGrad // Multi-Turn System Framing, Chain-of-Thought &amp; Few-Shot Design</div>
+            <p class="zavi-web1-desc">
+              Comprehensive prompt design credential mastering few-shot in-context learning, ReAct frameworks, system prompt defensive hygiene, and JSON structured output validation.
+            </p>
+          </div>
+        </div>
+
+        <!-- 05. Canva AI -->
+        <div class="zavi-web1-row">
+          <div class="zavi-web1-num">05.</div>
+          <div>
+            <div class="zavi-web1-header">
+              <h3 class="zavi-web1-role">Work Smarter with AI</h3>
+              <span class="zavi-web1-meta">CANVA &bull; <a href="https://credly.com/users/zaveriya" target="_blank" rel="noopener noreferrer" class="zavi-cert-verify-link">VERIFY CREDLY ↗</a></span>
+            </div>
+            <div class="zavi-web1-sub">Canva // Generative Visual Synthesis &amp; Rapid Creative Workflows</div>
+            <p class="zavi-web1-desc">
+              Application of generative design models, multimodal asset creation, brand kit automated synthesis, and AI-assisted multimedia production pipelines.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================= -->
+    <!-- SECTION 05: CISCO NETWORKING ACADEMY                      -->
+    <!-- ========================================================= -->
+    <section class="zavi-web1-section">
+      <div class="zavi-web1-sidebar is-sticky">
+        <span class="zavi-web1-tag">[NETWORKING &amp; DEFENSE] — 05</span>
+        <h2 class="zavi-web1-title">CISCO NETWORKING ACADEMY</h2>
+        <div class="zavi-web1-media">
+          <img src="./assets/Ulauty9Q5T9wNSC2JVKSfkOJ5I4.jpg" alt="Cisco Networking Academy" />
+        </div>
+      </div>
+      <div>
+        <!-- 01. Cisco Cybersecurity -->
+        <div class="zavi-web1-row">
+          <div class="zavi-web1-num">01.</div>
+          <div>
+            <div class="zavi-web1-header">
+              <h3 class="zavi-web1-role">Introduction to Cybersecurity</h3>
+              <span class="zavi-web1-meta">CISCO &bull; <a href="https://credly.com/users/zaveriya" target="_blank" rel="noopener noreferrer" class="zavi-cert-verify-link">VERIFY CREDLY ↗</a></span>
+            </div>
+            <div class="zavi-web1-sub">Cisco Networking Academy // Threat Vector Mitigation &amp; Network Hardening</div>
+            <p class="zavi-web1-desc">
+              Foundational Cisco security credential addressing threat vectors, malware classification, firewall topology, packet sniffing countermeasures, cryptography, and enterprise defense governance.
+            </p>
+          </div>
+        </div>
+
+        <!-- 02. Cisco Modern AI -->
+        <div class="zavi-web1-row">
+          <div class="zavi-web1-num">02.</div>
+          <div>
+            <div class="zavi-web1-header">
+              <h3 class="zavi-web1-role">Introduction to Modern AI</h3>
+              <span class="zavi-web1-meta">CISCO &bull; <a href="https://credly.com/users/zaveriya" target="_blank" rel="noopener noreferrer" class="zavi-cert-verify-link">VERIFY CREDLY ↗</a></span>
+            </div>
+            <div class="zavi-web1-sub">Cisco Networking Academy // Applied Neural Networks &amp; Edge Infrastructure</div>
+            <p class="zavi-web1-desc">
+              Exploration of machine intelligence, neural networks, computer vision, natural language processing, and high-performance edge computing infrastructure within enterprise Cisco environments.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================= -->
+    <!-- SECTION 06: IBM SKILLSBUILD                               -->
+    <!-- ========================================================= -->
+    <section class="zavi-web1-section">
+      <div class="zavi-web1-sidebar is-sticky">
+        <span class="zavi-web1-tag">[ENTERPRISE SYSTEMS DESIGN] — 06</span>
+        <h2 class="zavi-web1-title">IBM SKILLSBUILD</h2>
+        <div class="zavi-web1-media">
+          <video src="./assets/YKFmX4qZ7zf0wcgXqvG8WIZBM.mp4" loop autoplay muted playsinline poster="./assets/2nBnLmhRLmgp93zBcdw2yChw2MQ.jpg"></video>
+        </div>
+      </div>
+      <div>
+        <!-- 01. IBM Design Thinking -->
+        <div class="zavi-web1-row">
+          <div class="zavi-web1-num">01.</div>
+          <div>
+            <div class="zavi-web1-header">
+              <h3 class="zavi-web1-role">Enterprise Design Thinking Practitioner</h3>
+              <span class="zavi-web1-meta">IBM SKILLSBUILD &bull; <a href="https://credly.com/users/zaveriya" target="_blank" rel="noopener noreferrer" class="zavi-cert-verify-link">VERIFY CREDLY ↗</a></span>
+            </div>
+            <div class="zavi-web1-sub">IBM SkillsBuild // Human-Centered Problem Framing &amp; Empathy Mapping</div>
+            <p class="zavi-web1-desc">
+              Official IBM badge verifying practitioner proficiency in user-centered research, restless reinvention, multidisciplinary collaboration, empathy mapping, and rapid iterative prototyping for enterprise solutions.
+            </p>
+          </div>
+        </div>
+
+        <!-- 02. IBM AI Literacy -->
+        <div class="zavi-web1-row">
+          <div class="zavi-web1-num">02.</div>
+          <div>
+            <div class="zavi-web1-header">
+              <h3 class="zavi-web1-role">AI Literacy</h3>
+              <span class="zavi-web1-meta">IBM SKILLSBUILD &bull; <a href="https://credly.com/users/zaveriya" target="_blank" rel="noopener noreferrer" class="zavi-cert-verify-link">VERIFY CREDLY ↗</a></span>
+            </div>
+            <div class="zavi-web1-sub">IBM SkillsBuild // AI Ethics, Bias Mitigation &amp; Foundational Systems</div>
+            <p class="zavi-web1-desc">
+              Rigorous introduction to AI history, algorithmic bias identification, fairness principles in machine learning systems, data governance standards, and trustworthy AI adoption frameworks.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================= -->
+    <!-- SECTION 07: CYBERSECURITY & OFFENSIVE CTF                 -->
+    <!-- ========================================================= -->
+    <section class="zavi-web1-section">
+      <div class="zavi-web1-sidebar is-sticky">
+        <span class="zavi-web1-tag">[OFFENSIVE SECURITY &amp; CTF] — 07</span>
+        <h2 class="zavi-web1-title">CYBERSECURITY &amp; OFFENSIVE CTF</h2>
+        <div class="zavi-web1-media">
+          <img src="./assets/Ulauty9Q5T9wNSC2JVKSfkOJ5I4.jpg" alt="Cybersecurity &amp; Offensive CTF" />
+        </div>
+      </div>
+      <div>
+        <!-- 01. CySeck Bootcamp & CTF -->
+        <div class="zavi-web1-row">
+          <div class="zavi-web1-num">01.</div>
+          <div>
+            <div class="zavi-web1-header">
+              <h3 class="zavi-web1-role">Cybersecurity Bootcamp &amp; CTF Competition</h3>
+              <span class="zavi-web1-meta">CYSECK (K-TECH COE) &bull; <a href="https://credly.com/users/zaveriya" target="_blank" rel="noopener noreferrer" class="zavi-cert-verify-link">VERIFY CREDLY ↗</a></span>
+            </div>
+            <div class="zavi-web1-sub">CySeck (K-Tech CoE) // Web Security, Binary Exploitation &amp; Digital Forensics</div>
+            <p class="zavi-web1-desc">
+              Karnataka State Cyber Centre of Excellence (CySeck) intensive training and capture-the-flag tournament. Solved real-world exploitation challenges across SQLi, XSS, reverse engineering, and network packet forensics.
+            </p>
+          </div>
+        </div>
+
+        <!-- 02. Intercollegiate CTF -->
+        <div class="zavi-web1-row">
+          <div class="zavi-web1-num">02.</div>
+          <div>
+            <div class="zavi-web1-header">
+              <h3 class="zavi-web1-role">Intercollegiate CTF — 3rd Place / 300+ Teams</h3>
+              <span class="zavi-web1-meta">INTERCOLLEGIATE BELAGAVI &bull; <a href="https://credly.com/users/zaveriya" target="_blank" rel="noopener noreferrer" class="zavi-cert-verify-link">VERIFY CREDLY ↗</a></span>
+            </div>
+            <div class="zavi-web1-sub">Intercollegiate Belagavi // Summit Qualifier &amp; Flag Captures</div>
+            <p class="zavi-web1-desc">
+              High-stakes collegiate cybersecurity tournament ranking 3rd overall among 300+ competitive teams across Karnataka. Captured critical flags in cryptographic challenge suites and privilege escalation vectors.
+            </p>
+          </div>
+        </div>
+
+        <!-- 03. EKAIVA x TryHackMe -->
+        <div class="zavi-web1-row">
+          <div class="zavi-web1-num">03.</div>
+          <div>
+            <div class="zavi-web1-header">
+              <h3 class="zavi-web1-role">Security Challenges (OSINT, TLS, Binary Exploit)</h3>
+              <span class="zavi-web1-meta">EKAIVA &times; TRYHACKME &bull; <a href="https://credly.com/users/zaveriya" target="_blank" rel="noopener noreferrer" class="zavi-cert-verify-link">VERIFY CREDLY ↗</a></span>
+            </div>
+            <div class="zavi-web1-sub">EKAIVA &times; TryHackMe // ret2libc Memory Exploits &amp; Open-Source Reconnaissance</div>
+            <p class="zavi-web1-desc">
+              Hands-on offensive security laboratory solving advanced TryHackMe capture-the-flag vectors: buffer overflow exploitation (ret2libc), TLS handshake interception, and comprehensive OSINT reconnaissance.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================= -->
+    <!-- SECTION 08: DATA SCIENCE & ANALYTICS                      -->
+    <!-- ========================================================= -->
+    <section class="zavi-web1-section">
+      <div class="zavi-web1-sidebar is-sticky">
+        <span class="zavi-web1-tag">[DATA SCIENCE &amp; RESEARCH] — 08</span>
+        <h2 class="zavi-web1-title">DATA SCIENCE &amp; ANALYTICS</h2>
+        <div class="zavi-web1-media">
+          <video src="./assets/OJfAagBtWLUivBJLt5loMVShVQ.mp4" loop autoplay muted playsinline poster="./assets/ltIrXAljK9f8M2lzL8XhDeJSqE.webp"></video>
+        </div>
+      </div>
+      <div>
+        <!-- 01. Cambridge Data Science -->
+        <div class="zavi-web1-row">
+          <div class="zavi-web1-num">01.</div>
+          <div>
+            <div class="zavi-web1-header">
+              <h3 class="zavi-web1-role">Data Science Certification</h3>
+              <span class="zavi-web1-meta">CAMBRIDGE &times; UNIATHENA &bull; <a href="https://credly.com/users/zaveriya" target="_blank" rel="noopener noreferrer" class="zavi-cert-verify-link">VERIFY CREDLY ↗</a></span>
+            </div>
+            <div class="zavi-web1-sub">Cambridge University &times; UniAthena // Statistical Computing, Probability &amp; Stats</div>
+            <p class="zavi-web1-desc">
+              Academic data science credential covering descriptive/inferential statistics, Bayesian probability distributions, hypothesis testing (p-value validation), data regression, and analytical modeling.
+            </p>
+          </div>
+        </div>
+
+        <!-- 02. Deloitte Data Analytics -->
+        <div class="zavi-web1-row">
+          <div class="zavi-web1-num">02.</div>
+          <div>
+            <div class="zavi-web1-header">
+              <h3 class="zavi-web1-role">Deloitte Data Analytics Certification</h3>
+              <span class="zavi-web1-meta">DELOITTE (FORAGE) &bull; <a href="https://credly.com/users/zaveriya" target="_blank" rel="noopener noreferrer" class="zavi-cert-verify-link">VERIFY CREDLY ↗</a></span>
+            </div>
+            <div class="zavi-web1-sub">Deloitte (Forage) // Forensic Analytics, Tableau BI &amp; Executive Synthesis</div>
+            <p class="zavi-web1-desc">
+              Enterprise analytics virtual experience completing real-world Deloitte client engagements: data quality auditing, Tableau dashboard synthesis, risk telemetry modeling, and executive stakeholder briefing decks.
+            </p>
+          </div>
+        </div>
+
+        <!-- 03. Scaler Python -->
+        <div class="zavi-web1-row">
+          <div class="zavi-web1-num">03.</div>
+          <div>
+            <div class="zavi-web1-header">
+              <h3 class="zavi-web1-role">Python Course for Beginners</h3>
+              <span class="zavi-web1-meta">SCALER &bull; <a href="https://credly.com/users/zaveriya" target="_blank" rel="noopener noreferrer" class="zavi-cert-verify-link">VERIFY CREDLY ↗</a></span>
+            </div>
+            <div class="zavi-web1-sub">Scaler // Algorithmic Complexity, OOP &amp; Data Structures</div>
+            <p class="zavi-web1-desc">
+              Mastery of core Python engineering, algorithmic problem solving, object-oriented design patterns, recursion, list/dict comprehension, and high-efficiency standard libraries.
+            </p>
+          </div>
+        </div>
+
+        <!-- 04. WorkIndia Advanced Skills -->
+        <div class="zavi-web1-row">
+          <div class="zavi-web1-num">04.</div>
+          <div>
+            <div class="zavi-web1-header">
+              <h3 class="zavi-web1-role">Advanced Computer Skills Certification</h3>
+              <span class="zavi-web1-meta">WORKINDIA &bull; <a href="https://credly.com/users/zaveriya" target="_blank" rel="noopener noreferrer" class="zavi-cert-verify-link">VERIFY CREDLY ↗</a></span>
+            </div>
+            <div class="zavi-web1-sub">WorkIndia // Enterprise Systems, Operating Systems &amp; Productivity Architecture</div>
+            <p class="zavi-web1-desc">
+              Comprehensive assessment verifying advanced operating system proficiency, file system architectures, enterprise hardware management, and administrative computing tools.
+            </p>
+          </div>
+        </div>
+
+        <!-- 05. WorkIndia MS Excel -->
+        <div class="zavi-web1-row">
+          <div class="zavi-web1-num">05.</div>
+          <div>
+            <div class="zavi-web1-header">
+              <h3 class="zavi-web1-role">MS Excel Basics with Certification</h3>
+              <span class="zavi-web1-meta">WORKINDIA &bull; <a href="https://credly.com/users/zaveriya" target="_blank" rel="noopener noreferrer" class="zavi-cert-verify-link">VERIFY CREDLY ↗</a></span>
+            </div>
+            <div class="zavi-web1-sub">WorkIndia // Spreadsheet Modeling, VLOOKUP, XLOOKUP &amp; Conditional Logic</div>
+            <p class="zavi-web1-desc">
+              Practical spreadsheet modeling certification validating advanced formulas (VLOOKUP, XLOOKUP, INDEX/MATCH), data filtering, conditional logic rules, and quantitative table formatting.
+            </p>
+          </div>
+        </div>
+
+        <!-- 06. Invento First Prize -->
+        <div class="zavi-web1-row">
+          <div class="zavi-web1-num">06.</div>
+          <div>
+            <div class="zavi-web1-header">
+              <h3 class="zavi-web1-role">Invento First Prize — Critical Thinking &amp; Innovation</h3>
+              <span class="zavi-web1-meta">INVENTO (VTU) &bull; <a href="https://credly.com/users/zaveriya" target="_blank" rel="noopener noreferrer" class="zavi-cert-verify-link">VERIFY CREDLY ↗</a></span>
+            </div>
+            <div class="zavi-web1-sub">Invento (VTU) // Technical Innovation &amp; Product Strategy Championship</div>
+            <p class="zavi-web1-desc">
+              Secured First Prize in the state-level VTU Invento technical symposium. Evaluated on innovative systems thinking, technical feasibility, product defense, and structured presentation to academic juries.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========================================================= -->
+  <!-- 4 AUTHENTIC DIRECTORY FOLDERS DOCK                        -->
+  <!-- ========================================================= -->
+  <section id="zavi-folders-section" class="zavi-bottom-dock zavi-folders-section">
+  <div class="zavi-folders-header-block">
+    <span class="zavi-folders-tag">// DIRECTORY SELECTION</span>
+    <h2 class="zavi-folders-heading">ARCHIVES &amp; WORKSPACES</h2>
+  </div>
+
+  <div class="zavi-original-folders-group">
+    <!-- 01. ABOUT FOLDER -->
+    <a href="./about.html" class="zavi-heat-folder" onclick="zaviNavigateFolder(event, './about.html');" title="About Directory">
+      <div class="zavi-heat-folder-icon"></div>
+      <span class="zavi-heat-folder-label">ABOUT</span>
+    </a>
+
+    <!-- 02. PROJECTS FOLDER -->
+    <a href="./projects.html" class="zavi-heat-folder" onclick="zaviNavigateFolder(event, './projects.html');" title="Projects Directory">
+      <div class="zavi-heat-folder-icon"></div>
+      <span class="zavi-heat-folder-label">PROJECTS</span>
+    </a>
+
+    <!-- 03. EXPERIENCE FOLDER -->
+    <a href="./experience.html" class="zavi-heat-folder" onclick="zaviNavigateFolder(event, './experience.html');" title="Experience Directory">
+      <div class="zavi-heat-folder-icon"></div>
+      <span class="zavi-heat-folder-label">EXPERIENCE</span>
+    </a>
+  </div>
+</section>
+
+  <!-- ========================================================= -->
+  <!-- FOOTER                                                    -->
+  <!-- ========================================================= -->
+  <footer>
+    <div class="zavi-footer-inner">
+      <div class="zavi-footer-left"><span style="text-transform:none !important;">&copy; &nbsp;Zaveriya . All rights reserved.</span></div>
+      <div class="zavi-footer-right">
+        <a href="./about.html">About</a>
+        <a href="./projects.html">Projects</a>
+        <a href="./experience.html">Experience</a>
+        <a href="https://github.com/xozavii" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://linkedin.com/in/zaveriya" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://instagram.com/zvi.py" target="_blank" rel="noopener">Instagram</a>
+        <a href="mailto:zaveriya.edu@gmail.com">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function zaviNavigateFolder(event, targetUrl) {
+      if (!targetUrl) return;
+      var currentFile = window.location.pathname.split('/').pop() || 'index.html';
+      var cleanTarget = targetUrl.replace(/^(\.\/|\/)/, '');
+      
+      if (currentFile === cleanTarget) {
+        if (event && event.preventDefault) event.preventDefault();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      } else {
+        window.location.href = targetUrl;
+      }
+    }
+  </script>
+<script src="./assets/lenis.js"></script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+{
+  "status": "verified",
+  "pages": [
+    "index.html",
+    "projects.html",
+    "about.html",
+    "services.html"
+  ],
+  "assets_total": 228,
+  "method": "source-first direct resource reuse and local rewriting"
+}
