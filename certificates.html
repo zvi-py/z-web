@@ -11,583 +11,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Fragment+Mono:ital@0;1&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 
-  <style>
-    /* Font Declarations */
-    @font-face {
-      font-family: 'Inter Display';
-      font-style: normal;
-      font-weight: 600 800;
-      font-display: swap;
-      src: url('./assets/GrgcKwrN6d3Uz8EwcLHZxwEfC4.woff2') format('woff2');
-    }
-    @font-face {
-      font-family: 'Neue Montreal Regular';
-      font-style: normal;
-      font-weight: 400 600;
-      font-display: swap;
-      src: url('./assets/EN0wrjjcgDdG3SMgxfEI19PNHRs.woff2') format('woff2');
-    }
-    @font-face {
-      font-family: 'Suisse Int'l Mono Regular';
-      font-style: normal;
-      font-weight: 400;
-      font-display: swap;
-      src: url('./assets/4LkYyDftQWBsGmW5l8UyJRTPr0.woff2') format('woff2');
-    }
-
-    /* Core Variables & Reset */
-    :root {
-      --color-bg: #FFFFFF;
-      --color-text-primary: #000000;
-      --color-text-secondary: #222222;
-      --color-text-muted: rgba(0, 0, 0, 0.65);
-      --color-burgundy: #6D001A;
-      --color-border: rgba(0, 0, 0, 0.08);
-      --font-display: 'Inter Display', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-      --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-      --font-mono: 'Fragment Mono', 'Suisse Int'l Mono Regular', monospace;
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    html, body {
-      background-color: #FFFFFF !important;
-      background: #FFFFFF !important;
-      color: #000000 !important;
-      font-family: var(--font-body);
-      overflow-x: hidden;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-    }
-
-    /* =========================================================
-       TOP NAVIGATION BAR (Standardized across all pages)
-       ========================================================= */
-    .zavi-pinned-header {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      z-index: 99999;
-      background: rgba(255, 255, 255, 0.94);
-      backdrop-filter: blur(20px);
-      -webkit-backdrop-filter: blur(20px);
-      border-bottom: 1px solid var(--color-border);
-      height: 64px;
-      display: flex;
-      align-items: center;
-      padding: 0 clamp(20px, 4vw, 60px);
-      box-sizing: border-box;
-      box-shadow: 0 1px 10px rgba(0, 0, 0, 0.02);
-    }
-
-    .zavi-header-content {
-      width: 100%;
-      max-width: 1400px;
-      margin: 0 auto;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .zavi-pinned-logo {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      text-decoration: none;
-      color: #000000;
-      font-family: var(--font-mono);
-      font-size: 13px;
-      letter-spacing: 0.04em;
-    }
-
-    .zavi-pinned-logo img {
-      width: 16px;
-      height: 16px;
-      vertical-align: middle;
-      filter: invert(1) brightness(0.15);
-    }
-
-    .zavi-pinned-nav {
-      display: flex;
-      align-items: center;
-      gap: clamp(16px, 2.5vw, 36px);
-    }
-
-    .zavi-pinned-nav a {
-      font-family: var(--font-display);
-      font-size: 12.8px;
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
-      text-decoration: none;
-      color: #000000;
-      font-weight: 500;
-      transition: color 0.2s ease;
-    }
-
-    .zavi-pinned-nav a:hover {
-      color: var(--color-burgundy);
-    }
-
-    .zavi-pinned-nav a.is-active {
-      color: var(--color-burgundy) !important;
-      font-weight: 600 !important;
-    }
-
-    .zavi-header-contact {
-      font-family: var(--font-mono);
-      font-size: 12px;
-      letter-spacing: 0.12em;
-      color: #000000;
-      text-decoration: none;
-      transition: color 0.2s ease;
-    }
-
-    .zavi-header-contact:hover {
-      color: var(--color-burgundy);
-    }
-
-    /* =========================================================
-       EDITORIAL TWO-COLUMN LAYOUT (Exact match to experience.html)
-       ========================================================= */
-    .zavi-web1-section {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 40px;
-      border-bottom: 1px solid var(--color-border);
-      padding: 56px 0;
-      box-sizing: border-box;
-    }
-
-    @media (min-width: 900px) {
-      .zavi-web1-section {
-        grid-template-columns: 360px 1fr;
-        gap: 64px;
-      }
-    }
-
-    .zavi-web1-sidebar {
-      position: relative;
-    }
-
-    @media (min-width: 900px) {
-      .zavi-web1-sidebar.is-sticky {
-        position: sticky;
-        top: 110px;
-        height: fit-content;
-      }
-    }
-
-    .zavi-web1-tag {
-      font-family: var(--font-mono) !important;
-      font-size: 11.5px !important;
-      letter-spacing: 0.14em !important;
-      color: var(--color-burgundy) !important;
-      text-transform: uppercase !important;
-      display: block !important;
-      margin-bottom: 12px !important;
-      font-weight: 600 !important;
-    }
-
-    
-    .zavi-web1-title {
-      font-family: 'Inter Display', sans-serif !important;
-      font-size: clamp(24px, 2.8vw, 36px) !important;
-      font-weight: 700 !important;
-      letter-spacing: -0.03em !important;
-      line-height: 1.12 !important;
-      color: #000000 !important;
-      margin: 0 0 20px 0 !important;
-      text-transform: uppercase !important;
-    }
-    
-
-    .zavi-web1-media {
-      width: 100%;
-      aspect-ratio: 16 / 9;
-      border-radius: 0px;
-      overflow: hidden;
-      background: #F8F8F8;
-      margin-top: 24px;
-      border: 1px solid rgba(0, 0, 0, 0.1);
-      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
-    }
-
-    .zavi-web1-media video,
-    .zavi-web1-media img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
-
-    /* Editorial Ledger Row */
-    .zavi-web1-row {
-      border-top: 1px solid var(--color-border);
-      padding: 28px 0;
-      display: grid;
-      grid-template-columns: 44px 1fr;
-      gap: 16px;
-      transition: background 0.2s ease, padding-left 0.2s ease;
-    }
-
-    .zavi-web1-row:first-child {
-      border-top: none;
-      padding-top: 0;
-    }
-
-    .zavi-web1-row:hover {
-      background: rgba(109, 0, 26, 0.02);
-      padding-left: 8px;
-    }
-
-    .zavi-web1-num {
-      font-family: var(--font-mono) !important;
-      font-size: 13.5px !important;
-      color: var(--color-burgundy) !important;
-      letter-spacing: 0.08em !important;
-      padding-top: 3px !important;
-      font-weight: 600 !important;
-    }
-
-    .zavi-web1-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-bottom: 4px;
-    }
-
-    
-    .zavi-web1-role {
-      font-family: 'Inter Display', sans-serif !important;
-      font-size: clamp(18px, 2vw, 24px) !important;
-      font-weight: 600 !important;
-      color: #000000 !important;
-      letter-spacing: -0.02em !important;
-      margin: 0 !important;
-      line-height: 1.25 !important;
-    }
-    
-
-    
-
-    
-
-    
-
-    .zavi-cert-verify-link {
-      color: var(--color-burgundy) !important;
-      text-decoration: none !important;
-      border-bottom: 1px solid rgba(109, 0, 26, 0.35) !important;
-      padding-bottom: 1px !important;
-      transition: all 0.2s ease !important;
-      display: inline-flex !important;
-      align-items: center !important;
-      gap: 3px !important;
-    }
-
-    .zavi-cert-verify-link:hover {
-      color: #000000 !important;
-      border-bottom-color: #000000 !important;
-    }
-
-    /* =========================================================
-       AUTHENTIC DIRECTORY SELECTION & ARCHIVES WORKSPACES DOCK
-       ========================================================= */
-    #zavi-folders-section,
-    .zavi-bottom-dock {
-      display: flex !important;
-      flex-direction: column !important;
-      justify-content: center !important;
-      align-items: center !important;
-      width: 100% !important;
-      min-height: 46vh !important;
-      padding: 60px 24px 75px 24px !important;
-      background: #FFFFFF !important;
-      background-color: #FFFFFF !important;
-      position: relative !important;
-      z-index: 1000 !important;
-      opacity: 1 !important;
-      visibility: visible !important;
-      box-sizing: border-box !important;
-      border-top: 1px solid rgba(0, 0, 0, 0.08) !important;
-      border-bottom: 1px solid rgba(0, 0, 0, 0.08) !important;
-      text-align: center !important;
-    }
-
-    .zavi-folders-header-block {
-      text-align: center !important;
-      margin-bottom: 36px !important;
-    }
-
-    .zavi-folders-tag {
-      font-family: var(--font-mono) !important;
-      font-size: clamp(12px, 1vw, 13.5px) !important;
-      letter-spacing: 0.22em !important;
-      color: var(--color-burgundy) !important;
-      text-transform: uppercase !important;
-      font-weight: 600 !important;
-      display: inline-block !important;
-      margin-bottom: 10px !important;
-    }
-
-    .zavi-folders-heading {
-      font-family: var(--font-display) !important;
-      font-size: clamp(28px, 3.5vw, 44px) !important;
-      font-weight: 700 !important;
-      color: #111111 !important;
-      letter-spacing: -0.03em !important;
-      text-transform: uppercase !important;
-      margin: 0 !important;
-      line-height: 1.15 !important;
-    }
-
-    .zavi-original-folders-group {
-      display: flex !important;
-      flex-direction: row !important;
-      flex-wrap: wrap !important;
-      gap: clamp(24px, 3.8vw, 54px) !important;
-      justify-content: center !important;
-      align-items: flex-end !important;
-      width: 100% !important;
-      max-width: 1180px !important;
-      margin: 0 auto !important;
-    }
-
-    .zavi-heat-folder {
-      display: flex !important;
-      flex-direction: column !important;
-      align-items: center !important;
-      justify-content: flex-end !important;
-      gap: 12px !important;
-      text-decoration: none !important;
-      width: clamp(100px, 11.6vw, 140px) !important;
-      cursor: pointer !important;
-      background: transparent !important;
-      border: none !important;
-      padding: 0 !important;
-      outline: none !important;
-      transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.35s ease !important;
-    }
-
-    .zavi-heat-folder-icon {
-      width: 100% !important;
-      aspect-ratio: 1024 / 1234 !important;
-      background: url('./assets/gdUx6rALI3FrP7JAvefnJYqbcpo.png') no-repeat center / contain !important;
-      filter: drop-shadow(0 10px 22px rgba(0, 0, 0, 0.22)) !important;
-      -webkit-filter: drop-shadow(0 10px 22px rgba(0, 0, 0, 0.22)) !important;
-      transition: filter 0.35s cubic-bezier(0.16, 1, 0.3, 1), -webkit-filter 0.35s cubic-bezier(0.16, 1, 0.3, 1), transform 0.35s cubic-bezier(0.16, 1, 0.3, 1) !important;
-    }
-
-    .zavi-heat-folder:hover {
-      opacity: 1 !important;
-      transform: translateY(-4px) scale(1.03) !important;
-      z-index: 100 !important;
-    }
-
-    .zavi-heat-folder:hover .zavi-heat-folder-icon {
-      filter: brightness(1.08) drop-shadow(0 14px 28px rgba(0, 0, 0, 0.32)) !important;
-      -webkit-filter: brightness(1.08) drop-shadow(0 14px 28px rgba(0, 0, 0, 0.32)) !important;
-      transform: scale(1.02) !important;
-    }
-
-    .zavi-heat-folder-label {
-      margin-top: 10px !important;
-      font-family: "Neue Montreal Regular", var(--font-display) !important;
-      font-size: clamp(13px, 1vw, 15px) !important;
-      font-weight: 600 !important;
-      letter-spacing: 0.08em !important;
-      line-height: 1.2em !important;
-      text-transform: uppercase !important;
-      color: #111111 !important;
-      text-align: center !important;
-      white-space: nowrap !important;
-      pointer-events: none !important;
-      transition: color 0.25s ease, transform 0.25s ease !important;
-    }
-
-    .zavi-heat-folder:hover .zavi-heat-folder-label {
-      color: var(--color-burgundy) !important;
-    }
-
-    /* =========================================================
-       FOOTER
-       ========================================================= */
-    footer {
-      background: #000000 !important;
-      color: #FFFFFF !important;
-      padding: 64px clamp(20px, 4vw, 60px) 48px clamp(20px, 4vw, 60px);
-      box-sizing: border-box;
-      font-family: var(--font-mono);
-      font-size: 12px;
-      letter-spacing: 0.06em;
-    }
-
-    .zavi-footer-inner {
-      max-width: 1400px;
-      margin: 0 auto;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 24px;
-    }
-
-    .zavi-footer-left {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      color: #888888;
-    }
-
-    .zavi-footer-right {
-      display: flex;
-      align-items: center;
-      gap: 24px;
-    }
-
-    .zavi-footer-right a {
-      color: #CCCCCC;
-      text-decoration: none;
-      transition: color 0.2s ease;
-    }
-
-    .zavi-footer-right a:hover {
-      color: #FFFFFF;
-    }
   
-  /* =========================================================
-     STANDARDIZED BOLD HEADLINE & EDITORIAL TYPOGRAPHY
-     ========================================================= */
-  @import url('https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Inter:wght@400;500;600;700;800&display=swap');
-
-  h1, .zavi-cert-h1, main h1 {
-    font-family: 'Inter Display', sans-serif !important;
-    font-size: clamp(48px, 8vw, 110px) !important;
-    font-weight: 700 !important;
-    letter-spacing: -0.04em !important;
-    line-height: 0.95 !important;
-    color: #000000 !important;
-    margin: 0 !important;
-    text-transform: lowercase !important;
-  }
-
-  
-    .zavi-web1-title {
-      font-family: 'Inter Display', sans-serif !important;
-      font-size: clamp(24px, 2.8vw, 36px) !important;
-      font-weight: 700 !important;
-      letter-spacing: -0.03em !important;
-      line-height: 1.12 !important;
-      color: #000000 !important;
-      margin: 0 0 20px 0 !important;
-      text-transform: uppercase !important;
-    }
-    
-
-  
-    .zavi-web1-role {
-      font-family: 'Inter Display', sans-serif !important;
-      font-size: clamp(18px, 2vw, 24px) !important;
-      font-weight: 600 !important;
-      color: #000000 !important;
-      letter-spacing: -0.02em !important;
-      margin: 0 !important;
-      line-height: 1.25 !important;
-    }
-    
-
-  .zavi-footer-left span {
-    font-family: 'Fragment Mono', monospace !important;
-    font-size: 12px !important;
-    color: #888888 !important;
-    letter-spacing: 0.02em !important;
-    text-transform: none !important;
-  }
-
-
-  /* =========================================================
-     AUTHENTIC POP-UP / EXPAND & CAESAR COLOR SHIFT ON HOVER
-     ========================================================= */
-  .zavi-heat-folder {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    justify-content: flex-end !important;
-    gap: 12px !important;
-    text-decoration: none !important;
-    width: clamp(100px, 11.6vw, 140px) !important;
-    cursor: pointer !important;
-    background: transparent !important;
-    border: none !important;
-    padding: 0 !important;
-    outline: none !important;
-    transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.35s ease !important;
-    transform: translateY(0) scale(1) !important;
-  }
-
-  .zavi-heat-folder-icon {
-    width: 100% !important;
-    aspect-ratio: 1024 / 1234 !important;
-    background: url('./assets/gdUx6rALI3FrP7JAvefnJYqbcpo.png') no-repeat center / contain !important;
-    filter: drop-shadow(0 8px 18px rgba(0, 0, 0, 0.2)) !important;
-    -webkit-filter: drop-shadow(0 8px 18px rgba(0, 0, 0, 0.2)) !important;
-    transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), filter 0.35s ease, -webkit-filter 0.35s ease !important;
-  }
-
-  .zavi-heat-folder:hover {
-    opacity: 1 !important;
-    transform: translateY(-16px) scale(1.12) !important;
-    z-index: 100 !important;
-  }
-
-  .zavi-heat-folder:hover .zavi-heat-folder-icon {
-    
-    -webkit-
-    transform: scale(1.04) !important;
-  }
-
-  .zavi-heat-folder-label,
-  span.zavi-heat-folder-label,
-  html[data-theme="light"] .zavi-heat-folder-label,
-  html[data-theme="dark"] .zavi-heat-folder-label {
-    margin-top: 8px !important;
-    font-family: "Neue Montreal Regular", "Neue Montreal", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
-    font-size: clamp(12px, 0.9vw, 14px) !important;
-    font-weight: 600 !important;
-    letter-spacing: 0.08em !important;
-    line-height: 1.2em !important;
-    text-transform: uppercase !important;
-    color: #111111 !important;
-    text-align: center !important;
-    background: transparent !important;
-    border: none !important;
-    padding: 0 !important;
-    text-shadow: none !important;
-    white-space: nowrap !important;
-    pointer-events: none !important;
-    transition: color 0.3s ease, transform 0.3s ease !important;
-  }
-
-  .zavi-heat-folder:hover .zavi-heat-folder-label,
-  html[data-theme="light"] .zavi-heat-folder:hover .zavi-heat-folder-label,
-  html[data-theme="dark"] .zavi-heat-folder:hover .zavi-heat-folder-label {
-    color: #6D001A !important;
-    font-weight: 700 !important;
-    transform: translateY(2px) scale(1.05) !important;
-  }
-
-  .zavi-heat-folder:active {
-    transform: translateY(-8px) scale(1.06) !important;
-  }
-
-</style>
 <style>
 /* UNIFIED FOLDER HOVER & PHYSICS (Standardized across all pages) */
 .zavi-heat-folder {
@@ -739,26 +163,642 @@
   text-shadow: 0 0 12px rgba(255, 85, 46, 0.6) !important;
 }
 </style>
+<style id='zavi-framer-authentic-fonts'>
+/* cyrillic-ext */
+
+@font-face {
+
+  font-family: 'Fragment Mono';
+
+  font-style: normal;
+
+  font-weight: 400;
+
+  src: url(https://fonts.gstatic.com/s/fragmentmono/v6/4iCr6K5wfMRRjxp0DA6-2CLnB45HhrUI.woff2) format('woff2');
+
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+
+}
+
+/* latin-ext */
+
+@font-face {
+
+  font-family: 'Fragment Mono';
+
+  font-style: normal;
+
+  font-weight: 400;
+
+  src: url(https://fonts.gstatic.com/s/fragmentmono/v6/4iCr6K5wfMRRjxp0DA6-2CLnB41HhrUI.woff2) format('woff2');
+
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+
+}
+
+/* latin */
+
+@font-face {
+
+  font-family: 'Fragment Mono';
+
+  font-style: normal;
+
+  font-weight: 400;
+
+  src: url(https://fonts.gstatic.com/s/fragmentmono/v6/4iCr6K5wfMRRjxp0DA6-2CLnB4NHhg.woff2) format('woff2');
+
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+
+}
+
+
+
+@font-face { font-family: "Suisse Int'l Mono Regular"; src: url("./assets/4LkYyDftQWBsGmW5l8UyJRTPr0.woff2"); font-display: swap; font-style: normal; font-weight: 400 }
+
+@font-face { font-family: "Neue Montreal Regular"; src: url("./assets/EN0wrjjcgDdG3SMgxfEI19PNHRs.woff2"); font-display: swap; font-style: normal; font-weight: 400 }
+
+@font-face { font-family: "Suisse Int'l Mono Regular"; src: url("./assets/4LkYyDftQWBsGmW5l8UyJRTPr0.woff2"); font-display: swap }
+
+@font-face { font-family: "Inter"; src: url("./assets/5vvr9Vy74if2I6bQbJvbw7SY1pQ.woff2"); font-display: swap; font-style: normal; font-weight: 400; unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F }
+
+@font-face { font-family: "Inter"; src: url("./assets/EOr0mi4hNtlgWNn9if640EZzXCo.woff2"); font-display: swap; font-style: normal; font-weight: 400; unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116 }
+
+@font-face { font-family: "Inter"; src: url("./assets/Y9k9QrlZAqio88Klkmbd8VoMQc.woff2"); font-display: swap; font-style: normal; font-weight: 400; unicode-range: U+1F00-1FFF }
+
+@font-face { font-family: "Inter"; src: url("./assets/OYrD2tBIBPvoJXiIHnLoOXnY9M.woff2"); font-display: swap; font-style: normal; font-weight: 400; unicode-range: U+0370-03FF }
+
+@font-face { font-family: "Inter"; src: url("./assets/JeYwfuaPfZHQhEG8U5gtPDZ7WQ.woff2"); font-display: swap; font-style: normal; font-weight: 400; unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF }
+
+@font-face { font-family: "Inter"; src: url("./assets/GrgcKwrN6d3Uz8EwcLHZxwEfC4.woff2"); font-display: swap; font-style: normal; font-weight: 400; unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2070, U+2074-207E, U+2080-208E, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD }
+
+@font-face { font-family: "Inter"; src: url("./assets/b6Y37FthZeALduNqHicBT6FutY.woff2"); font-display: swap; font-style: normal; font-weight: 400; unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB }
+
+@font-face { font-family: "Inter Display"; src: url("./assets/ePuN3mCjzajIHnyCdvKBFiZkyY0.woff2"); font-display: swap; font-style: normal; font-weight: 500; unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F }
+
+@font-face { font-family: "Inter Display"; src: url("./assets/V3j1L0o5vPFKe26Sw4HcpXCfHo.woff2"); font-display: swap; font-style: normal; font-weight: 500; unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116 }
+
+@font-face { font-family: "Inter Display"; src: url("./assets/F3kdpd2N0cToWV5huaZjjgM.woff2"); font-display: swap; font-style: normal; font-weight: 500; unicode-range: U+1F00-1FFF }
+
+@font-face { font-family: "Inter Display"; src: url("./assets/0iDmxkizU9goZoclqIqsV5rvETU.woff2"); font-display: swap; font-style: normal; font-weight: 500; unicode-range: U+0370-03FF }
+
+@font-face { font-family: "Inter Display"; src: url("./assets/r0mv3NegmA0akcQsNFotG32Las.woff2"); font-display: swap; font-style: normal; font-weight: 500; unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF }
+
+@font-face { font-family: "Inter Display"; src: url("./assets/iwWTDc49ENF2tCHbqlNARXw6Ug.woff2"); font-display: swap; font-style: normal; font-weight: 500; unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2070, U+2074-207E, U+2080-208E, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD }
+
+@font-face { font-family: "Inter Display"; src: url("./assets/Ii21jnSJkulBKsHHXKlapi7fv9w.woff2"); font-display: swap; font-style: normal; font-weight: 500; unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB }
+
+@font-face { font-family: "Inter Display"; src: url("./assets/I11LrmuBDQZweplJ62KkVsklU5Y.woff2"); font-display: swap; font-style: normal; font-weight: 700; unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F }
+
+@font-face { font-family: "Inter Display"; src: url("./assets/UjFZPDy3qGuDktQM4q9CxhKfIa8.woff2"); font-display: swap; font-style: normal; font-weight: 700; unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116 }
+
+@font-face { font-family: "Inter Display"; src: url("./assets/8exwVHJy2DhJ4N5prYlVMrEKmQ.woff2"); font-display: swap; font-style: normal; font-weight: 700; unicode-range: U+1F00-1FFF }
+
+@font-face { font-family: "Inter Display"; src: url("./assets/UTeedEK21hO5jDxEUldzdScUqpg.woff2"); font-display: swap; font-style: normal; font-weight: 700; unicode-range: U+0370-03FF }
+
+@font-face { font-family: "Inter Display"; src: url("./assets/Ig8B8nzy11hzIWEIYnkg91sofjo.woff2"); font-display: swap; font-style: normal; font-weight: 700; unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF }
+
+@font-face { font-family: "Inter Display"; src: url("./assets/qITWJ2WdG0wrgQPDb8lvnYnTXDg.woff2"); font-display: swap; font-style: normal; font-weight: 700; unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2070, U+2074-207E, U+2080-208E, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD }
+
+@font-face { font-family: "Inter Display"; src: url("./assets/qctQFoJqJ9aIbRSIp0AhCQpFxn8.woff2"); font-display: swap; font-style: normal; font-weight: 700; unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB }
+
+@font-face { font-family: "Inter Display"; src: url("./assets/fXvVh2JeZlehNcEhKHpHH0frSl0.woff2"); font-display: swap; font-style: italic; font-weight: 700; unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F }
+
+@font-face { font-family: "Inter Display"; src: url("./assets/7pScaNeb6M7n2HF2jKemDqzCIr4.woff2"); font-display: swap; font-style: italic; font-weight: 700; unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116 }
+
+@font-face { font-family: "Inter Display"; src: url("./assets/qS4UjQYyATcVV9rODk0Zx9KhkY8.woff2"); font-display: swap; font-style: italic; font-weight: 700; unicode-range: U+1F00-1FFF }
+
+@font-face { font-family: "Inter Display"; src: url("./assets/VfD2n20yM7v0hrUEBHEyafsmMBY.woff2"); font-display: swap; font-style: italic; font-weight: 700; unicode-range: U+0370-03FF }
+
+@font-face { font-family: "Inter Display"; src: url("./assets/4oIO9fB59bn3cKFWz7piCj28z9s.woff2"); font-display: swap; font-style: italic; font-weight: 700; unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF }
+
+@font-face { font-family: "Inter Display"; src: url("./assets/MzumQQZJQBC6KM1omtmwOtsogtI.woff2"); font-display: swap; font-style: italic; font-weight: 700; unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2070, U+2074-207E, U+2080-208E, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD }
+
+@font-face { font-family: "Inter Display"; src: url("./assets/F5Lmfd3fCAu7TwiYbI4DLWw4ks.woff2"); font-display: swap; font-style: italic; font-weight: 700; unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB }
+
+@font-face { font-family: "Inter Display"; src: url("./assets/A5P4nkYCJlLQxGxaS1lzG8PNSc.woff2"); font-display: swap; font-style: italic; font-weight: 500; unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F }
+
+@font-face { font-family: "Inter Display"; src: url("./assets/vuPfygr1n1zYxscvWgGI8hRf3LE.woff2"); font-display: swap; font-style: italic; font-weight: 500; unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116 }
+
+@font-face { font-family: "Inter Display"; src: url("./assets/jplzYzqFHXreyADwk9yrkQlWQ.woff2"); font-display: swap; font-style: italic; font-weight: 500; unicode-range: U+1F00-1FFF }
+
+@font-face { font-family: "Inter Display"; src: url("./assets/sSIKP2TfVPvfK7YVENPE5H87A.woff2"); font-display: swap; font-style: italic; font-weight: 500; unicode-range: U+0370-03FF }
+
+@font-face { font-family: "Inter Display"; src: url("./assets/gawbeo7iEJSRZ4kcrh6YRrU8o.woff2"); font-display: swap; font-style: italic; font-weight: 500; unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF }
+
+@font-face { font-family: "Inter Display"; src: url("./assets/RkMAGv2iAm3rw7tZzs7FaZf0rM.woff2"); font-display: swap; font-style: italic; font-weight: 500; unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2070, U+2074-207E, U+2080-208E, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD }
+
+@font-face { font-family: "Inter Display"; src: url("./assets/8E92vrr3j1gDqzepmeSbD2u0JxA.woff2"); font-display: swap; font-style: italic; font-weight: 500; unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB }
+
+@font-face { font-family: "Inter Display"; src: url("./assets/gazZKZuUEtvr9ULhdA4SprP0AZ0.woff2"); font-display: swap; font-style: normal; font-weight: 600; unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F }
+
+@font-face { font-family: "Inter Display"; src: url("./assets/pe8RoujoPxuTZhqoNzYqHX2MXA.woff2"); font-display: swap; font-style: normal; font-weight: 600; unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116 }
+
+@font-face { font-family: "Inter Display"; src: url("./assets/teGhWnhH3bCqefKGsIsqFy3hK8.woff2"); font-display: swap; font-style: normal; font-weight: 600; unicode-range: U+1F00-1FFF }
+
+@font-face { font-family: "Inter Display"; src: url("./assets/qQHxgTnEk6Czu1yW4xS82HQWFOk.woff2"); font-display: swap; font-style: normal; font-weight: 600; unicode-range: U+0370-03FF }
+
+@font-face { font-family: "Inter Display"; src: url("./assets/MJ3N6lfN4iP5Um8rJGqLYl03tE.woff2"); font-display: swap; font-style: normal; font-weight: 600; unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF }
+
+@font-face { font-family: "Inter Display"; src: url("./assets/PfdOpgzFf7N2Uye9JX7xRKYTgSc.woff2"); font-display: swap; font-style: normal; font-weight: 600; unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2070, U+2074-207E, U+2080-208E, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD }
+
+@font-face { font-family: "Inter Display"; src: url("./assets/0SEEmmWc3vovhaai4RlRQSWRrz0.woff2"); font-display: swap; font-style: normal; font-weight: 600; unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB }
+
+@font-face { font-family: "Inter"; src: url("./assets/DpPBYI0sL4fYLgAkX8KXOPVt7c.woff2"); font-display: swap; font-style: normal; font-weight: 700; unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F }
+
+@font-face { font-family: "Inter"; src: url("./assets/4RAEQdEOrcnDkhHiiCbJOw92Lk.woff2"); font-display: swap; font-style: normal; font-weight: 700; unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116 }
+
+@font-face { font-family: "Inter"; src: url("./assets/1K3W8DizY3v4emK8Mb08YHxTbs.woff2"); font-display: swap; font-style: normal; font-weight: 700; unicode-range: U+1F00-1FFF }
+
+@font-face { font-family: "Inter"; src: url("./assets/tUSCtfYVM1I1IchuyCwz9gDdQ.woff2"); font-display: swap; font-style: normal; font-weight: 700; unicode-range: U+0370-03FF }
+
+@font-face { font-family: "Inter"; src: url("./assets/VgYFWiwsAC5OYxAycRXXvhze58.woff2"); font-display: swap; font-style: normal; font-weight: 700; unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF }
+
+@font-face { font-family: "Inter"; src: url("./assets/syRNPWzAMIrcJ3wIlPIP43KjQs.woff2"); font-display: swap; font-style: normal; font-weight: 700; unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2070, U+2074-207E, U+2080-208E, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD }
+
+@font-face { font-family: "Inter"; src: url("./assets/GIryZETIX4IFypco5pYZONKhJIo.woff2"); font-display: swap; font-style: normal; font-weight: 700; unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB }
+
+@font-face { font-family: "Inter"; src: url("./assets/H89BbHkbHDzlxZzxi8uPzTsp90.woff2"); font-display: swap; font-style: italic; font-weight: 700; unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F }
+
+@font-face { font-family: "Inter"; src: url("./assets/u6gJwDuwB143kpNK1T1MDKDWkMc.woff2"); font-display: swap; font-style: italic; font-weight: 700; unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116 }
+
+@font-face { font-family: "Inter"; src: url("./assets/43sJ6MfOPh1LCJt46OvyDuSbA6o.woff2"); font-display: swap; font-style: italic; font-weight: 700; unicode-range: U+1F00-1FFF }
+
+@font-face { font-family: "Inter"; src: url("./assets/wccHG0r4gBDAIRhfHiOlq6oEkqw.woff2"); font-display: swap; font-style: italic; font-weight: 700; unicode-range: U+0370-03FF }
+
+@font-face { font-family: "Inter"; src: url("./assets/WZ367JPwf9bRW6LdTHN8rXgSjw.woff2"); font-display: swap; font-style: italic; font-weight: 700; unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF }
+
+@font-face { font-family: "Inter"; src: url("./assets/ia3uin3hQWqDrVloC1zEtYHWw.woff2"); font-display: swap; font-style: italic; font-weight: 700; unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2070, U+2074-207E, U+2080-208E, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD }
+
+@font-face { font-family: "Inter"; src: url("./assets/2A4Xx7CngadFGlVV4xrO06OBHY.woff2"); font-display: swap; font-style: italic; font-weight: 700; unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB }
+
+@font-face { font-family: "Inter"; src: url("./assets/CfMzU8w2e7tHgF4T4rATMPuWosA.woff2"); font-display: swap; font-style: italic; font-weight: 400; unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F }
+
+@font-face { font-family: "Inter"; src: url("./assets/867QObYax8ANsfX4TGEVU9YiCM.woff2"); font-display: swap; font-style: italic; font-weight: 400; unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116 }
+
+@font-face { font-family: "Inter"; src: url("./assets/Oyn2ZbENFdnW7mt2Lzjk1h9Zb9k.woff2"); font-display: swap; font-style: italic; font-weight: 400; unicode-range: U+1F00-1FFF }
+
+@font-face { font-family: "Inter"; src: url("./assets/cdAe8hgZ1cMyLu9g005pAW3xMo.woff2"); font-display: swap; font-style: italic; font-weight: 400; unicode-range: U+0370-03FF }
+
+@font-face { font-family: "Inter"; src: url("./assets/DOfvtmE1UplCq161m6Hj8CSQYg.woff2"); font-display: swap; font-style: italic; font-weight: 400; unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF }
+
+@font-face { font-family: "Inter"; src: url("./assets/pKRFNWFoZl77qYCAIp84lN1h944.woff2"); font-display: swap; font-style: italic; font-weight: 400; unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2070, U+2074-207E, U+2080-208E, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD }
+
+@font-face { font-family: "Inter"; src: url("./assets/tKtBcDnBMevsEEJKdNGhhkLzYo.woff2"); font-display: swap; font-style: italic; font-weight: 400; unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB }
+
+@font-face { font-family: "Inter Display"; src: url("./assets/KKQXBq6BF0xEmVbrTnWxh3Yw.woff2"); font-display: swap; font-style: italic; font-weight: 600; unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F }
+
+@font-face { font-family: "Inter Display"; src: url("./assets/ugFYeIKZEJXDxI6Kh0YQUX6EK9I.woff2"); font-display: swap; font-style: italic; font-weight: 600; unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116 }
+
+@font-face { font-family: "Inter Display"; src: url("./assets/DgDysCLt0HkIpWMu2uN5tivgQ.woff2"); font-display: swap; font-style: italic; font-weight: 600; unicode-range: U+1F00-1FFF }
+
+@font-face { font-family: "Inter Display"; src: url("./assets/2yEyxokC6poTg3Uc5E2ogfVi6WE.woff2"); font-display: swap; font-style: italic; font-weight: 600; unicode-range: U+0370-03FF }
+
+@font-face { font-family: "Inter Display"; src: url("./assets/wmHLUqO4QxLaADUScavxvknnBQ.woff2"); font-display: swap; font-style: italic; font-weight: 600; unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF }
+
+@font-face { font-family: "Inter Display"; src: url("./assets/e3ySEnhUUpItjJUo5buJawUl4Y.woff2"); font-display: swap; font-style: italic; font-weight: 600; unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2070, U+2074-207E, U+2080-208E, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD }
+
+@font-face { font-family: "Inter Display"; src: url("./assets/DuYGXsyDXsSnxlZ8qzmcA4x3JiI.woff2"); font-display: swap; font-style: italic; font-weight: 600; unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB }
+
+@font-face { font-family: "Inter Display"; src: url("./assets/2uIBiALfCHVpWbHqRMZutfT7giU.woff2"); font-display: swap; font-style: normal; font-weight: 400; unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F }
+
+@font-face { font-family: "Inter Display"; src: url("./assets/Zwfz6xbVe5pmcWRJRgBDHnMkOkI.woff2"); font-display: swap; font-style: normal; font-weight: 400; unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116 }
+
+@font-face { font-family: "Inter Display"; src: url("./assets/U9LaDDmbRhzX3sB8g8glTy5feTE.woff2"); font-display: swap; font-style: normal; font-weight: 400; unicode-range: U+1F00-1FFF }
+
+@font-face { font-family: "Inter Display"; src: url("./assets/tVew2LzXJ1t7QfxP1gdTIdj2o0g.woff2"); font-display: swap; font-style: normal; font-weight: 400; unicode-range: U+0370-03FF }
+
+@font-face { font-family: "Inter Display"; src: url("./assets/DF7bjCRmStYPqSb945lAlMfCCVQ.woff2"); font-display: swap; font-style: normal; font-weight: 400; unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF }
+
+@font-face { font-family: "Inter Display"; src: url("./assets/bHYNJqzTyl2lqvmMiRRS6Y16Es.woff2"); font-display: swap; font-style: normal; font-weight: 400; unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2070, U+2074-207E, U+2080-208E, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD }
+
+@font-face { font-family: "Inter Display"; src: url("./assets/vebZUMjGyKkYsfcY73iwWTzLNag.woff2"); font-display: swap; font-style: normal; font-weight: 400; unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB }
+
+@font-face { font-family: "Inter Display"; src: url("./assets/THWAFHoAcmqLMy81E8hCSdziVKA.woff2"); font-display: swap; font-style: italic; font-weight: 400; unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F }
+
+@font-face { font-family: "Inter Display"; src: url("./assets/sQxGYWDlRkDr0eOKqiNRl6g5rs.woff2"); font-display: swap; font-style: italic; font-weight: 400; unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116 }
+
+@font-face { font-family: "Inter Display"; src: url("./assets/NNTAT1XAm8ZRkr824inYPkjNeL4.woff2"); font-display: swap; font-style: italic; font-weight: 400; unicode-range: U+1F00-1FFF }
+
+@font-face { font-family: "Inter Display"; src: url("./assets/P2qr9PAWBt905929rHfxmneMUG0.woff2"); font-display: swap; font-style: italic; font-weight: 400; unicode-range: U+0370-03FF }
+
+@font-face { font-family: "Inter Display"; src: url("./assets/2BmSa4TZZvFKAZg2DydxTbvKlTU.woff2"); font-display: swap; font-style: italic; font-weight: 400; unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF }
+
+@font-face { font-family: "Inter Display"; src: url("./assets/P0JCAnd2N1Q6qwTQohre3XmQ.woff2"); font-display: swap; font-style: italic; font-weight: 400; unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2070, U+2074-207E, U+2080-208E, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD }
+
+@font-face { font-family: "Inter Display"; src: url("./assets/KMFW46iYsEZaUBwXbwPc9nQm71o.woff2"); font-display: swap; font-style: italic; font-weight: 400; unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB }
+
+@font-face { font-family: "Inter"; src: url("./assets/5A3Ce6C9YYmCjpQx9M4inSaKU.woff2"); font-display: swap; font-style: normal; font-weight: 500; unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F }
+
+@font-face { font-family: "Inter"; src: url("./assets/Qx95Xyt0Ka3SGhinnbXIGpEIyP4.woff2"); font-display: swap; font-style: normal; font-weight: 500; unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116 }
+
+@font-face { font-family: "Inter"; src: url("./assets/6mJuEAguuIuMog10gGvH5d3cl8.woff2"); font-display: swap; font-style: normal; font-weight: 500; unicode-range: U+1F00-1FFF }
+
+@font-face { font-family: "Inter"; src: url("./assets/xYYWaj7wCU5zSQH0eXvSaS19wo.woff2"); font-display: swap; font-style: normal; font-weight: 500; unicode-range: U+0370-03FF }
+
+@font-face { font-family: "Inter"; src: url("./assets/otTaNuNpVK4RbdlT7zDDdKvQBA.woff2"); font-display: swap; font-style: normal; font-weight: 500; unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF }
+
+@font-face { font-family: "Inter"; src: url("./assets/UjlFhCnUjxhNfep4oYBPqnEssyo.woff2"); font-display: swap; font-style: normal; font-weight: 500; unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2070, U+2074-207E, U+2080-208E, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD }
+
+@font-face { font-family: "Inter"; src: url("./assets/DolVirEGb34pEXEp8t8FQBSK4.woff2"); font-display: swap; font-style: normal; font-weight: 500; unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB }
+
+@font-face { font-family: "Suisse Int'l Mono Regular Placeholder"; src: local("Arial"); ascent-override: 69.65%; descent-override: 21.97%; line-gap-override: 0.00%; size-adjust: 141.57% }
+
+@font-face { font-family: "Neue Montreal Regular Placeholder"; src: local("Arial"); ascent-override: 102.46%; descent-override: 23.64%; line-gap-override: 0.00%; size-adjust: 95.16% }
+
+@font-face { font-family: "Inter Placeholder"; src: local("Arial"); ascent-override: 89.79%; descent-override: 22.36%; line-gap-override: 0.00%; size-adjust: 107.89% }
+
+@font-face { font-family: "Inter Display Placeholder"; src: local("Arial"); ascent-override: 98.56%; descent-override: 24.54%; line-gap-override: 0.00%; size-adjust: 98.29% }
+  
+  /* =========================================================
+     AUTHENTIC HEAT BUREAU FOLDER HOVER & SPRING TRANSITION
+     ========================================================= */
+  .zavi-heat-folder {
+    transition: transform 0.38s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.38s ease !important;
+    transform: none !important;
+  }
+
+  .zavi-heat-folder-icon {
+    transition: filter 0.38s cubic-bezier(0.16, 1, 0.3, 1), -webkit-filter 0.38s cubic-bezier(0.16, 1, 0.3, 1), transform 0.38s cubic-bezier(0.16, 1, 0.3, 1) !important;
+    transform: none !important;
+  }
+
+  .zavi-heat-folder-label {
+    font-family: "Neue Montreal Regular", "Neue Montreal", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+    font-size: clamp(14px, 1.15vw, 16px) !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.08em !important;
+    text-transform: uppercase !important;
+    transition: color 0.3s ease, text-shadow 0.3s ease !important;
+    transform: none !important;
+  }
+
+  /* Dark mode / dark theme text */
+  .zavi-heat-folder-label {
+    color: #FFFFFF !important;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.9), 0 2px 8px rgba(0, 0, 0, 0.7) !important;
+  }
+
+  .zavi-heat-folder:hover {
+    opacity: 1 !important;
+    transform: scale(1.025) !important;
+    z-index: 100 !important;
+  }
+
+  .zavi-heat-folder:hover .zavi-heat-folder-icon {
+    filter: brightness(1.18) drop-shadow(0 14px 28px rgba(0, 0, 0, 0.75)) !important;
+    -webkit-filter: brightness(1.18) drop-shadow(0 14px 28px rgba(0, 0, 0, 0.75)) !important;
+    transform: scale(1.02) !important;
+  }
+
+  .zavi-heat-folder:hover .zavi-heat-folder-label {
+    color: #FFFFFF !important;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.55), 0 2px 8px rgba(0, 0, 0, 0.95) !important;
+    transform: none !important;
+  }
+
+  /* Light Theme Specific: Black text that stays crisp on white/light gray background */
+  html[data-theme="light"] .zavi-heat-folder-label,
+  .zavi-bottom-dock[style*="background: #F8F8F8"] .zavi-heat-folder-label,
+  .zavi-bottom-dock[style*="background:#F8F8F8"] .zavi-heat-folder-label {
+    color: #111111 !important;
+    text-shadow: none !important;
+  }
+
+  html[data-theme="light"] .zavi-heat-folder:hover .zavi-heat-folder-label,
+  .zavi-bottom-dock[style*="background: #F8F8F8"] .zavi-heat-folder:hover .zavi-heat-folder-label,
+  .zavi-bottom-dock[style*="background:#F8F8F8"] .zavi-heat-folder:hover .zavi-heat-folder-label {
+    color: #000000 !important;
+    text-shadow: 0 1px 6px rgba(0, 0, 0, 0.2) !important;
+    transform: none !important;
+  }
+
+  .zavi-heat-folder:active {
+    transform: scale(0.98) !important;
+  }
+
+
+  /* =========================================================
+     AUTHENTIC POP-UP / EXPAND & CAESAR COLOR SHIFT ON HOVER
+     ========================================================= */
+  .zavi-heat-folder {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: flex-end !important;
+    gap: 12px !important;
+    text-decoration: none !important;
+    width: clamp(100px, 11.6vw, 140px) !important;
+    cursor: pointer !important;
+    background: transparent !important;
+    border: none !important;
+    padding: 0 !important;
+    outline: none !important;
+    transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.35s ease !important;
+    transform: translateY(0) scale(1) !important;
+  }
+
+  .zavi-heat-folder-icon {
+    width: 100% !important;
+    aspect-ratio: 1024 / 1234 !important;
+    background: url('./assets/gdUx6rALI3FrP7JAvefnJYqbcpo.png') no-repeat center / contain !important;
+    filter: drop-shadow(0 8px 18px rgba(0, 0, 0, 0.2)) !important;
+    -webkit-filter: drop-shadow(0 8px 18px rgba(0, 0, 0, 0.2)) !important;
+    transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), filter 0.35s ease, -webkit-filter 0.35s ease !important;
+  }
+
+  .zavi-heat-folder:hover {
+    opacity: 1 !important;
+    transform: translateY(-16px) scale(1.12) !important;
+    z-index: 100 !important;
+  }
+
+  .zavi-heat-folder:hover .zavi-heat-folder-icon {
+    
+    -webkit-
+    transform: scale(1.04) !important;
+  }
+
+  .zavi-heat-folder-label,
+  span.zavi-heat-folder-label,
+  html[data-theme="light"] .zavi-heat-folder-label,
+  html[data-theme="dark"] .zavi-heat-folder-label {
+    margin-top: 8px !important;
+    font-family: "Neue Montreal Regular", "Neue Montreal", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+    font-size: clamp(12px, 0.9vw, 14px) !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.08em !important;
+    line-height: 1.2em !important;
+    text-transform: uppercase !important;
+    color: #111111 !important;
+    text-align: center !important;
+    background: transparent !important;
+    border: none !important;
+    padding: 0 !important;
+    text-shadow: none !important;
+    white-space: nowrap !important;
+    pointer-events: none !important;
+    transition: color 0.3s ease, transform 0.3s ease !important;
+  }
+
+  .zavi-heat-folder:hover .zavi-heat-folder-label,
+  html[data-theme="light"] .zavi-heat-folder:hover .zavi-heat-folder-label,
+  html[data-theme="dark"] .zavi-heat-folder:hover .zavi-heat-folder-label {
+    color: #6D001A !important;
+    font-weight: 700 !important;
+    transform: translateY(2px) scale(1.05) !important;
+  }
+
+  .zavi-heat-folder:active {
+    transform: translateY(-8px) scale(1.06) !important;
+  }
+
+  /* Footer copyright standardization */
+  .zavi-footer-left span,
+  [data-framer-name="Copyright"] p {
+    text-transform: none !important;
+  }
+
+
+</style>
+
+<style id="zavi-exact-experience-header-and-hero">
+  /* 1. Header Navigation Identical to Experience */
+  .zavi-pinned-header {
+    height: 64px !important;
+    background: rgba(255, 255, 255, 0.95) !important;
+    backdrop-filter: blur(18px) !important;
+    -webkit-backdrop-filter: blur(18px) !important;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08) !important;
+  }
+  .zavi-pinned-logo,
+  .zavi-brand-logo-link {
+    font-family: 'Inter Display', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif !important;
+    font-size: 13.5px !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.06em !important;
+    text-transform: uppercase !important;
+    color: #000000 !important;
+    text-decoration: none !important;
+  }
+  .zavi-nav-link {
+    font-family: 'Inter Display', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif !important;
+    font-size: 12.8px !important;
+    font-weight: 500 !important;
+    letter-spacing: normal !important;
+    text-transform: uppercase !important;
+    color: #000000 !important;
+    text-decoration: none !important;
+    transition: color 0.25s ease !important;
+  }
+  .zavi-nav-link:hover {
+    color: #6D001A !important;
+  }
+  .zavi-nav-link.is-active,
+  .zavi-nav-link.active {
+    color: #6D001A !important;
+    font-weight: 600 !important;
+  }
+
+  /* 2. Hero Headline Identical to Experience */
+  .zavi-hero-main-title,
+  h1.zavi-hero-title,
+  .zavi-hero-grid h1 {
+    font-family: 'Inter Display', sans-serif !important;
+    font-size: clamp(48px, 8.5vw, 110px) !important;
+    font-weight: 700 !important;
+    letter-spacing: -0.04em !important;
+    line-height: 0.95 !important;
+    color: #000000 !important;
+    margin: 0 !important;
+    text-transform: lowercase !important;
+    -webkit-font-smoothing: antialiased !important;
+  }
+
+  .zavi-hero-desc,
+  .zavi-hero-grid p {
+    font-family: 'Inter', sans-serif !important;
+    font-size: clamp(14px, 1.4vw, 17px) !important;
+    line-height: 1.55 !important;
+    color: #222222 !important;
+    max-width: 560px !important;
+    margin: 0 !important;
+  }
+</style>
+
+
+<style id="zavi-authentic-framer-header-css">
+/* AUTHENTIC FRAMER HEADER CSS IDENTICAL TO EXPERIENCE */
+.framer-2g118 {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 64px !important;
+  z-index: 99999 !important;
+  background: rgba(255, 255, 255, 0.95) !important;
+  backdrop-filter: blur(18px) !important;
+  -webkit-backdrop-filter: blur(18px) !important;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  box-sizing: border-box !important;
+}
+
+.framer-ueo1sj {
+  width: 100% !important;
+  max-width: 1400px !important;
+  height: 100% !important;
+  padding: 0 40px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  box-sizing: border-box !important;
+}
+
+.framer-1mm09jf {
+  width: 100% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+}
+
+.framer-1d9aiee {
+  flex: 1 !important;
+  display: flex !important;
+  align-items: center !important;
+}
+
+.zavi-brand-logo-link,
+.framer-1d9aiee a {
+  font-family: 'Inter Display', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif !important;
+  font-size: 13.5px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.06em !important;
+  text-transform: uppercase !important;
+  color: #000000 !important;
+  text-decoration: none !important;
+}
+
+.framer-g7h191-container {
+  flex: 2 !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+.framer-MaGa7 {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: clamp(16px, 2.5vw, 34px) !important;
+}
+
+.framer-MaGa7 a {
+  font-family: 'Inter Display', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif !important;
+  font-size: 12.8px !important;
+  font-weight: 500 !important;
+  letter-spacing: normal !important;
+  text-transform: uppercase !important;
+  color: #000000 !important;
+  text-decoration: none !important;
+  transition: color 0.25s ease !important;
+}
+
+.framer-MaGa7 a:hover {
+  color: #6D001A !important;
+}
+
+.framer-MaGa7 a.is-active {
+  color: #6D001A !important;
+  font-weight: 600 !important;
+}
+
+.framer-1v1xd8a {
+  flex: 1 !important;
+  display: flex !important;
+  justify-content: flex-end !important;
+  align-items: center !important;
+}
+
+.framer-1v1xd8a a {
+  font-family: 'Fragment Mono', monospace !important;
+  font-size: 12px !important;
+  letter-spacing: 0.12em !important;
+  color: #000000 !important;
+  text-decoration: none !important;
+}
+
+.framer-1v1xd8a a:hover {
+  color: #6D001A !important;
+}
+
+/* Adjust page content top padding so it doesn't get covered by fixed header */
+body {
+  padding-top: 64px !important;
+}
+</style>
+
 </head>
 <body>
 
   <!-- ========================================================= -->
   <!-- PINNED NAVIGATION HEADER                                  -->
   <!-- ========================================================= -->
-  <header class="zavi-pinned-header">
-    <div class="zavi-header-content">
-      <a class="zavi-pinned-logo" href="./index.html" title="Return to Homepage">
-        <span>zaveriya&#8482;</span>
-      </a>
-
-      <nav class="zavi-pinned-nav">
-        <a href="./about.html">ABOUT</a>
-        <a href="./projects.html">PROJECTS</a>
-        <a href="./experience.html">EXPERIENCE</a>
-        <a href="./certificates.html" class="is-active">CERTIFICATES</a>
-      </nav>
-
-      <a class="zavi-header-contact" href="mailto:zaveriya.edu@gmail.com">[contact]</a>
+  <header class="framer-2g118 framer-jkcq9z framer-v-jkcq9z" data-framer-name="Desktop" style="--y1rysu:0px 40px 0px 40px;width:100%;z-index:99999;position:relative;">
+    <div class="framer-ueo1sj" data-framer-name="Menu">
+      <div class="framer-1mm09jf" data-framer-name="Container">
+        <div class="framer-1d9aiee" data-framer-name="Left">
+          <div class="framer-18wje3r-container">
+            <div class="framer-jQpvw framer-l14IM framer-C2LGp framer-1fsuk4r framer-v-zf2vfq" data-framer-name="Name">
+              <div class="framer-12u3yt1" data-framer-component-type="RichTextContainer" style="transform:none">
+                <p class="framer-text framer-styles-preset-1vj0jfz" data-styles-preset="iGznlXWfD">
+                  <a class="framer-text framer-styles-preset-1hz48h6 zavi-brand-logo-link" data-styles-preset="KtMZ3zMX_" href="./index.html" title="Zaveriya Mulla — Return to Homepage" style="display:inline-flex;align-items:center;gap:8px;text-decoration:none;color:#EEEDE4;">
+                    <span>ZAVERIYA&#8482;</span>
+                  </a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="framer-g7h191-container">
+          <nav class="framer-MaGa7 framer-l14IM framer-HqvhM framer-wGcE7 framer-1a06dcw framer-v-1a06dcw" data-framer-name="Desktop" style="height:100%;width:100%;display:flex;flex-direction:row;align-items:center;justify-content:center;gap:clamp(16px, 2.5vw, 34px);">
+            <div class="framer-nav-item-wrap" style="position:relative!important;display:inline-flex!important;">
+            <p class="framer-text framer-styles-preset-1vj0jfz" data-styles-preset="iGznlXWfD">
+              <a class="framer-text framer-styles-preset-th5v8x" data-styles-preset="kk1g8TeHD" href="./about.html" style="text-decoration:none;">ABOUT</a>
+            </p>
+          </div>
+            <div class="framer-nav-item-wrap" style="position:relative!important;display:inline-flex!important;">
+            <p class="framer-text framer-styles-preset-1vj0jfz" data-styles-preset="iGznlXWfD">
+              <a class="framer-text framer-styles-preset-th5v8x" data-styles-preset="kk1g8TeHD" href="./projects.html" style="text-decoration:none;">PROJECTS</a>
+            </p>
+          </div>
+            <div class="framer-nav-item-wrap" style="position:relative!important;display:inline-flex!important;">
+            <p class="framer-text framer-styles-preset-1vj0jfz" data-styles-preset="iGznlXWfD">
+              <a class="framer-text framer-styles-preset-th5v8x" data-styles-preset="kk1g8TeHD" href="./experience.html" style="text-decoration:none;">EXPERIENCE</a>
+            </p>
+          </div>
+            <div class="framer-nav-item-wrap" style="position:relative!important;display:inline-flex!important;">
+            <p class="framer-text framer-styles-preset-1vj0jfz" data-styles-preset="iGznlXWfD">
+              <a class="framer-text framer-styles-preset-th5v8x" data-styles-preset="kk1g8TeHD" href="./certificates.html" class="is-active" style="font-weight:600!important;text-decoration:none;color:#6D001A!important;">CERTIFICATES</a>
+            </p>
+          </div>
+          </nav>
+        </div>
+        <div class="framer-1v1xd8a" data-framer-name="Right">
+          <div class="framer-1dypw8w-container">
+            <div class="framer-jQpvw framer-l14IM framer-C2LGp framer-1fsuk4r framer-v-1r8y95" data-framer-name="Year">
+              <div class="framer-b251s9" data-framer-component-type="RichTextContainer" style="transform:none">
+                <p class="framer-text framer-styles-preset-1vj0jfz" data-styles-preset="iGznlXWfD">
+                  <a class="framer-text framer-styles-preset-1d01iwt" data-styles-preset="a5eWwY_8L" href="mailto:zaveriya.edu@gmail.com" style="color:#EEEDE4;text-decoration:none;font-family:'Fragment Mono',monospace;font-size:12px;letter-spacing:0.12em;">[contact]</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </header>
 
@@ -769,9 +809,7 @@
     
     <!-- HERO HEADLINE -->
     <div style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:24px;border-bottom:1px solid rgba(0,0,0,0.08);padding-bottom:48px;margin-bottom:20px;">
-      <h1 style="font-family:'Inter Display',sans-serif;font-size:clamp(48px, 8vw, 110px);font-weight:700;letter-spacing:-0.04em;line-height:0.95;color:#000000;margin:0;text-transform:lowercase;">
-        certificates
-      </h1>
+      <h1 class="zavi-hero-main-title">certificates</h1>
       <p style="font-family:'Inter',sans-serif;font-size:clamp(15px, 1.6vw, 19px);color:rgba(0,0,0,0.65);max-width:560px;line-height:1.55;margin:0;">
         Verified industry credentials, engineering accreditations, and competitive honors categorized across Amazon Web Services (AWS), Google Cloud Platform (GCP), Microsoft, Anthropic Frontier AI, Cisco Networking Academy, IBM SkillsBuild, Cybersecurity, and Applied Data Science.
       </p>
