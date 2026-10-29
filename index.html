@@ -644,8 +644,8 @@
   }
 
   .zavi-heat-folder:hover .zavi-heat-folder-icon {
-    filter: hue-rotate(150deg) saturate(1.45) brightness(1.08) drop-shadow(0 20px 32px rgba(109, 0, 26, 0.45)) !important;
-    -webkit-filter: hue-rotate(150deg) saturate(1.45) brightness(1.08) drop-shadow(0 20px 32px rgba(109, 0, 26, 0.45)) !important;
+    
+    -webkit-
     transform: scale(1.04) !important;
   }
 
@@ -1280,8 +1280,8 @@
   }
 
   #zavi-fingerprint-folders-dock .zavi-heat-folder:hover .zavi-heat-folder-icon {
-    filter: hue-rotate(150deg) saturate(1.45) brightness(1.08) drop-shadow(0 20px 36px rgba(109, 0, 26, 0.75)) !important;
-    -webkit-filter: hue-rotate(150deg) saturate(1.45) brightness(1.08) drop-shadow(0 20px 36px rgba(109, 0, 26, 0.75)) !important;
+    
+    -webkit-
     transform: scale(1.04) !important;
   }
 
@@ -1312,8 +1312,71 @@
 }
 .zavi-heat-folder:hover {
   transform: translateY(-14px) scale(1.10) !important;
-  filter: hue-rotate(150deg) saturate(1.45) brightness(1.08) drop-shadow(0 20px 32px rgba(109, 0, 26, 0.40)) !important;
+  
   z-index: 100 !important;
+}
+</style>
+
+
+<style id="zavi-authentic-heat-orange-hover">
+/* AUTHENTIC HEAT BUREAU DARK ORANGE FOLDER HOVER ENGINE */
+.zavi-heat-folder {
+  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
+}
+.zavi-heat-folder:hover,
+.zavi-heat-folder.is-hovered {
+  transform: translateY(-14px) scale(1.10) !important;
+  z-index: 100 !important;
+}
+.zavi-heat-folder:hover .zavi-heat-folder-icon,
+.zavi-heat-folder.is-hovered .zavi-heat-folder-icon {
+  filter: hue-rotate(200deg) saturate(5.5) brightness(0.92) contrast(1.1) drop-shadow(0 18px 36px rgba(235, 75, 0, 0.75)) !important;
+  -webkit-filter: hue-rotate(200deg) saturate(5.5) brightness(0.92) contrast(1.1) drop-shadow(0 18px 36px rgba(235, 75, 0, 0.75)) !important;
+}
+.zavi-heat-folder:hover .zavi-heat-folder-label,
+.zavi-heat-folder.is-hovered .zavi-heat-folder-label {
+  color: #FF552E !important;
+  text-shadow: 0 0 12px rgba(255, 85, 46, 0.6) !important;
+}
+</style>
+
+<style id='zavi-universal-orange-hover'>
+/* UNIVERSAL AUTHENTIC HEAT BUREAU DARK ORANGE FOLDER HOVER */
+.zavi-heat-folder:hover,
+.zavi-heat-folder.is-hovered,
+#zavi-fingerprint-folders-dock .zavi-heat-folder:hover,
+#zavi-fingerprint-folders-dock .zavi-heat-folder.is-hovered,
+#zavi-folders-section .zavi-heat-folder:hover,
+#zavi-folders-section .zavi-heat-folder.is-hovered,
+.zavi-bottom-dock .zavi-heat-folder:hover,
+.zavi-bottom-dock .zavi-heat-folder.is-hovered {
+  transform: translateY(-14px) scale(1.10) !important;
+  z-index: 100 !important;
+}
+
+.zavi-heat-folder:hover .zavi-heat-folder-icon,
+.zavi-heat-folder.is-hovered .zavi-heat-folder-icon,
+#zavi-fingerprint-folders-dock .zavi-heat-folder:hover .zavi-heat-folder-icon,
+#zavi-fingerprint-folders-dock .zavi-heat-folder.is-hovered .zavi-heat-folder-icon,
+#zavi-folders-section .zavi-heat-folder:hover .zavi-heat-folder-icon,
+#zavi-folders-section .zavi-heat-folder.is-hovered .zavi-heat-folder-icon,
+.zavi-bottom-dock .zavi-heat-folder:hover .zavi-heat-folder-icon,
+.zavi-bottom-dock .zavi-heat-folder.is-hovered .zavi-heat-folder-icon {
+  filter: hue-rotate(200deg) saturate(5.5) brightness(0.92) contrast(1.1) drop-shadow(0 18px 36px rgba(235, 75, 0, 0.75)) !important;
+  -webkit-filter: hue-rotate(200deg) saturate(5.5) brightness(0.92) contrast(1.1) drop-shadow(0 18px 36px rgba(235, 75, 0, 0.75)) !important;
+  transform: scale(1.08) !important;
+}
+
+.zavi-heat-folder:hover .zavi-heat-folder-label,
+.zavi-heat-folder.is-hovered .zavi-heat-folder-label,
+#zavi-fingerprint-folders-dock .zavi-heat-folder:hover .zavi-heat-folder-label,
+#zavi-fingerprint-folders-dock .zavi-heat-folder.is-hovered .zavi-heat-folder-label,
+#zavi-folders-section .zavi-heat-folder:hover .zavi-heat-folder-label,
+#zavi-folders-section .zavi-heat-folder.is-hovered .zavi-heat-folder-label,
+.zavi-bottom-dock .zavi-heat-folder:hover .zavi-heat-folder-label,
+.zavi-bottom-dock .zavi-heat-folder.is-hovered .zavi-heat-folder-label {
+  color: #FF552E !important;
+  text-shadow: 0 0 12px rgba(255, 85, 46, 0.6) !important;
 }
 </style>
 </head>
@@ -1451,7 +1514,7 @@
     // Toggle visibility in fingerprint scene (scrollY ~ 1400px to 2150px)
     function onScrollCheck() {
       var y = window.scrollY || 0;
-      if (y >= 1350 && y <= 2150) {
+      if (y >= 2650 && y <= 3400) {
         dock.classList.add('is-visible');
       } else {
         dock.classList.remove('is-visible');
@@ -1481,7 +1544,7 @@
     scrollText.onclick = function(e) {
       e.preventDefault();
       // Smoothly glide directly into the fingerprint scene with the 4 folders
-      if (window.zaviScrollTo) { window.zaviScrollTo(1650); } else { window.scrollTo({ top: 1650, behavior: 'smooth' }); }
+      if (window.zaviScrollTo) { window.zaviScrollTo(2950); } else { window.scrollTo({ top: 2950, behavior: 'smooth' }); }
     };
 
     window.addEventListener('scroll', function() {
@@ -1654,5 +1717,22 @@ function zaviNavigateFolder(event, targetUrl) {
 
 
 <script src="./assets/lenis.js"></script>
+
+<script id="zavi-folder-hover-sync">
+(function() {
+  function initHoverSync() {
+    document.querySelectorAll('.zavi-heat-folder').forEach(function(folder) {
+      folder.addEventListener('mouseenter', function() { folder.classList.add('is-hovered'); });
+      folder.addEventListener('mouseleave', function() { folder.classList.remove('is-hovered'); });
+    });
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initHoverSync);
+  } else {
+    initHoverSync();
+  }
+})();
+</script>
+
 </body>
 </html>
